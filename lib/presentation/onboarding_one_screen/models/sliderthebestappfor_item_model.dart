@@ -1,0 +1,3 @@
+class SliderthebestappforItemModel {
+  String? id = "";
+}

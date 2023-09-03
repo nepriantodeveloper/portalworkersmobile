@@ -1,0 +1,3 @@
+class SlidermessageItemModel {
+  String? id = "";
+}
