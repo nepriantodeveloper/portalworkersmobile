@@ -27,7 +27,6 @@ class AppbarTitle extends StatelessWidget {
           textAlign: TextAlign.left,
           style: AppStyle.txtPlusJakartaSansBold18.copyWith(
             letterSpacing: getHorizontalSize(context,
-              context,
               0.09,
             ),
             color: ColorConstant.gray900,
