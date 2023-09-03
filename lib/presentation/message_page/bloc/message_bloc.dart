@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
 import '../models/message_item_model.dart';
-import 'package:stock_workers/presentation/message_page/models/message_model.dart';
+import 'package:stockworkers/presentation/message_page/models/message_model.dart';
 part 'message_event.dart';
 part 'message_state.dart';
 

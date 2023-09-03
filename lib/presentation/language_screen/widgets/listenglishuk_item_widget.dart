@@ -1,7 +1,7 @@
 import '../models/listenglishuk_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_checkbox.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_checkbox.dart';
 
 // ignore: must_be_immutable
 class ListenglishukItemWidget extends StatelessWidget {

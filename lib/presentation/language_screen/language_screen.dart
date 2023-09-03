@@ -1,3 +1,5 @@
+import 'package:stockworkers/localization/app_localization.dart';
+
 import '../language_screen/widgets/listchineses_item_widget.dart';
 import '../language_screen/widgets/listenglishuk_item_widget.dart';
 import 'bloc/language_bloc.dart';
@@ -5,10 +7,10 @@ import 'models/language_model.dart';
 import 'models/listchineses_item_model.dart';
 import 'models/listenglishuk_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
 
 class LanguageScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {

@@ -1,7 +1,13 @@
+import 'package:bloc_provider/bloc_provider.dart';
+import 'package:stockworkers/core/utils/color_constant.dart';
+import 'package:stockworkers/core/utils/image_constant.dart';
+import 'package:stockworkers/core/utils/size_utils.dart';
+import 'package:stockworkers/widgets/custom_image_view.dart';
+
 import 'bloc/splash_bloc.dart';
 import 'models/splash_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/app_export.dart';
 
 class SplashScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {

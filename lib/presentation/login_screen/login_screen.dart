@@ -1,10 +1,10 @@
 import 'bloc/login_bloc.dart';
 import 'models/login_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
-import 'package:stock_workers/widgets/custom_text_form_field.dart';
-import 'package:stock_workers/domain/googleauth/google_auth_helper.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
+import 'package:stockworkers/widgets/custom_text_form_field.dart';
+import 'package:stockworkers/domain/googleauth/google_auth_helper.dart';
 
 class LoginScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {

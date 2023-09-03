@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '/core/app_export.dart';
 import '../models/listclock_item_model.dart';
 import '../models/listdescription_item_model.dart';
-import 'package:stock_workers/presentation/job_details_screen/models/job_details_model.dart';
+import 'package:stockworkers/presentation/job_details_screen/models/job_details_model.dart';
 part 'job_details_event.dart';
 part 'job_details_state.dart';
 

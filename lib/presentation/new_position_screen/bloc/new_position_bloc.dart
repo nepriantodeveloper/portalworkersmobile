@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
-import 'package:stock_workers/presentation/new_position_screen/models/new_position_model.dart';
+import 'package:stockworkers/presentation/new_position_screen/models/new_position_model.dart';
 part 'new_position_event.dart';
 part 'new_position_state.dart';
 

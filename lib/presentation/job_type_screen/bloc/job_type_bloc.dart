@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
-import 'package:stock_workers/presentation/job_type_screen/models/job_type_model.dart';
+import 'package:stockworkers/presentation/job_type_screen/models/job_type_model.dart';
 part 'job_type_event.dart';
 part 'job_type_state.dart';
 

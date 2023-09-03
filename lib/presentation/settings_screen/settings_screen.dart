@@ -1,17 +1,19 @@
+import 'package:stockworkers/localization/app_localization.dart';
+
 import 'bloc/settings_bloc.dart';
 import 'models/settings_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/presentation/home_page/home_page.dart';
-import 'package:stock_workers/presentation/message_page/message_page.dart';
-import 'package:stock_workers/presentation/profile_page/profile_page.dart';
-import 'package:stock_workers/presentation/saved_page/saved_page.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
-import 'package:stock_workers/widgets/custom_bottom_bar.dart';
-import 'package:stock_workers/widgets/custom_checkbox.dart';
-import 'package:stock_workers/presentation/logout_popup_dialog/logout_popup_dialog.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/presentation/home_page/home_page.dart';
+import 'package:stockworkers/presentation/message_page/message_page.dart';
+import 'package:stockworkers/presentation/profile_page/profile_page.dart';
+import 'package:stockworkers/presentation/saved_page/saved_page.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/widgets/custom_bottom_bar.dart';
+import 'package:stockworkers/widgets/custom_checkbox.dart';
+import 'package:stockworkers/presentation/logout_popup_dialog/logout_popup_dialog.dart';
 
 // ignore_for_file: must_be_immutable
 class SettingsScreen extends StatelessWidget {

@@ -1,10 +1,9 @@
 // ignore_for_file: must_be_immutable
 
 import 'dart:io';
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CustomImageView extends StatelessWidget {
   ///[url] is required parameter for fetching network image

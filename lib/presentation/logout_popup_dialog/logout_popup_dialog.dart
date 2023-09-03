@@ -1,8 +1,8 @@
 import 'bloc/logout_popup_bloc.dart';
 import 'models/logout_popup_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
 
 class LogoutPopupDialog extends StatelessWidget {
   static Widget builder(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '/core/app_export.dart';
 import '../models/listenglishuk_item_model.dart';
 import '../models/listchineses_item_model.dart';
-import 'package:stock_workers/presentation/language_screen/models/language_model.dart';
+import 'package:stockworkers/presentation/language_screen/models/language_model.dart';
 part 'language_event.dart';
 part 'language_state.dart';
 

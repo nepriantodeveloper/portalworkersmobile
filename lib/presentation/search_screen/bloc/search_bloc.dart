@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
 import '../models/search_item_model.dart';
-import 'package:stock_workers/presentation/search_screen/models/search_model.dart';
+import 'package:stockworkers/presentation/search_screen/models/search_model.dart';
 part 'search_event.dart';
 part 'search_state.dart';
 

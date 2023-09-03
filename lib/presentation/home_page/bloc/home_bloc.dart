@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '/core/app_export.dart';
 import '../models/listuser_item_model.dart';
 import '../models/listgroup_item_model.dart';
-import 'package:stock_workers/presentation/home_page/models/home_model.dart';
+import 'package:stockworkers/presentation/home_page/models/home_model.dart';
 part 'home_event.dart';
 part 'home_state.dart';
 
