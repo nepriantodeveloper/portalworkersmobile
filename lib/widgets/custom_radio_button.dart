@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/utils/color_constant.dart';
+import 'package:stockworkers/core/utils/size_utils.dart';
+
 
 class CustomRadioButton extends StatelessWidget {
   CustomRadioButton(
@@ -101,7 +103,7 @@ class CustomRadioButton extends StatelessWidget {
       child: Radio<String>(
         value: value ?? "",
         groupValue: groupValue,
-        activeColor: ColorConstant.indigo5001,
+        activeColor: ColorConstant.indigo50,
         onChanged: (value) {
           onChange!(value!);
         },

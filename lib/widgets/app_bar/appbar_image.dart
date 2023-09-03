@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_image_view.dart';
+
 
 // ignore: must_be_immutable
 class AppbarImage extends StatelessWidget {
   AppbarImage(
-      {required this.height,
+      {super.key, required this.height,
       required this.width,
       this.imagePath,
       this.svgPath,

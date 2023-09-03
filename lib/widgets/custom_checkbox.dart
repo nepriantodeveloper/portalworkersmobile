@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/utils/color_constant.dart';
+import 'package:stockworkers/core/utils/size_utils.dart';
+
 
 class CustomCheckbox extends StatelessWidget {
   CustomCheckbox(
@@ -101,7 +103,7 @@ class CustomCheckbox extends StatelessWidget {
         onChanged: (value) {
           onChange!(value!);
         },
-        checkColor: ColorConstant.indigo5001,
+        checkColor: ColorConstant.indigo50,
         visualDensity: VisualDensity(
           vertical: -4,
           horizontal: -4,

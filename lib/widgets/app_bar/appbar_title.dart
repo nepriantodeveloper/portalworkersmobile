@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/utils/color_constant.dart';
+import 'package:stockworkers/core/utils/size_utils.dart';
+import 'package:stockworkers/theme/app_style.dart';
+
 
 // ignore: must_be_immutable
 class AppbarTitle extends StatelessWidget {
-  AppbarTitle({required this.text, this.margin, this.onTap});
+  AppbarTitle({super.key, required this.text, this.margin, this.onTap});
 
   String text;
 

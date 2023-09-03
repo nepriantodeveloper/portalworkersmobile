@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/utils/color_constant.dart';
+import 'package:stockworkers/core/utils/size_utils.dart';
 
 class CustomSwitch extends StatelessWidget {
   CustomSwitch({this.alignment, this.margin, this.value, this.onChanged});
