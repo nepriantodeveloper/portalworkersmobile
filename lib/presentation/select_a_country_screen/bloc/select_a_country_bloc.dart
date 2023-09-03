@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
-import 'package:stock_workers/presentation/select_a_country_screen/models/select_a_country_model.dart';
+import 'package:stockworkers/presentation/select_a_country_screen/models/select_a_country_model.dart';
 part 'select_a_country_event.dart';
 part 'select_a_country_state.dart';
 

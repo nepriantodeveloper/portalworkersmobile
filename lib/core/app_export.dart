@@ -14,5 +14,6 @@ export 'package:stockworkers/core/errors/exceptions.dart';
 export 'package:stockworkers/core/network/network_info.dart';
 export 'package:stockworkers/core/utils/logger.dart';
 export 'package:stockworkers/core/utils/navigator_service.dart';
-export 'package:flutter_bloc/flutter_bloc.dart';
+// export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:bloc_provider/bloc_provider.dart';
 export 'package:stockworkers/core/utils/date_time_utils.dart';

@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
-import 'package:stock_workers/presentation/sign_up_complete_account_screen/models/sign_up_complete_account_model.dart';
-import 'package:stock_workers/data/models/register/post_register_resp.dart';
-import 'package:stock_workers/data/models/register/post_register_req.dart';
+import 'package:stockworkers/presentation/sign_up_complete_account_screen/models/sign_up_complete_account_model.dart';
+import 'package:stockworkers/data/models/register/post_register_resp.dart';
+import 'package:stockworkers/data/models/register/post_register_req.dart';
 import 'dart:async';
-import 'package:stock_workers/data/repository/repository.dart';
-import 'package:stock_workers/core/constants/user.dart';
-import 'package:stock_workers/core/constants/role.dart';
+import 'package:stockworkers/data/repository/repository.dart';
+import 'package:stockworkers/core/constants/user.dart';
+import 'package:stockworkers/core/constants/role.dart';
 part 'sign_up_complete_account_event.dart';
 part 'sign_up_complete_account_state.dart';
 

@@ -1,3 +1,5 @@
+import 'package:stockworkers/localization/app_localization.dart';
+
 import '../notifications_general_screen/widgets/listuser1_item_widget.dart';
 import 'bloc/notifications_general_bloc.dart';
 import 'models/listuser1_item_model.dart';

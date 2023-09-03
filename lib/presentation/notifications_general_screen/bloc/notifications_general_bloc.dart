@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
 import '../models/listuser1_item_model.dart';
-import 'package:stock_workers/presentation/notifications_general_screen/models/notifications_general_model.dart';
+import 'package:stockworkers/presentation/notifications_general_screen/models/notifications_general_model.dart';
 part 'notifications_general_event.dart';
 part 'notifications_general_state.dart';
 

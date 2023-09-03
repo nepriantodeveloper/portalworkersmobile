@@ -1,3 +1,5 @@
+import 'package:stockworkers/localization/app_localization.dart';
+
 import 'bloc/settings_bloc.dart';
 import 'models/settings_model.dart';
 import 'package:flutter/material.dart';

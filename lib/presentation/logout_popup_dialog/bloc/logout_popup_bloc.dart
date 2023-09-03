@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
-import 'package:stock_workers/presentation/logout_popup_dialog/models/logout_popup_model.dart';
+import 'package:stockworkers/presentation/logout_popup_dialog/models/logout_popup_model.dart';
 part 'logout_popup_event.dart';
 part 'logout_popup_state.dart';
 

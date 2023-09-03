@@ -1,3 +1,5 @@
+import 'package:stockworkers/localization/app_localization.dart';
+
 import '../language_screen/widgets/listchineses_item_widget.dart';
 import '../language_screen/widgets/listenglishuk_item_widget.dart';
 import 'bloc/language_bloc.dart';

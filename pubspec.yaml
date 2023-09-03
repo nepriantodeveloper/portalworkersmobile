@@ -39,8 +39,11 @@ dependencies:
   connectivity_plus: ^4.0.2
   localization: ^2.1.0
   google_sign_in: ^6.1.5
+  bloc_provider: ^1.0.0
+  equatable: ^2.0.5
+  fluttertoast: ^8.2.2
+  flutter_switch: ^0.3.2
   cached_network_image: ^3.2.3
-  flutter_bloc: ^8.1.3
 
 dev_dependencies:
 

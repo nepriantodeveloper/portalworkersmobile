@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stock_workers/main.dart';
+import 'package:stockworkers/main.dart';
 
 class ServerException implements Exception {}
 
