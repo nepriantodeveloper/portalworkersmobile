@@ -49,7 +49,7 @@ class ProfilePage extends StatelessWidget {
                       })
                 ]),
             body: SizedBox(
-                width: size.width,
+                width: size(context).width,
                 child: SingleChildScrollView(
                     child: Padding(
                         padding: getPadding(context,top: 43, bottom: 5),
@@ -126,8 +126,7 @@ class ProfilePage extends StatelessWidget {
                                                                         "lbl_open_to_work"
                                                                             .tr,
                                                                     value: "lbl_open_to_work"
-                                                                            .tr ??
-                                                                        "",
+                                                                            .tr,
                                                                     groupValue:
                                                                         radioGroup,
                                                                     margin:
@@ -178,7 +177,7 @@ class ProfilePage extends StatelessWidget {
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
-                                                            .roundedBorder24),
+                                                            .roundedBorder24(context)),
                                             child: Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -230,7 +229,7 @@ class ProfilePage extends StatelessWidget {
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
-                                                            .roundedBorder24),
+                                                            .roundedBorder24(context)),
                                             child: Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -279,10 +278,10 @@ class ProfilePage extends StatelessWidget {
                                       getMargin(context,left: 24, top: 22, right: 24),
                                   padding: getPadding(context,
                                       left: 16, top: 14, right: 16, bottom: 14),
-                                  decoration: AppDecoration.outlineIndigo50
+                                  decoration: AppDecoration.outlineIndigo50(context)
                                       .copyWith(
                                           borderRadius: BorderRadiusStyle
-                                              .roundedBorder12),
+                                              .roundedBorder12(context)),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
@@ -338,10 +337,10 @@ class ProfilePage extends StatelessWidget {
                                       getMargin(context,left: 25, top: 24, right: 23),
                                   padding: getPadding(context,
                                       left: 9, top: 16, right: 9, bottom: 16),
-                                  decoration: AppDecoration.outlineIndigo50
+                                  decoration: AppDecoration.outlineIndigo50(context)
                                       .copyWith(
                                           borderRadius: BorderRadiusStyle
-                                              .roundedBorder12),
+                                              .roundedBorder12(context)),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
@@ -424,10 +423,10 @@ class ProfilePage extends StatelessWidget {
                                       getMargin(context,left: 24, top: 24, right: 24),
                                   padding: getPadding(context,
                                       left: 16, top: 15, right: 16, bottom: 15),
-                                  decoration: AppDecoration.outlineIndigo50
+                                  decoration: AppDecoration.outlineIndigo50(context)
                                       .copyWith(
                                           borderRadius: BorderRadiusStyle
-                                              .roundedBorder12),
+                                              .roundedBorder12(context)),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
@@ -517,10 +516,10 @@ class ProfilePage extends StatelessWidget {
                                   margin:
                                       getMargin(context,left: 24, top: 24, right: 24),
                                   padding: getPadding(context,all: 16),
-                                  decoration: AppDecoration.outlineBluegray50
+                                  decoration: AppDecoration.outlineBluegray50(context)
                                       .copyWith(
                                           borderRadius: BorderRadiusStyle
-                                              .roundedBorder12),
+                                              .roundedBorder12(context)),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:

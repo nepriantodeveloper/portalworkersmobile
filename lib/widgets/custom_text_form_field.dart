@@ -67,37 +67,37 @@ class CustomTextFormField extends StatelessWidget {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: _buildTextFormFieldWidget(),
+            child: _buildTextFormFieldWidget(context),
           )
-        : _buildTextFormFieldWidget();
+        : _buildTextFormFieldWidget(context);
   }
 
-  _buildTextFormFieldWidget() {
+  _buildTextFormFieldWidget(BuildContext context) {
     return Container(
       width: width ?? double.maxFinite,
       margin: margin,
       child: TextFormField(
         controller: controller,
         focusNode: focusNode,
-        style: _setFontStyle(),
+        style: _setFontStyle(context),
         obscureText: isObscureText!,
         textInputAction: textInputAction,
         keyboardType: textInputType,
         maxLines: maxLines ?? 1,
-        decoration: _buildDecoration(),
+        decoration: _buildDecoration(context),
         validator: validator,
       ),
     );
   }
 
-  _buildDecoration() {
+  _buildDecoration(BuildContext context) {
     return InputDecoration(
       hintText: hintText ?? "",
-      hintStyle: _setFontStyle(),
-      border: _setBorderStyle(),
-      enabledBorder: _setBorderStyle(),
-      focusedBorder: _setBorderStyle(),
-      disabledBorder: _setBorderStyle(),
+      hintStyle: _setFontStyle(context),
+      border: _setBorderStyle(context),
+      enabledBorder: _setBorderStyle(context),
+      focusedBorder: _setBorderStyle(context),
+      disabledBorder: _setBorderStyle(context),
       prefixIcon: prefix,
       prefixIconConstraints: prefixConstraints,
       suffixIcon: suffix,
@@ -105,11 +105,11 @@ class CustomTextFormField extends StatelessWidget {
       fillColor: _setFillColor(),
       filled: _setFilled(),
       isDense: true,
-      contentPadding: _setPadding(),
+      contentPadding: _setPadding(context),
     );
   }
 
-  _setFontStyle() {
+  _setFontStyle(BuildContext context) {
     switch (fontStyle) {
       case TextFormFieldFontStyle.PlusJakartaSansSemiBold16Gray900:
         return TextStyle(
@@ -150,7 +150,7 @@ class CustomTextFormField extends StatelessWidget {
     }
   }
 
-  _setOutlineBorderRadius() {
+  _setOutlineBorderRadius(BuildContext context) {
     switch (shape) {
       case TextFormFieldShape.CircleBorder28:
         return BorderRadius.circular(
@@ -167,18 +167,18 @@ class CustomTextFormField extends StatelessWidget {
     }
   }
 
-  _setBorderStyle() {
+  _setBorderStyle(BuildContext context) {
     switch (variant) {
       case TextFormFieldVariant.FillGray200:
         return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
+          borderRadius: _setOutlineBorderRadius(context),
           borderSide: BorderSide.none,
         );
       case TextFormFieldVariant.None:
         return InputBorder.none;
       default:
         return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
+          borderRadius: _setOutlineBorderRadius(context),
           borderSide: BorderSide(
             color: ColorConstant.indigo50,
             width: 1,
@@ -207,7 +207,7 @@ class CustomTextFormField extends StatelessWidget {
     }
   }
 
-  _setPadding() {
+  _setPadding(BuildContext context) {
     switch (padding) {
       case TextFormFieldPadding.PaddingT15:
         return getPadding(context,

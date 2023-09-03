@@ -46,10 +46,10 @@ class ExperienceSettingScreen extends StatelessWidget {
                           width: double.maxFinite,
                           child: Container(
                               padding: getPadding(context,all: 16),
-                              decoration: AppDecoration.outlineIndigo50
+                              decoration: AppDecoration.outlineIndigo50(context)
                                   .copyWith(
                                       borderRadius:
-                                          BorderRadiusStyle.roundedBorder12),
+                                          BorderRadiusStyle.roundedBorder12(context)),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,10 +150,10 @@ class ExperienceSettingScreen extends StatelessWidget {
                           child: Container(
                               margin: getMargin(context,top: 32, bottom: 3),
                               padding: getPadding(context,all: 16),
-                              decoration: AppDecoration.outlineBluegray50
+                              decoration: AppDecoration.outlineBluegray50(context)
                                   .copyWith(
                                       borderRadius:
-                                          BorderRadiusStyle.roundedBorder12),
+                                          BorderRadiusStyle.roundedBorder12(context)),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,

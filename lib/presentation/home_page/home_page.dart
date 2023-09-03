@@ -85,10 +85,10 @@ class HomePage extends StatelessWidget {
                                       getMargin(context,left: 24, top: 30, right: 24),
                                   padding: getPadding(context,
                                       left: 16, top: 14, right: 16, bottom: 14),
-                                  decoration: AppDecoration.outlineIndigo50
+                                  decoration: AppDecoration.outlineIndigo50(context)
                                       .copyWith(
                                           borderRadius: BorderRadiusStyle
-                                              .roundedBorder24),
+                                              .roundedBorder24(context)),
                                   child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,

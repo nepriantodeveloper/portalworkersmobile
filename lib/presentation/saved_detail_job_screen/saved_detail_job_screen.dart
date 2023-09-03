@@ -53,10 +53,10 @@ class SavedDetailJobScreen extends StatelessWidget {
                                 margin: getMargin(context,right: 24),
                                 padding: getPadding(context,
                                     left: 75, top: 24, right: 72, bottom: 24),
-                                decoration: AppDecoration.outlineIndigo50
+                                decoration: AppDecoration.outlineIndigo50(context)
                                     .copyWith(
                                         borderRadius:
-                                            BorderRadiusStyle.roundedBorder16),
+                                            BorderRadiusStyle.roundedBorder16(context)),
                                 child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -68,7 +68,7 @@ class SavedDetailJobScreen extends StatelessWidget {
                                           color: ColorConstant.gray100,
                                           shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder39),
+                                                  .roundedBorder39(context)),
                                           child: Container(
                                               height: getSize(context,79),
                                               width: getSize(context,79),
@@ -78,7 +78,7 @@ class SavedDetailJobScreen extends StatelessWidget {
                                                   .copyWith(
                                                       borderRadius:
                                                           BorderRadiusStyle
-                                                              .roundedBorder39),
+                                                              .roundedBorder39(context)),
                                               child: Stack(children: [
                                                 CustomImageView(
                                                     svgPath:

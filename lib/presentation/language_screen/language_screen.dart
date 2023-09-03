@@ -48,10 +48,10 @@ class LanguageScreen extends StatelessWidget {
                           child: Container(
                               padding: getPadding(context,
                                   left: 16, top: 21, right: 16, bottom: 21),
-                              decoration: AppDecoration.outlineIndigo50
+                              decoration: AppDecoration.outlineIndigo50(context)
                                   .copyWith(
                                       borderRadius:
-                                          BorderRadiusStyle.roundedBorder12),
+                                          BorderRadiusStyle.roundedBorder12(context)),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,10 +130,10 @@ class LanguageScreen extends StatelessWidget {
                           child: Container(
                               margin: getMargin(context,top: 24, bottom: 5),
                               padding: getPadding(context,all: 16),
-                              decoration: AppDecoration.outlineIndigo50
+                              decoration: AppDecoration.outlineIndigo50(context)
                                   .copyWith(
                                       borderRadius:
-                                          BorderRadiusStyle.roundedBorder12),
+                                          BorderRadiusStyle.roundedBorder12(context)),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,

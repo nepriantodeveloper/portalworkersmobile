@@ -39,8 +39,8 @@ class NotificationsScreen extends StatelessWidget {
                 width: getHorizontalSize(context,327),
                 margin: getMargin(context,left: 24, top: 30, right: 24, bottom: 5),
                 padding: getPadding(context,left: 16, top: 15, right: 16, bottom: 15),
-                decoration: AppDecoration.outlineIndigo50
-                    .copyWith(borderRadius: BorderRadiusStyle.roundedBorder12),
+                decoration: AppDecoration.outlineIndigo50(context)
+                    .copyWith(borderRadius: BorderRadiusStyle.roundedBorder12(context)),
                 child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -152,10 +152,10 @@ class AddNewEducationScreen extends StatelessWidget {
                                           top: 14,
                                           right: 16,
                                           bottom: 14),
-                                      decoration: AppDecoration.outlineIndigo50
+                                      decoration: AppDecoration.outlineIndigo50(context)
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder24),
+                                                  .roundedBorder24(context)),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -214,10 +214,10 @@ class AddNewEducationScreen extends StatelessWidget {
                                           top: 14,
                                           right: 16,
                                           bottom: 14),
-                                      decoration: AppDecoration.outlineIndigo50
+                                      decoration: AppDecoration.outlineIndigo50(context)
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder24),
+                                                  .roundedBorder24(context)),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,

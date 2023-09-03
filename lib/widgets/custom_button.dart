@@ -2,68 +2,69 @@ import 'package:flutter/material.dart';
 import 'package:stockworkers/core/utils/color_constant.dart';
 import 'package:stockworkers/core/utils/size_utils.dart';
 
-
 class CustomButton extends StatelessWidget {
-  CustomButton(
-      {this.shape,
-      this.padding,
-      this.variant,
-      this.fontStyle,
-      this.alignment,
-      this.margin,
-      this.onTap,
-      this.width,
-      this.height,
-      this.text,
-      this.prefixWidget,
-      this.suffixWidget});
+  const CustomButton({
+    super.key,
+    this.shape,
+    this.padding,
+    this.variant,
+    this.fontStyle,
+    this.alignment,
+    this.margin,
+    this.onTap,
+    this.width,
+    this.height,
+    this.text,
+    this.prefixWidget,
+    this.suffixWidget,
+  });
 
-  ButtonShape? shape;
+  final ButtonShape? shape;
 
-  ButtonPadding? padding;
+  final ButtonPadding? padding;
 
-  ButtonVariant? variant;
+  final ButtonVariant? variant;
 
-  ButtonFontStyle? fontStyle;
+  final ButtonFontStyle? fontStyle;
 
-  Alignment? alignment;
+  final Alignment? alignment;
 
-  EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? margin;
 
-  VoidCallback? onTap;
+  final VoidCallback? onTap;
 
-  double? width;
+  final double? width;
 
-  double? height;
+  final double? height;
 
-  String? text;
+  final String? text;
 
-  Widget? prefixWidget;
+  final Widget? prefixWidget;
 
-  Widget? suffixWidget;
+  final Widget? suffixWidget;
 
   @override
   Widget build(BuildContext context) {
     return alignment != null
         ? Align(
             alignment: alignment!,
-            child: _buildButtonWidget(),
+            child: _buildButtonWidget(context),
           )
-        : _buildButtonWidget();
+        : _buildButtonWidget(context);
   }
 
-  _buildButtonWidget() {
+  _buildButtonWidget(BuildContext context) {
     return Padding(
       padding: margin ?? EdgeInsets.zero,
       child: TextButton(
         onPressed: onTap,
-        style: _buildTextButtonStyle(),
-        child: _buildButtonWithOrWithoutIcon(),
+        style: _buildTextButtonStyle(context),
+        child: _buildButtonWithOrWithoutIcon(context),
       ),
     );
   }
 
-  _buildButtonWithOrWithoutIcon() {
+  _buildButtonWithOrWithoutIcon(BuildContext context) {
     if (prefixWidget != null || suffixWidget != null) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +73,7 @@ class CustomButton extends StatelessWidget {
           Text(
             text ?? "",
             textAlign: TextAlign.center,
-            style: _setFontStyle(),
+            style: _setFontStyle(context),
           ),
           suffixWidget ?? SizedBox(),
         ],
@@ -81,50 +82,55 @@ class CustomButton extends StatelessWidget {
       return Text(
         text ?? "",
         textAlign: TextAlign.center,
-        style: _setFontStyle(),
+        style: _setFontStyle(context),
       );
     }
   }
 
-  _buildTextButtonStyle() {
+  _buildTextButtonStyle(BuildContext context) {
     return TextButton.styleFrom(
       fixedSize: Size(
         width ?? double.maxFinite,
-        height ?? getVerticalSize(context,40),
+        height ?? getVerticalSize(context, 40),
       ),
-      padding: _setPadding(),
+      padding: _setPadding(context),
       backgroundColor: _setColor(),
-      side: _setTextButtonBorder(),
+      side: _setTextButtonBorder(context),
       shape: RoundedRectangleBorder(
-        borderRadius: _setBorderRadius(),
+        borderRadius: _setBorderRadius(context),
       ),
     );
   }
 
-  _setPadding() {
+  _setPadding(BuildContext context) {
     switch (padding) {
       case ButtonPadding.PaddingAll17:
-        return getPadding(context,
+        return getPadding(
+          context,
           all: 17,
         );
       case ButtonPadding.PaddingT17:
-        return getPadding(context,
+        return getPadding(
+          context,
           top: 17,
           right: 17,
           bottom: 17,
         );
       case ButtonPadding.PaddingAll16:
-        return getPadding(context,
+        return getPadding(
+          context,
           all: 14,
         );
       case ButtonPadding.PaddingT14:
-        return getPadding(context,
+        return getPadding(
+          context,
           top: 14,
           right: 14,
           bottom: 14,
         );
       default:
-        return getPadding(context,
+        return getPadding(
+          context,
           all: 6,
         );
     }
@@ -155,26 +161,29 @@ class CustomButton extends StatelessWidget {
     }
   }
 
-  _setTextButtonBorder() {
+  _setTextButtonBorder(BuildContext context) {
     switch (variant) {
       case ButtonVariant.OutlineGray900:
         return BorderSide(
           color: ColorConstant.gray900,
-          width: getHorizontalSize(context,
+          width: getHorizontalSize(
+            context,
             1.00,
           ),
         );
       case ButtonVariant.OutlineBluegray50:
         return BorderSide(
           color: ColorConstant.blueGray50,
-          width: getHorizontalSize(context,
+          width: getHorizontalSize(
+            context,
             1.00,
           ),
         );
       case ButtonVariant.OutlineIndigo50:
         return BorderSide(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(context,
+          width: getHorizontalSize(
+            context,
             1.00,
           ),
         );
@@ -191,52 +200,60 @@ class CustomButton extends StatelessWidget {
     }
   }
 
-  _setBorderRadius() {
+  _setBorderRadius(BuildContext context) {
     switch (shape) {
       case ButtonShape.RoundedBorder8:
         return BorderRadius.circular(
-          getHorizontalSize(context,
+          getHorizontalSize(
+            context,
             8.00,
           ),
         );
       case ButtonShape.RoundedBorder20:
         return BorderRadius.circular(
-          getHorizontalSize(context,
+          getHorizontalSize(
+            context,
             20.00,
           ),
         );
       case ButtonShape.CustomBorderTL24:
         return BorderRadius.only(
           topLeft: Radius.circular(
-            getHorizontalSize(context,
+            getHorizontalSize(
+              context,
               24.00,
             ),
           ),
           topRight: Radius.circular(
-            getHorizontalSize(context,
+            getHorizontalSize(
+              context,
               24.00,
             ),
           ),
           bottomLeft: Radius.circular(
-            getHorizontalSize(context,
+            getHorizontalSize(
+              context,
               24.00,
             ),
           ),
           bottomRight: Radius.circular(
-            getHorizontalSize(context,
+            getHorizontalSize(
+              context,
               0.00,
             ),
           ),
         );
       case ButtonShape.RoundedBorder12:
         return BorderRadius.circular(
-          getHorizontalSize(context,
+          getHorizontalSize(
+            context,
             12.00,
           ),
         );
       case ButtonShape.RoundedBorder4:
         return BorderRadius.circular(
-          getHorizontalSize(context,
+          getHorizontalSize(
+            context,
             4.00,
           ),
         );
@@ -244,192 +261,223 @@ class CustomButton extends StatelessWidget {
         return BorderRadius.circular(0);
       default:
         return BorderRadius.circular(
-          getHorizontalSize(context,
+          getHorizontalSize(
+            context,
             24.00,
           ),
         );
     }
   }
 
-  _setFontStyle() {
+  TextStyle _setFontStyle(BuildContext context) {
     switch (fontStyle) {
       case ButtonFontStyle.PlusJakartaSansSemiBold16Gray50:
         return TextStyle(
           color: ColorConstant.gray50,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.31,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold16Gray900_1:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.31,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold14Gray50:
         return TextStyle(
           color: ColorConstant.gray50,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             14,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.29,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold12Gray50:
         return TextStyle(
           color: ColorConstant.gray50,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.33,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold12Gray900_1:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.33,
           ),
         );
       case ButtonFontStyle.InterRegular12Bluegray400:
         return TextStyle(
           color: ColorConstant.blueGray400,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.25,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansMedium14Gray50:
         return TextStyle(
           color: ColorConstant.gray50,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             14,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w500,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.29,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold16Bluegray300_1:
         return TextStyle(
           color: ColorConstant.blueGray300,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.31,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold12WhiteA700_1:
         return TextStyle(
           color: ColorConstant.whiteA700,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.33,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold12Gray600_1:
         return TextStyle(
           color: ColorConstant.gray600,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.33,
           ),
         );
       case ButtonFontStyle.InterRegular12GreenA700_1:
         return TextStyle(
           color: ColorConstant.greenA700,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.25,
           ),
         );
       case ButtonFontStyle.InterRegular12Deeporange400_1:
         return TextStyle(
           color: ColorConstant.deepOrange400,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.25,
           ),
         );
       case ButtonFontStyle.InterRegular12RedA200_1:
         return TextStyle(
           color: ColorConstant.redA200,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.25,
           ),
         );
       case ButtonFontStyle.PlusJakartaSansSemiBold14Gray900_1:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             14,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.29,
           ),
         );
       default:
         return TextStyle(
           color: ColorConstant.blueGray400,
-          fontSize: getFontSize(context,
+          fontSize: getFontSize(
+            context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w500,
-          height: getVerticalSize(context,
+          height: getVerticalSize(
+            context,
             1.33,
           ),
         );

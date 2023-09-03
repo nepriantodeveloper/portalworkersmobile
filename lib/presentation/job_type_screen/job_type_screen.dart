@@ -68,11 +68,11 @@ class JobTypeScreen extends StatelessWidget {
                                               right: 18,
                                               bottom: 24),
                                           decoration: AppDecoration
-                                              .outlineGray900
+                                              .outlineGray900(context)
                                               .copyWith(
                                                   borderRadius:
                                                       BorderRadiusStyle
-                                                          .roundedBorder24),
+                                                          .roundedBorder24(context)),
                                           child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment:
@@ -132,11 +132,11 @@ class JobTypeScreen extends StatelessWidget {
                                               right: 14,
                                               bottom: 24),
                                           decoration: AppDecoration
-                                              .outlineGray70014
+                                              .outlineGray70014(context)
                                               .copyWith(
                                                   borderRadius:
                                                       BorderRadiusStyle
-                                                          .roundedBorder24),
+                                                          .roundedBorder24(context)),
                                           child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment:

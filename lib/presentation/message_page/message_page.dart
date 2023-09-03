@@ -47,8 +47,8 @@ class MessagePage extends StatelessWidget {
                           margin: getMargin(context,top: 4),
                           padding: getPadding(context,
                               left: 16, top: 10, right: 16, bottom: 10),
-                          decoration: AppDecoration.outlineIndigo50.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder24),
+                          decoration: AppDecoration.outlineIndigo50(context).copyWith(
+                              borderRadius: BorderRadiusStyle.roundedBorder24(context)),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [

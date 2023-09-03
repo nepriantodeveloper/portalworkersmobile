@@ -22,8 +22,8 @@ class SavedItemWidget extends StatelessWidget {
         padding: getPadding(context,
           all: 16,
         ),
-        decoration: AppDecoration.outlineIndigo50.copyWith(
-          borderRadius: BorderRadiusStyle.roundedBorder16,
+        decoration: AppDecoration.outlineIndigo50(context).copyWith(
+          borderRadius: BorderRadiusStyle.roundedBorder16(context),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

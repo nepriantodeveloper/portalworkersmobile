@@ -48,7 +48,7 @@ class ApplyJobScreen extends StatelessWidget {
                             child: Container(
                                 decoration: BoxDecoration(
                                     borderRadius:
-                                        BorderRadiusStyle.roundedBorder8),
+                                        BorderRadiusStyle.roundedBorder8(context)),
                                 child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -73,11 +73,11 @@ class ApplyJobScreen extends StatelessWidget {
                                                   right: 16,
                                                   bottom: 12),
                                               decoration: AppDecoration
-                                                  .outlineIndigo50
+                                                  .outlineIndigo50(context)
                                                   .copyWith(
                                                       borderRadius:
                                                           BorderRadiusStyle
-                                                              .roundedBorder24),
+                                                              .roundedBorder24(context)),
                                               child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
@@ -111,7 +111,7 @@ class ApplyJobScreen extends StatelessWidget {
                                 margin: getMargin(context,top: 26),
                                 decoration: BoxDecoration(
                                     borderRadius:
-                                        BorderRadiusStyle.roundedBorder8),
+                                        BorderRadiusStyle.roundedBorder8(context)),
                                 child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -136,11 +136,11 @@ class ApplyJobScreen extends StatelessWidget {
                                                   right: 16,
                                                   bottom: 12),
                                               decoration: AppDecoration
-                                                  .outlineIndigo50
+                                                  .outlineIndigo50(context)
                                                   .copyWith(
                                                       borderRadius:
                                                           BorderRadiusStyle
-                                                              .roundedBorder24),
+                                                              .roundedBorder24(context)),
                                               child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
@@ -183,10 +183,10 @@ class ApplyJobScreen extends StatelessWidget {
                                 margin: getMargin(context,top: 7),
                                 padding: getPadding(context,
                                     left: 125, top: 39, right: 125, bottom: 39),
-                                decoration: AppDecoration.outlineIndigo502
+                                decoration: AppDecoration.outlineIndigo502(context)
                                     .copyWith(
                                         borderRadius:
-                                            BorderRadiusStyle.roundedBorder24),
+                                            BorderRadiusStyle.roundedBorder24(context)),
                                 child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -213,7 +213,7 @@ class ApplyJobScreen extends StatelessWidget {
                                 margin: getMargin(context,top: 28, bottom: 5),
                                 decoration: BoxDecoration(
                                     borderRadius:
-                                        BorderRadiusStyle.roundedBorder8),
+                                        BorderRadiusStyle.roundedBorder8(context)),
                                 child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -238,11 +238,11 @@ class ApplyJobScreen extends StatelessWidget {
                                                   right: 16,
                                                   bottom: 12),
                                               decoration: AppDecoration
-                                                  .outlineIndigo50
+                                                  .outlineIndigo50(context)
                                                   .copyWith(
                                                       borderRadius:
                                                           BorderRadiusStyle
-                                                              .roundedBorder24),
+                                                              .roundedBorder24(context)),
                                               child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.min,

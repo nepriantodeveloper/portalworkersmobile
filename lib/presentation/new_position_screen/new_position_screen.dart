@@ -37,7 +37,7 @@ class NewPositionScreen extends StatelessWidget {
                 centerTitle: true,
                 title: AppbarTitle(text: "msg_add_new_positio".tr)),
             body: SizedBox(
-                width: size.width,
+                width: size(context).width,
                 child: SingleChildScrollView(
                     child: Padding(
                         padding:
@@ -70,7 +70,7 @@ class NewPositionScreen extends StatelessWidget {
                                       margin: getMargin(context,top: 20),
                                       decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadiusStyle.roundedBorder8),
+                                              BorderRadiusStyle.roundedBorder8(context)),
                                       child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -94,11 +94,11 @@ class NewPositionScreen extends StatelessWidget {
                                                     right: 16,
                                                     bottom: 13),
                                                 decoration: AppDecoration
-                                                    .outlineIndigo50
+                                                    .outlineIndigo50(context)
                                                     .copyWith(
                                                         borderRadius:
                                                             BorderRadiusStyle
-                                                                .roundedBorder24),
+                                                                .roundedBorder24(context)),
                                                 child: Row(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
@@ -193,10 +193,10 @@ class NewPositionScreen extends StatelessWidget {
                                           top: 14,
                                           right: 16,
                                           bottom: 14),
-                                      decoration: AppDecoration.outlineIndigo50
+                                      decoration: AppDecoration.outlineIndigo50(context)
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder24),
+                                                  .roundedBorder24(context)),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -253,10 +253,10 @@ class NewPositionScreen extends StatelessWidget {
                                           top: 14,
                                           right: 16,
                                           bottom: 14),
-                                      decoration: AppDecoration.outlineIndigo50
+                                      decoration: AppDecoration.outlineIndigo50(context)
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder24),
+                                                  .roundedBorder24(context)),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
