@@ -1,7 +1,7 @@
 import '../models/notifications_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_switch.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_switch.dart';
 
 // ignore: must_be_immutable
 class NotificationsItemWidget extends StatelessWidget {
@@ -21,7 +21,7 @@ class NotificationsItemWidget extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
           style: AppStyle.txtPoppinsRegular16.copyWith(
-            letterSpacing: getHorizontalSize(
+            letterSpacing: getHorizontalSize(context,
               0.12,
             ),
           ),

@@ -33,13 +33,13 @@ class SettingsScreen extends StatelessWidget {
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA70002,
             appBar: CustomAppBar(
-                height: getVerticalSize(38),
+                height: getVerticalSize(context,38),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, bottom: 1),
+                    margin: getMargin(context,left: 24, bottom: 1),
                     onTap: () {
                       onTapArrowleft12(context);
                     }),
@@ -50,13 +50,13 @@ class SettingsScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                     child: Padding(
                         padding:
-                            getPadding(left: 24, top: 41, right: 24, bottom: 5),
+                            getPadding(context,left: 24, top: 41, right: 24, bottom: 5),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Container(
-                                  padding: getPadding(top: 13, bottom: 13),
+                                  padding: getPadding(context,top: 13, bottom: 13),
                                   decoration: AppDecoration.fillGray900
                                       .copyWith(
                                           borderRadius: BorderRadiusStyle
@@ -66,10 +66,10 @@ class SettingsScreen extends StatelessWidget {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Container(
-                                            height: getSize(64),
-                                            width: getSize(64),
+                                            height: getSize(context,64),
+                                            width: getSize(context,64),
                                             margin:
-                                                getMargin(top: 3, bottom: 2),
+                                                getMargin(context,top: 3, bottom: 2),
                                             child: Stack(
                                                 alignment: Alignment.center,
                                                 children: [
@@ -77,12 +77,12 @@ class SettingsScreen extends StatelessWidget {
                                                       alignment:
                                                           Alignment.center,
                                                       child: Container(
-                                                          height: getSize(64),
-                                                          width: getSize(64),
+                                                          height: getSize(context,64),
+                                                          width: getSize(context,64),
                                                           child: CircularProgressIndicator(
                                                               value: 0.5,
                                                               strokeWidth:
-                                                                  getHorizontalSize(
+                                                                  getHorizontalSize(context,
                                                                       4)))),
                                                   Align(
                                                       alignment:
@@ -96,11 +96,11 @@ class SettingsScreen extends StatelessWidget {
                                                               .txtPlusJakartaSansBold16Gray50
                                                               .copyWith(
                                                                   letterSpacing:
-                                                                      getHorizontalSize(
+                                                                      getHorizontalSize(context,
                                                                           0.08))))
                                                 ])),
                                         Padding(
-                                            padding: getPadding(top: 6),
+                                            padding: getPadding(context,top: 6),
                                             child: Column(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
@@ -115,12 +115,12 @@ class SettingsScreen extends StatelessWidget {
                                                           .txtInterBold16
                                                           .copyWith(
                                                               letterSpacing:
-                                                                  getHorizontalSize(
+                                                                  getHorizontalSize(context,
                                                                       0.08))),
                                                   Container(
-                                                      width: getHorizontalSize(
+                                                      width: getHorizontalSize(context,
                                                           199),
-                                                      margin: getMargin(top: 6),
+                                                      margin: getMargin(context,top: 6),
                                                       child: Text(
                                                           "msg_quality_profile"
                                                               .tr,
@@ -131,14 +131,14 @@ class SettingsScreen extends StatelessWidget {
                                                               .txtInterRegular12
                                                               .copyWith(
                                                                   letterSpacing:
-                                                                      getHorizontalSize(
+                                                                      getHorizontalSize(context,
                                                                           0.5))))
                                                 ]))
                                       ])),
                               Align(
                                   alignment: Alignment.centerLeft,
                                   child: Padding(
-                                      padding: getPadding(top: 32),
+                                      padding: getPadding(context,top: 32),
                                       child: Text("lbl_account".tr,
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
@@ -146,14 +146,14 @@ class SettingsScreen extends StatelessWidget {
                                               .txtPlusJakartaSansSemiBold12Bluegray400
                                               .copyWith(
                                                   letterSpacing:
-                                                      getHorizontalSize(
+                                                      getHorizontalSize(context,
                                                           0.06))))),
                               GestureDetector(
                                   onTap: () {
                                     onTapAccount(context);
                                   },
                                   child: Padding(
-                                      padding: getPadding(top: 15),
+                                      padding: getPadding(context,top: 15),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
@@ -162,11 +162,11 @@ class SettingsScreen extends StatelessWidget {
                                           children: [
                                             CustomImageView(
                                                 svgPath: ImageConstant.imgUser2,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(top: 3)),
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,top: 3)),
                                             Padding(
-                                                padding: getPadding(
+                                                padding: getPadding(context,
                                                     left: 12, top: 5),
                                                 child: Text(
                                                     "lbl_personal_info".tr,
@@ -177,29 +177,29 @@ class SettingsScreen extends StatelessWidget {
                                                         .txtPlusJakartaSansSemiBold16Gray900
                                                         .copyWith(
                                                             letterSpacing:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     0.08)))),
                                             Spacer(),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgArrowright,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(bottom: 3))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,bottom: 3))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 16),
+                                  padding: getPadding(context,top: 16),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               GestureDetector(
                                   onTap: () {
                                     onTapPrivacy(context);
                                   },
                                   child: Padding(
-                                      padding: getPadding(top: 15),
+                                      padding: getPadding(context,top: 15),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
@@ -208,12 +208,12 @@ class SettingsScreen extends StatelessWidget {
                                           children: [
                                             CustomImageView(
                                                 svgPath: ImageConstant.imgUser3,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,
                                                     top: 3, bottom: 1)),
                                             Padding(
-                                                padding: getPadding(
+                                                padding: getPadding(context,
                                                     left: 12, top: 7),
                                                 child: Text("lbl_experience".tr,
                                                     overflow:
@@ -223,27 +223,27 @@ class SettingsScreen extends StatelessWidget {
                                                         .txtPlusJakartaSansSemiBold16Gray900
                                                         .copyWith(
                                                             letterSpacing:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     0.08)))),
                                             Spacer(),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgArrowright,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(bottom: 4))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,bottom: 4))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 14),
+                                  padding: getPadding(context,top: 14),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               Align(
                                   alignment: Alignment.centerLeft,
                                   child: Padding(
-                                      padding: getPadding(top: 26),
+                                      padding: getPadding(context,top: 26),
                                       child: Text("lbl_general".tr,
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
@@ -251,14 +251,14 @@ class SettingsScreen extends StatelessWidget {
                                               .txtPlusJakartaSansSemiBold12Bluegray400
                                               .copyWith(
                                                   letterSpacing:
-                                                      getHorizontalSize(
+                                                      getHorizontalSize(context,
                                                           0.06))))),
                               GestureDetector(
                                   onTap: () {
                                     onTapNotification(context);
                                   },
                                   child: Padding(
-                                      padding: getPadding(top: 15),
+                                      padding: getPadding(context,top: 15),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
@@ -266,11 +266,11 @@ class SettingsScreen extends StatelessWidget {
                                             CustomImageView(
                                                 svgPath: ImageConstant
                                                     .imgNotification,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(top: 2)),
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,top: 2)),
                                             Padding(
-                                                padding: getPadding(
+                                                padding: getPadding(context,
                                                     left: 12, top: 2),
                                                 child: Text(
                                                     "lbl_notification".tr,
@@ -281,29 +281,29 @@ class SettingsScreen extends StatelessWidget {
                                                         .txtPoppinsMedium16
                                                         .copyWith(
                                                             letterSpacing:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     0.12)))),
                                             Spacer(),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgArrowright,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(bottom: 2))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,bottom: 2))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 16),
+                                  padding: getPadding(context,top: 16),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               GestureDetector(
                                   onTap: () {
                                     onTapLanguage(context);
                                   },
                                   child: Padding(
-                                      padding: getPadding(top: 15),
+                                      padding: getPadding(context,top: 15),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
@@ -312,12 +312,12 @@ class SettingsScreen extends StatelessWidget {
                                           children: [
                                             CustomImageView(
                                                 svgPath: ImageConstant.imgGlobe,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,
                                                     top: 2, bottom: 1)),
                                             Padding(
-                                                padding: getPadding(
+                                                padding: getPadding(context,
                                                     left: 12, top: 7),
                                                 child: Text("lbl_language".tr,
                                                     overflow:
@@ -327,25 +327,25 @@ class SettingsScreen extends StatelessWidget {
                                                         .txtPlusJakartaSansSemiBold16Gray900
                                                         .copyWith(
                                                             letterSpacing:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     0.08)))),
                                             Spacer(),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgArrowright,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(bottom: 4))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,bottom: 4))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 14),
+                                  padding: getPadding(context,top: 14),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               Padding(
-                                  padding: getPadding(top: 15),
+                                  padding: getPadding(context,top: 15),
                                   child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -371,21 +371,21 @@ class SettingsScreen extends StatelessWidget {
                                         CustomImageView(
                                             svgPath:
                                                 ImageConstant.imgArrowright,
-                                            height: getSize(24),
-                                            width: getSize(24),
-                                            margin: getMargin(bottom: 1))
+                                            height: getSize(context,24),
+                                            width: getSize(context,24),
+                                            margin: getMargin(context,bottom: 1))
                                       ])),
                               Padding(
-                                  padding: getPadding(top: 14),
+                                  padding: getPadding(context,top: 14),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               Align(
                                   alignment: Alignment.centerLeft,
                                   child: Padding(
-                                      padding: getPadding(top: 26),
+                                      padding: getPadding(context,top: 26),
                                       child: Text("lbl_about".tr,
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
@@ -393,14 +393,14 @@ class SettingsScreen extends StatelessWidget {
                                               .txtPlusJakartaSansSemiBold12Bluegray400
                                               .copyWith(
                                                   letterSpacing:
-                                                      getHorizontalSize(
+                                                      getHorizontalSize(context,
                                                           0.06))))),
                               GestureDetector(
                                   onTap: () {
                                     onTapRowlocation(context);
                                   },
                                   child: Padding(
-                                      padding: getPadding(top: 16),
+                                      padding: getPadding(context,top: 16),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
@@ -408,11 +408,11 @@ class SettingsScreen extends StatelessWidget {
                                             CustomImageView(
                                                 svgPath: ImageConstant
                                                     .imgLocation24x24,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(bottom: 1)),
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,bottom: 1)),
                                             Padding(
-                                                padding: getPadding(
+                                                padding: getPadding(context,
                                                     left: 12, top: 4),
                                                 child: Text(
                                                     "msg_legal_and_polic".tr,
@@ -423,36 +423,36 @@ class SettingsScreen extends StatelessWidget {
                                                         .txtPlusJakartaSansSemiBold16Gray900
                                                         .copyWith(
                                                             letterSpacing:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     0.08)))),
                                             Spacer(),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgArrowright,
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                margin: getMargin(bottom: 1))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24),
+                                                margin: getMargin(context,bottom: 1))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 15),
+                                  padding: getPadding(context,top: 15),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               Padding(
-                                  padding: getPadding(top: 16),
+                                  padding: getPadding(context,top: 16),
                                   child: Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         CustomImageView(
                                             svgPath: ImageConstant.imgQuestion,
-                                            height: getSize(24),
-                                            width: getSize(24),
-                                            margin: getMargin(bottom: 1)),
+                                            height: getSize(context,24),
+                                            width: getSize(context,24),
+                                            margin: getMargin(context,bottom: 1)),
                                         Padding(
                                             padding:
-                                                getPadding(left: 12, top: 4),
+                                                getPadding(context,left: 12, top: 4),
                                             child: Text("lbl_help_feedback".tr,
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
@@ -460,35 +460,35 @@ class SettingsScreen extends StatelessWidget {
                                                     .txtPlusJakartaSansSemiBold16Gray900
                                                     .copyWith(
                                                         letterSpacing:
-                                                            getHorizontalSize(
+                                                            getHorizontalSize(context,
                                                                 0.08)))),
                                         Spacer(),
                                         CustomImageView(
                                             svgPath:
                                                 ImageConstant.imgArrowright,
-                                            height: getSize(24),
-                                            width: getSize(24),
-                                            margin: getMargin(bottom: 1))
+                                            height: getSize(context,24),
+                                            width: getSize(context,24),
+                                            margin: getMargin(context,bottom: 1))
                                       ])),
                               Padding(
-                                  padding: getPadding(top: 17),
+                                  padding: getPadding(context,top: 17),
                                   child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
+                                      height: getVerticalSize(context,1),
+                                      thickness: getVerticalSize(context,1),
                                       color: ColorConstant.indigo50,
-                                      indent: getHorizontalSize(36))),
+                                      indent: getHorizontalSize(context,36))),
                               Padding(
-                                  padding: getPadding(top: 16),
+                                  padding: getPadding(context,top: 16),
                                   child: Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         CustomImageView(
                                             svgPath: ImageConstant.imgWarning,
-                                            height: getSize(24),
-                                            width: getSize(24)),
+                                            height: getSize(context,24),
+                                            width: getSize(context,24)),
                                         Padding(
                                             padding:
-                                                getPadding(left: 12, top: 2),
+                                                getPadding(context,left: 12, top: 2),
                                             child: Text("lbl_about_us".tr,
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
@@ -496,14 +496,14 @@ class SettingsScreen extends StatelessWidget {
                                                     .txtPlusJakartaSansSemiBold16Gray900
                                                     .copyWith(
                                                         letterSpacing:
-                                                            getHorizontalSize(
+                                                            getHorizontalSize(context,
                                                                 0.08)))),
                                         Spacer(),
                                         CustomImageView(
                                             svgPath:
                                                 ImageConstant.imgArrowright,
-                                            height: getSize(24),
-                                            width: getSize(24))
+                                            height: getSize(context,24),
+                                            width: getSize(context,24))
                                       ])),
                               Align(
                                   alignment: Alignment.center,
@@ -512,7 +512,7 @@ class SettingsScreen extends StatelessWidget {
                                         onTapTxtLargelabelmediu(context);
                                       },
                                       child: Padding(
-                                          padding: getPadding(top: 28),
+                                          padding: getPadding(context,top: 28),
                                           child: Text("lbl_logout".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
@@ -520,7 +520,7 @@ class SettingsScreen extends StatelessWidget {
                                                   .txtPlusJakartaSansSemiBold16RedA200
                                                   .copyWith(
                                                       letterSpacing:
-                                                          getHorizontalSize(
+                                                          getHorizontalSize(context,
                                                               0.08))))))
                             ])))),
             bottomNavigationBar:

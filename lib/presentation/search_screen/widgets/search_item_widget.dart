@@ -19,11 +19,11 @@ class SearchItemWidget extends StatelessWidget {
         onTapRowlightbulb?.call();
       },
       child: Container(
-        padding: getPadding(
+        padding: getPadding(context,
           all: 16,
         ),
-        decoration: AppDecoration.outlineIndigo50.copyWith(
-          borderRadius: BorderRadiusStyle.roundedBorder16,
+        decoration: AppDecoration.outlineIndigo50(context).copyWith(
+          borderRadius: BorderRadiusStyle.roundedBorder16(context),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +32,7 @@ class SearchItemWidget extends StatelessWidget {
             CustomIconButton(
               height: 48,
               width: 48,
-              margin: getMargin(
+              margin: getMargin(context,
                 bottom: 68,
               ),
               child: CustomImageView(
@@ -40,7 +40,7 @@ class SearchItemWidget extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: getPadding(
+              padding: getPadding(context,
                 left: 12,
                 top: 4,
               ),
@@ -53,13 +53,13 @@ class SearchItemWidget extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtPlusJakartaSansBold16.copyWith(
-                      letterSpacing: getHorizontalSize(
+                      letterSpacing: getHorizontalSize(context,
                         0.08,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: getPadding(
+                    padding: getPadding(context,
                       top: 5,
                     ),
                     child: Text(
@@ -68,14 +68,14 @@ class SearchItemWidget extends StatelessWidget {
                       textAlign: TextAlign.left,
                       style: AppStyle.txtPlusJakartaSansSemiBold12Bluegray300
                           .copyWith(
-                        letterSpacing: getHorizontalSize(
+                        letterSpacing: getHorizontalSize(context,
                           0.06,
                         ),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: getPadding(
+                    padding: getPadding(context,
                       top: 12,
                     ),
                     child: Text(
@@ -84,23 +84,23 @@ class SearchItemWidget extends StatelessWidget {
                       textAlign: TextAlign.left,
                       style:
                           AppStyle.txtPlusJakartaSansMedium12Gray600.copyWith(
-                        letterSpacing: getHorizontalSize(
+                        letterSpacing: getHorizontalSize(context,
                           0.06,
                         ),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: getPadding(
+                    padding: getPadding(context,
                       top: 13,
                     ),
                     child: Row(
                       children: [
                         CustomButton(
-                          height: getVerticalSize(
+                          height: getVerticalSize(context,
                             28,
                           ),
-                          width: getHorizontalSize(
+                          width: getHorizontalSize(context,
                             70,
                           ),
                           text: "lbl_fulltime".tr,
@@ -108,14 +108,14 @@ class SearchItemWidget extends StatelessWidget {
                           shape: ButtonShape.RoundedBorder8,
                         ),
                         CustomButton(
-                          height: getVerticalSize(
+                          height: getVerticalSize(context,
                             28,
                           ),
-                          width: getHorizontalSize(
+                          width: getHorizontalSize(context,
                             103,
                           ),
                           text: "lbl_two_days_ago".tr,
-                          margin: getMargin(
+                          margin: getMargin(context,
                             left: 8,
                           ),
                           variant: ButtonVariant.FillGray100,
@@ -129,13 +129,13 @@ class SearchItemWidget extends StatelessWidget {
             ),
             CustomImageView(
               svgPath: ImageConstant.imgBookmark,
-              height: getSize(
+              height: getSize(context,
                 24,
               ),
-              width: getSize(
+              width: getSize(context,
                 24,
               ),
-              margin: getMargin(
+              margin: getMargin(context,
                 left: 28,
                 bottom: 92,
               ),

@@ -5,7 +5,7 @@ import 'models/slidermessage_item_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/app_export.dart';
 
 class OnboardingTwoScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -32,7 +32,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                 child: Container(
                     width: double.maxFinite,
                     padding:
-                        getPadding(left: 24, top: 18, right: 24, bottom: 18),
+                        getPadding(context,left: 24, top: 18, right: 24, bottom: 18),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -47,25 +47,25 @@ class OnboardingTwoScreen extends StatelessWidget {
                                   style: AppStyle.txtPlusJakartaSansSemiBold14
                                       .copyWith(
                                           letterSpacing:
-                                              getHorizontalSize(0.07)))),
+                                              getHorizontalSize(context,0.07)))),
                           Container(
-                              height: getVerticalSize(672),
-                              width: getHorizontalSize(327),
-                              margin: getMargin(top: 19, bottom: 5),
+                              height: getVerticalSize(context,672),
+                              width: getHorizontalSize(context,327),
+                              margin: getMargin(context,top: 19, bottom: 5),
                               child: Stack(
                                   alignment: Alignment.bottomCenter,
                                   children: [
                                     CustomImageView(
                                         imagePath:
                                             ImageConstant.imgImage369x306,
-                                        height: getVerticalSize(369),
-                                        width: getHorizontalSize(306),
+                                        height: getVerticalSize(context,369),
+                                        width: getHorizontalSize(context,306),
                                         alignment: Alignment.topCenter),
                                     Align(
                                         alignment: Alignment.bottomCenter,
                                         child: Container(
-                                            height: getVerticalSize(335),
-                                            width: getHorizontalSize(327),
+                                            height: getVerticalSize(context,335),
+                                            width: getHorizontalSize(context,327),
                                             child: Stack(
                                                 alignment:
                                                     Alignment.bottomCenter,
@@ -79,7 +79,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                                                             options:
                                                                 CarouselOptions(
                                                                     height:
-                                                                        getVerticalSize(
+                                                                        getVerticalSize(context,
                                                                             335),
                                                                     initialPage:
                                                                         0,
@@ -131,9 +131,9 @@ class OnboardingTwoScreen extends StatelessWidget {
                                                               (context, state) {
                                                         return Container(
                                                             height:
-                                                                getVerticalSize(
+                                                                getVerticalSize(context,
                                                                     10),
-                                                            margin: getMargin(
+                                                            margin: getMargin(context,
                                                                 bottom: 112),
                                                             child: AnimatedSmoothIndicator(
                                                                 activeIndex: state
@@ -154,10 +154,10 @@ class OnboardingTwoScreen extends StatelessWidget {
                                                                         ColorConstant
                                                                             .gray90068,
                                                                     dotHeight:
-                                                                        getVerticalSize(
+                                                                        getVerticalSize(context,
                                                                             10),
                                                                     dotWidth:
-                                                                        getHorizontalSize(
+                                                                        getHorizontalSize(context,
                                                                             10))));
                                                       }))
                                                 ])))

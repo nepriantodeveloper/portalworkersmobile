@@ -1,7 +1,7 @@
 import '../models/profile_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_icon_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class ProfileItemWidget extends StatelessWidget {
@@ -12,10 +12,10 @@ class ProfileItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getVerticalSize(
+      height: getVerticalSize(context,
         64,
       ),
-      width: getHorizontalSize(
+      width: getHorizontalSize(context,
         295,
       ),
       child: Stack(
@@ -23,14 +23,14 @@ class ProfileItemWidget extends StatelessWidget {
         children: [
           CustomImageView(
             svgPath: ImageConstant.imgFolder,
-            height: getSize(
+            height: getSize(context,
               32,
             ),
-            width: getSize(
+            width: getSize(context,
               32,
             ),
             alignment: Alignment.topLeft,
-            margin: getMargin(
+            margin: getMargin(context,
               left: 8,
               top: 8,
             ),
@@ -47,7 +47,7 @@ class ProfileItemWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: getPadding(
+                  padding: getPadding(context,
                     left: 12,
                     top: 5,
                     bottom: 1,
@@ -62,19 +62,19 @@ class ProfileItemWidget extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: AppStyle.txtPlusJakartaSansSemiBold14Gray900
                             .copyWith(
-                          letterSpacing: getHorizontalSize(
+                          letterSpacing: getHorizontalSize(context,
                             0.07,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: getPadding(
+                        padding: getPadding(context,
                           top: 6,
                         ),
                         child: Row(
                           children: [
                             Padding(
-                              padding: getPadding(
+                              padding: getPadding(context,
                                 top: 1,
                               ),
                               child: Text(
@@ -83,14 +83,14 @@ class ProfileItemWidget extends StatelessWidget {
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPlusJakartaSansMedium12
                                     .copyWith(
-                                  letterSpacing: getHorizontalSize(
+                                  letterSpacing: getHorizontalSize(context,
                                     0.06,
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: getPadding(
+                              padding: getPadding(context,
                                 left: 3,
                                 top: 1,
                               ),
@@ -100,14 +100,14 @@ class ProfileItemWidget extends StatelessWidget {
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPlusJakartaSansMedium12
                                     .copyWith(
-                                  letterSpacing: getHorizontalSize(
+                                  letterSpacing: getHorizontalSize(context,
                                     0.06,
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: getPadding(
+                              padding: getPadding(context,
                                 left: 4,
                                 bottom: 1,
                               ),
@@ -117,7 +117,7 @@ class ProfileItemWidget extends StatelessWidget {
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPlusJakartaSansMedium12
                                     .copyWith(
-                                  letterSpacing: getHorizontalSize(
+                                  letterSpacing: getHorizontalSize(context,
                                     0.06,
                                   ),
                                 ),

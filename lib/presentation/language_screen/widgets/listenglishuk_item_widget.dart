@@ -15,7 +15,7 @@ class ListenglishukItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomCheckbox(
-      width: getHorizontalSize(
+      width: getHorizontalSize(context,
         295,
       ),
       text: "lbl_english_uk".tr,

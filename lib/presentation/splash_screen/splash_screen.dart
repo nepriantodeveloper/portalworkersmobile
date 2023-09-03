@@ -31,9 +31,9 @@ class SplashScreen extends StatelessWidget {
                       children: [
                         CustomImageView(
                             svgPath: ImageConstant.imgGroup162797,
-                            height: getVerticalSize(153),
-                            width: getHorizontalSize(102),
-                            margin: getMargin(bottom: 5))
+                            height: getVerticalSize(context,153),
+                            width: getHorizontalSize(context,102),
+                            margin: getMargin(context,bottom: 5))
                       ]))));
     });
   }

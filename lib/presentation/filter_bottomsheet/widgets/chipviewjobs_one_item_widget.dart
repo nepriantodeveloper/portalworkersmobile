@@ -1,6 +1,6 @@
 import '../models/chipviewjobs_one_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/app_export.dart';
 
 // ignore: must_be_immutable
 class ChipviewjobsOneItemWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class ChipviewjobsOneItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawChip(
-      padding: getPadding(
+      padding: getPadding(context,
         right: 16,
       ),
       showCheckmark: false,
@@ -26,7 +26,7 @@ class ChipviewjobsOneItemWidget extends StatelessWidget {
           color: chipviewjobsOneItemModelObj.isSelected
               ? ColorConstant.gray900
               : ColorConstant.gray50,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
@@ -35,13 +35,13 @@ class ChipviewjobsOneItemWidget extends StatelessWidget {
       ),
       avatar: CustomImageView(
         svgPath: ImageConstant.imgCheckmark18x18,
-        height: getSize(
+        height: getSize(context,
           18,
         ),
-        width: getSize(
+        width: getSize(context,
           18,
         ),
-        margin: getMargin(
+        margin: getMargin(context,
           right: 4,
         ),
       ),
@@ -52,12 +52,12 @@ class ChipviewjobsOneItemWidget extends StatelessWidget {
           ? RoundedRectangleBorder(
               side: BorderSide(
                 color: ColorConstant.blueGray50,
-                width: getHorizontalSize(
+                width: getHorizontalSize(context,
                   1,
                 ),
               ),
               borderRadius: BorderRadius.circular(
-                getHorizontalSize(
+                getHorizontalSize(context,
                   22,
                 ),
               ),
@@ -65,7 +65,7 @@ class ChipviewjobsOneItemWidget extends StatelessWidget {
           : RoundedRectangleBorder(
               side: BorderSide.none,
               borderRadius: BorderRadius.circular(
-                getHorizontalSize(
+                getHorizontalSize(context,
                   22,
                 ),
               ),

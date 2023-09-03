@@ -13,7 +13,7 @@ class ListclockItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicWidth(
       child: Padding(
-        padding: getPadding(
+        padding: getPadding(context,
           right: 54,
         ),
         child: Column(
@@ -30,7 +30,7 @@ class ListclockItemWidget extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: getPadding(
+              padding: getPadding(context,
                 top: 9,
               ),
               child: Text(
@@ -38,14 +38,14 @@ class ListclockItemWidget extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtPlusJakartaSansMedium12Bluegray300.copyWith(
-                  letterSpacing: getHorizontalSize(
+                  letterSpacing: getHorizontalSize(context,
                     0.06,
                   ),
                 ),
               ),
             ),
             Padding(
-              padding: getPadding(
+              padding: getPadding(context,
                 top: 9,
               ),
               child: Text(
@@ -53,7 +53,7 @@ class ListclockItemWidget extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtPlusJakartaSansSemiBold14Gray900.copyWith(
-                  letterSpacing: getHorizontalSize(
+                  letterSpacing: getHorizontalSize(context,
                     0.07,
                   ),
                 ),

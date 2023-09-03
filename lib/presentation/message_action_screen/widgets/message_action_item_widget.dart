@@ -20,10 +20,10 @@ class MessageActionItemWidget extends StatelessWidget {
         onTapChat?.call();
       },
       child: Container(
-        height: getVerticalSize(
+        height: getVerticalSize(context,
           73,
         ),
-        width: getHorizontalSize(
+        width: getHorizontalSize(context,
           327,
         ),
         child: Stack(
@@ -32,16 +32,16 @@ class MessageActionItemWidget extends StatelessWidget {
             Align(
               alignment: Alignment.topLeft,
               child: Container(
-                height: getSize(
+                height: getSize(context,
                   56,
                 ),
-                width: getSize(
+                width: getSize(context,
                   56,
                 ),
                 decoration: BoxDecoration(
                   color: ColorConstant.gray100,
                   borderRadius: BorderRadius.circular(
-                    getHorizontalSize(
+                    getHorizontalSize(context,
                       28,
                     ),
                   ),
@@ -59,10 +59,10 @@ class MessageActionItemWidget extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      height: getSize(
+                      height: getSize(context,
                         56,
                       ),
-                      width: getSize(
+                      width: getSize(context,
                         56,
                       ),
                       child: Stack(
@@ -70,14 +70,14 @@ class MessageActionItemWidget extends StatelessWidget {
                         children: [
                           CustomImageView(
                             imagePath: ImageConstant.imgImage56x561,
-                            height: getSize(
+                            height: getSize(context,
                               56,
                             ),
-                            width: getSize(
+                            width: getSize(context,
                               56,
                             ),
                             radius: BorderRadius.circular(
-                              getHorizontalSize(
+                              getHorizontalSize(context,
                                 28,
                               ),
                             ),
@@ -86,22 +86,22 @@ class MessageActionItemWidget extends StatelessWidget {
                           Align(
                             alignment: Alignment.bottomRight,
                             child: Container(
-                              height: getSize(
+                              height: getSize(context,
                                 16,
                               ),
-                              width: getSize(
+                              width: getSize(context,
                                 16,
                               ),
                               decoration: BoxDecoration(
                                 color: ColorConstant.tealA700,
                                 borderRadius: BorderRadius.circular(
-                                  getHorizontalSize(
+                                  getHorizontalSize(context,
                                     8,
                                   ),
                                 ),
                                 border: Border.all(
                                   color: ColorConstant.whiteA700,
-                                  width: getHorizontalSize(
+                                  width: getHorizontalSize(context,
                                     1,
                                   ),
                                 ),
@@ -112,7 +112,7 @@ class MessageActionItemWidget extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         left: 12,
                         top: 3,
                         bottom: 1,
@@ -126,13 +126,13 @@ class MessageActionItemWidget extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtPlusJakartaSansBold18.copyWith(
-                              letterSpacing: getHorizontalSize(
+                              letterSpacing: getHorizontalSize(context,
                                 0.09,
                               ),
                             ),
                           ),
                           Padding(
-                            padding: getPadding(
+                            padding: getPadding(context,
                               top: 9,
                             ),
                             child: Text(
@@ -142,7 +142,7 @@ class MessageActionItemWidget extends StatelessWidget {
                               style: AppStyle
                                   .txtPlusJakartaSansMedium14Bluegray400
                                   .copyWith(
-                                letterSpacing: getHorizontalSize(
+                                letterSpacing: getHorizontalSize(context,
                                   0.07,
                                 ),
                               ),
@@ -152,7 +152,7 @@ class MessageActionItemWidget extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         left: 30,
                         top: 7,
                       ),
@@ -167,19 +167,19 @@ class MessageActionItemWidget extends StatelessWidget {
                             style: AppStyle
                                 .txtPlusJakartaSansSemiBold12Bluegray400
                                 .copyWith(
-                              letterSpacing: getHorizontalSize(
+                              letterSpacing: getHorizontalSize(context,
                                 0.06,
                               ),
                             ),
                           ),
                           Container(
-                            width: getSize(
+                            width: getSize(context,
                               24,
                             ),
-                            margin: getMargin(
+                            margin: getMargin(context,
                               top: 8,
                             ),
-                            padding: getPadding(
+                            padding: getPadding(context,
                               left: 8,
                               top: 5,
                               right: 8,
@@ -194,7 +194,7 @@ class MessageActionItemWidget extends StatelessWidget {
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansSemiBold10
                                   .copyWith(
-                                letterSpacing: getHorizontalSize(
+                                letterSpacing: getHorizontalSize(context,
                                   0.05,
                                 ),
                               ),

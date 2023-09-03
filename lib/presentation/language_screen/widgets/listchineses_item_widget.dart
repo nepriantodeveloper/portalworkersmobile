@@ -15,7 +15,7 @@ class ListchinesesItemWidget extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       textAlign: TextAlign.left,
       style: AppStyle.txtPlusJakartaSansSemiBold16Gray900.copyWith(
-        letterSpacing: getHorizontalSize(
+        letterSpacing: getHorizontalSize(context,
           0.08,
         ),
       ),

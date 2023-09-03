@@ -3,8 +3,8 @@ import 'models/enter_otp_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
 
 class EnterOtpScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -23,51 +23,51 @@ class EnterOtpScreen extends StatelessWidget {
             resizeToAvoidBottomInset: false,
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 13, right: 24, bottom: 13),
+                padding: getPadding(context,left: 24, top: 13, right: 24, bottom: 13),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       CustomImageView(
                           svgPath: ImageConstant.imgArrowleft,
-                          height: getSize(24),
-                          width: getSize(24),
+                          height: getSize(context,24),
+                          width: getSize(context,24),
                           alignment: Alignment.centerLeft,
                           onTap: () {
                             onTapImgArrowleft(context);
                           }),
                       Padding(
-                          padding: getPadding(top: 44),
+                          padding: getPadding(context,top: 44),
                           child: Text("lbl_enter_otp".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansBold24.copyWith(
-                                  letterSpacing: getHorizontalSize(0.12)))),
+                                  letterSpacing: getHorizontalSize(context,0.12)))),
                       Container(
-                          width: getHorizontalSize(282),
-                          margin: getMargin(left: 22, top: 10, right: 22),
+                          width: getHorizontalSize(context,282),
+                          margin: getMargin(context,left: 22, top: 10, right: 22),
                           child: RichText(
                               text: TextSpan(children: [
                                 TextSpan(
                                     text: "msg_we_have_just_se2".tr,
                                     style: TextStyle(
                                         color: ColorConstant.blueGray400,
-                                        fontSize: getFontSize(14),
+                                        fontSize: getFontSize(context,14),
                                         fontFamily: 'Plus Jakarta Sans',
                                         fontWeight: FontWeight.w500,
                                         letterSpacing:
-                                            getHorizontalSize(0.07))),
+                                            getHorizontalSize(context,0.07))),
                                 TextSpan(
                                     text: "msg_example_gmail_c".tr,
                                     style: TextStyle(
                                         color: ColorConstant.gray900,
-                                        fontSize: getFontSize(14),
+                                        fontSize: getFontSize(context,14),
                                         fontFamily: 'Plus Jakarta Sans',
                                         fontWeight: FontWeight.w500,
-                                        letterSpacing: getHorizontalSize(0.07)))
+                                        letterSpacing: getHorizontalSize(context,0.07)))
                               ]),
                               textAlign: TextAlign.center)),
                       Padding(
-                          padding: getPadding(left: 16, top: 38, right: 15),
+                          padding: getPadding(context,left: 16, top: 38, right: 15),
                           child: BlocSelector<EnterOtpBloc, EnterOtpState,
                                   TextEditingController?>(
                               selector: (state) => state.otpController,
@@ -89,16 +89,16 @@ class EnterOtpScreen extends StatelessWidget {
                                     },
                                     textStyle: TextStyle(
                                         color: ColorConstant.gray900,
-                                        fontSize: getFontSize(24),
+                                        fontSize: getFontSize(context,24),
                                         fontFamily: 'Plus Jakarta Sans',
                                         fontWeight: FontWeight.w700,
-                                        letterSpacing: getHorizontalSize(0.12)),
+                                        letterSpacing: getHorizontalSize(context,0.12)),
                                     pinTheme: PinTheme(
-                                        fieldHeight: getHorizontalSize(56),
-                                        fieldWidth: getHorizontalSize(56),
+                                        fieldHeight: getHorizontalSize(context,56),
+                                        fieldWidth: getHorizontalSize(context,56),
                                         shape: PinCodeFieldShape.box,
                                         borderRadius: BorderRadius.circular(
-                                            getHorizontalSize(24)),
+                                            getHorizontalSize(context,24)),
                                         selectedFillColor:
                                             ColorConstant.whiteA700,
                                         activeFillColor:
@@ -110,9 +110,9 @@ class EnterOtpScreen extends StatelessWidget {
                                         activeColor: ColorConstant.indigo50));
                               })),
                       CustomButton(
-                          height: getVerticalSize(56),
+                          height: getVerticalSize(context,56),
                           text: "lbl_continue".tr,
-                          margin: getMargin(top: 40),
+                          margin: getMargin(context,top: 40),
                           padding: ButtonPadding.PaddingAll17,
                           fontStyle:
                               ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
@@ -120,7 +120,7 @@ class EnterOtpScreen extends StatelessWidget {
                             onTapContinue(context);
                           }),
                       Padding(
-                          padding: getPadding(
+                          padding: getPadding(context,
                               left: 30, top: 26, right: 30, bottom: 5),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -131,7 +131,7 @@ class EnterOtpScreen extends StatelessWidget {
                                     style: AppStyle.txtPlusJakartaSansSemiBold16
                                         .copyWith(
                                             letterSpacing:
-                                                getHorizontalSize(0.08))),
+                                                getHorizontalSize(context,0.08))),
                                 Text("lbl_resend_code".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
@@ -139,7 +139,7 @@ class EnterOtpScreen extends StatelessWidget {
                                         .txtPlusJakartaSansSemiBold16Gray900
                                         .copyWith(
                                             letterSpacing:
-                                                getHorizontalSize(0.08)))
+                                                getHorizontalSize(context,0.08)))
                               ]))
                     ]))));
   }

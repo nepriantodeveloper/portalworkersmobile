@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:stockworkers/core/utils/size_utils.dart';
 
@@ -42,7 +44,7 @@ class CustomAppBar extends StatelessWidget implements  PreferredSizeWidget {
 
   @override
   Size get preferredSize => Size(
-        size.width,
+        size(context).width,
         height,
       );
 }

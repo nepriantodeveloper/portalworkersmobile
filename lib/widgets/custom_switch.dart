@@ -30,10 +30,10 @@ class CustomSwitch extends StatelessWidget {
       padding: margin ?? EdgeInsets.zero,
       child: FlutterSwitch(
         value: value ?? false,
-        height: getHorizontalSize(23),
-        width: getHorizontalSize(44),
+        height: getHorizontalSize(context,23),
+        width: getHorizontalSize(context,44),
         toggleSize: 23,
-        borderRadius: getHorizontalSize(
+        borderRadius: getHorizontalSize(context,
           11.00,
         ),
         activeColor: ColorConstant.tealA700,

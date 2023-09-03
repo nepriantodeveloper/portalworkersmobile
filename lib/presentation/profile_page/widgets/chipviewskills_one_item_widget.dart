@@ -1,6 +1,6 @@
 import '../models/chipviewskills_one_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/app_export.dart';
 
 // ignore: must_be_immutable
 class ChipviewskillsOneItemWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class ChipviewskillsOneItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawChip(
-      padding: getPadding(
+      padding: getPadding(context,
         left: 16,
         right: 16,
       ),
@@ -25,7 +25,7 @@ class ChipviewskillsOneItemWidget extends StatelessWidget {
         textAlign: TextAlign.left,
         style: TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
@@ -39,12 +39,12 @@ class ChipviewskillsOneItemWidget extends StatelessWidget {
           ? RoundedRectangleBorder(
               side: BorderSide(
                 color: ColorConstant.blueGray5001,
-                width: getHorizontalSize(
+                width: getHorizontalSize(context,
                   1,
                 ),
               ),
               borderRadius: BorderRadius.circular(
-                getHorizontalSize(
+                getHorizontalSize(context,
                   22,
                 ),
               ),
@@ -52,12 +52,12 @@ class ChipviewskillsOneItemWidget extends StatelessWidget {
           : RoundedRectangleBorder(
               side: BorderSide(
                 color: ColorConstant.blueGray50,
-                width: getHorizontalSize(
+                width: getHorizontalSize(context,
                   1,
                 ),
               ),
               borderRadius: BorderRadius.circular(
-                getHorizontalSize(
+                getHorizontalSize(context,
                   22,
                 ),
               ),

@@ -53,32 +53,32 @@ class CustomSearchView extends StatelessWidget {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: _buildSearchViewWidget(),
+            child: _buildSearchViewWidget(context),
           )
-        : _buildSearchViewWidget();
+        : _buildSearchViewWidget(context);
   }
 
-  _buildSearchViewWidget() {
+  _buildSearchViewWidget(BuildContext context) {
     return Container(
       width: width ?? double.maxFinite,
       margin: margin,
       child: TextFormField(
         controller: controller,
         focusNode: focusNode,
-        style: _setFontStyle(),
-        decoration: _buildDecoration(),
+        style: _setFontStyle(context),
+        decoration: _buildDecoration(context),
       ),
     );
   }
 
-  _buildDecoration() {
+  _buildDecoration(BuildContext context) {
     return InputDecoration(
       hintText: hintText ?? "",
-      hintStyle: _setFontStyle(),
-      border: _setBorderStyle(),
-      enabledBorder: _setBorderStyle(),
-      focusedBorder: _setBorderStyle(),
-      disabledBorder: _setBorderStyle(),
+      hintStyle: _setFontStyle(context),
+      border: _setBorderStyle(context),
+      enabledBorder: _setBorderStyle(context),
+      focusedBorder: _setBorderStyle(context),
+      disabledBorder: _setBorderStyle(context),
       prefixIcon: prefix,
       prefixIconConstraints: prefixConstraints,
       suffixIcon: suffix,
@@ -86,45 +86,45 @@ class CustomSearchView extends StatelessWidget {
       fillColor: _setFillColor(),
       filled: _setFilled(),
       isDense: true,
-      contentPadding: _setPadding(),
+      contentPadding: _setPadding(context),
     );
   }
 
-  _setFontStyle() {
+  _setFontStyle(BuildContext context) {
     switch (fontStyle) {
       default:
         return TextStyle(
           color: ColorConstant.blueGray400,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w500,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.31,
           ),
         );
     }
   }
 
-  _setOutlineBorderRadius() {
+  _setOutlineBorderRadius(BuildContext context) {
     switch (shape) {
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             24.00,
           ),
         );
     }
   }
 
-  _setBorderStyle() {
+  _setBorderStyle(BuildContext context) {
     switch (variant) {
       case SearchViewVariant.None:
         return InputBorder.none;
       default:
         return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
+          borderRadius: _setOutlineBorderRadius(context),
           borderSide: BorderSide(
             color: ColorConstant.indigo50,
             width: 1,
@@ -149,15 +149,15 @@ class CustomSearchView extends StatelessWidget {
     }
   }
 
-  _setPadding() {
+  _setPadding(BuildContext context) {
     switch (padding) {
       case SearchViewPadding.PaddingT15:
-        return getPadding(
+        return getPadding(context,
           top: 15,
           bottom: 15,
         );
       default:
-        return getPadding(
+        return getPadding(context,
           top: 15,
           right: 15,
           bottom: 15,

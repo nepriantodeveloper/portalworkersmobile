@@ -4,8 +4,8 @@ import 'package:stockworkers/core/utils/size_utils.dart';
 
 
 class CustomIconButton extends StatelessWidget {
-  CustomIconButton(
-      {this.shape,
+  const CustomIconButton(
+      {super.key, this.shape,
       this.padding,
       this.variant,
       this.alignment,
@@ -15,35 +15,35 @@ class CustomIconButton extends StatelessWidget {
       this.child,
       this.onTap});
 
-  IconButtonShape? shape;
+  final IconButtonShape? shape;
 
-  IconButtonPadding? padding;
+  final IconButtonPadding? padding;
 
-  IconButtonVariant? variant;
+  final IconButtonVariant? variant;
 
-  Alignment? alignment;
+  final Alignment? alignment;
 
-  EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? margin;
 
-  double? width;
+  final double? width;
 
-  double? height;
+  final double? height;
 
-  Widget? child;
+  final Widget? child;
 
-  VoidCallback? onTap;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: _buildIconButtonWidget(),
+            child: _buildIconButtonWidget(context),
           )
-        : _buildIconButtonWidget();
+        : _buildIconButtonWidget(context);
   }
 
-  _buildIconButtonWidget() {
+  Padding _buildIconButtonWidget(BuildContext context) {
     return Padding(
       padding: margin ?? EdgeInsets.zero,
       child: IconButton(
@@ -51,14 +51,14 @@ class CustomIconButton extends StatelessWidget {
           vertical: -4,
           horizontal: -4,
         ),
-        iconSize: getSize(height ?? 0),
+        iconSize: getSize(context,height ?? 0),
         padding: EdgeInsets.all(0),
         icon: Container(
           alignment: Alignment.center,
-          width: getSize(width ?? 0),
-          height: getSize(height ?? 0),
-          padding: _setPadding(),
-          decoration: _buildDecoration(),
+          width: getSize(context,width ?? 0),
+          height: getSize(context,height ?? 0),
+          padding: _setPadding(context),
+          decoration: _buildDecoration(context),
           child: child,
         ),
         onPressed: onTap,
@@ -66,29 +66,29 @@ class CustomIconButton extends StatelessWidget {
     );
   }
 
-  _buildDecoration() {
+  BoxDecoration _buildDecoration(BuildContext context) {
     return BoxDecoration(
       color: _setColor(),
-      borderRadius: _setBorderRadius(),
+      borderRadius: _setBorderRadius(context),
     );
   }
 
-  _setPadding() {
+  _setPadding(BuildContext context) {
     switch (padding) {
       case IconButtonPadding.PaddingAll16:
-        return getPadding(
+        return getPadding(context,
           all: 16,
         );
       case IconButtonPadding.PaddingAll12:
-        return getPadding(
+        return getPadding(context,
           all: 12,
         );
       case IconButtonPadding.PaddingAll2:
-        return getPadding(
+        return getPadding(context,
           all: 4,
         );
       default:
-        return getPadding(
+        return getPadding(context,
           all: 8,
         );
     }
@@ -111,29 +111,29 @@ class CustomIconButton extends StatelessWidget {
     }
   }
 
-  _setBorderRadius() {
+  _setBorderRadius(BuildContext context) {
     switch (shape) {
       case IconButtonShape.CircleBorder32:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             32.00,
           ),
         );
       case IconButtonShape.CircleBorder24:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             24.00,
           ),
         );
       case IconButtonShape.CircleBorder16:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             16.00,
           ),
         );
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             8.00,
           ),
         );

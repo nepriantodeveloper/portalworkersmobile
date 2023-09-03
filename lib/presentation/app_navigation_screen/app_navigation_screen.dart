@@ -1,11 +1,11 @@
 import 'bloc/app_navigation_bloc.dart';
 import 'models/app_navigation_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/presentation/confirmation_dialog/confirmation_dialog.dart';
-import 'package:stock_workers/presentation/filter_bottomsheet/filter_bottomsheet.dart';
-import 'package:stock_workers/presentation/apply_job_popup_dialog/apply_job_popup_dialog.dart';
-import 'package:stock_workers/presentation/logout_popup_dialog/logout_popup_dialog.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/presentation/confirmation_dialog/confirmation_dialog.dart';
+import 'package:stockworkers/presentation/filter_bottomsheet/filter_bottomsheet.dart';
+import 'package:stockworkers/presentation/apply_job_popup_dialog/apply_job_popup_dialog.dart';
+import 'package:stockworkers/presentation/logout_popup_dialog/logout_popup_dialog.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -36,7 +36,7 @@ class AppNavigationScreen extends StatelessWidget {
                                   Align(
                                       alignment: Alignment.centerLeft,
                                       child: Padding(
-                                          padding: getPadding(
+                                          padding: getPadding(context,
                                               left: 20,
                                               top: 10,
                                               right: 20,
@@ -49,17 +49,17 @@ class AppNavigationScreen extends StatelessWidget {
                                   Align(
                                       alignment: Alignment.centerLeft,
                                       child: Padding(
-                                          padding: getPadding(left: 20),
+                                          padding: getPadding(context,left: 20),
                                           child: Text("msg_check_your_app_s".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.center,
                                               style: AppStyle
                                                   .txtRobotoRegular16))),
                                   Padding(
-                                      padding: getPadding(top: 5),
+                                      padding: getPadding(context,top: 5),
                                       child: Divider(
-                                          height: getVerticalSize(1),
-                                          thickness: getVerticalSize(1),
+                                          height: getVerticalSize(context,1),
+                                          thickness: getVerticalSize(context,1),
                                           color: ColorConstant.black900))
                                 ])),
                         Expanded(
@@ -87,7 +87,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -107,14 +107,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -136,7 +136,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -156,14 +156,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -185,7 +185,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -205,14 +205,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -234,7 +234,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -254,14 +254,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -284,7 +284,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -304,14 +304,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -334,7 +334,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -354,14 +354,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -383,7 +383,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -403,14 +403,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -432,7 +432,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -452,14 +452,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -481,7 +481,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -501,14 +501,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -530,7 +530,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -550,14 +550,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -579,7 +579,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -599,14 +599,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -628,7 +628,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -648,14 +648,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -677,7 +677,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -697,14 +697,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -726,7 +726,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -746,14 +746,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -775,7 +775,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -795,14 +795,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -824,7 +824,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -844,14 +844,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -873,7 +873,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -893,14 +893,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -922,7 +922,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -942,14 +942,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -971,7 +971,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -991,14 +991,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1020,7 +1020,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1040,14 +1040,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1069,7 +1069,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1089,14 +1089,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1118,7 +1118,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1138,14 +1138,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1168,7 +1168,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1188,14 +1188,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1218,7 +1218,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1238,14 +1238,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1267,7 +1267,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1287,14 +1287,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1316,7 +1316,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1336,14 +1336,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1365,7 +1365,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1385,14 +1385,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1414,7 +1414,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1434,14 +1434,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1463,7 +1463,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1483,14 +1483,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1512,7 +1512,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1532,14 +1532,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1561,7 +1561,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1581,14 +1581,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1610,7 +1610,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1630,14 +1630,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))
@@ -1659,7 +1659,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                 .centerLeft,
                                                             child: Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                    getPadding(context,
                                                                         left:
                                                                             20,
                                                                         top: 10,
@@ -1679,14 +1679,14 @@ class AppNavigationScreen extends StatelessWidget {
                                                                     style: AppStyle
                                                                         .txtRobotoRegular20))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 5),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .blueGray40001))

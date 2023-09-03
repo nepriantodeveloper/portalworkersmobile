@@ -38,12 +38,12 @@ class CustomCheckbox extends StatelessWidget {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: _buildCheckboxWidget(),
+            child: _buildCheckboxWidget(context),
           )
-        : _buildCheckboxWidget();
+        : _buildCheckboxWidget(context);
   }
 
-  _buildCheckboxWidget() {
+  _buildCheckboxWidget(BuildContext context) {
     return InkWell(
       onTap: () {
         value = !(value!);
@@ -52,12 +52,12 @@ class CustomCheckbox extends StatelessWidget {
       child: Container(
         width: width,
         margin: margin ?? EdgeInsets.zero,
-        child: isRightCheck! ? getRightSideCheckbox() : getLeftSideCheckbox(),
+        child: isRightCheck! ? getRightSideCheckbox(context) : getLeftSideCheckbox(context),
       ),
     );
   }
 
-  Widget getRightSideCheckbox() {
+  Widget getRightSideCheckbox(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -65,14 +65,14 @@ class CustomCheckbox extends StatelessWidget {
           padding: EdgeInsets.only(
             right: 8,
           ),
-          child: getTextWidget(),
+          child: getTextWidget(context),
         ),
         getCheckboxWidget(),
       ],
     );
   }
 
-  Widget getLeftSideCheckbox() {
+  Widget getLeftSideCheckbox(BuildContext context) {
     return Row(
       children: [
         getCheckboxWidget(),
@@ -80,17 +80,17 @@ class CustomCheckbox extends StatelessWidget {
           padding: EdgeInsets.only(
             left: 8,
           ),
-          child: getTextWidget(),
+          child: getTextWidget(context),
         ),
       ],
     );
   }
 
-  Widget getTextWidget() {
+  Widget getTextWidget(BuildContext context) {
     return Text(
       text ?? "",
       textAlign: TextAlign.center,
-      style: _setFontStyle(),
+      style: _setFontStyle(context),
     );
   }
 
@@ -112,17 +112,17 @@ class CustomCheckbox extends StatelessWidget {
     );
   }
 
-  _setFontStyle() {
+  _setFontStyle(BuildContext context) {
     switch (fontStyle) {
       default:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.31,
           ),
         );

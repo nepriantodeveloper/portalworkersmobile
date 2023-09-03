@@ -1,9 +1,9 @@
 import 'bloc/sign_up_complete_account_bloc.dart';
 import 'models/sign_up_complete_account_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
-import 'package:stock_workers/widgets/custom_text_form_field.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
+import 'package:stockworkers/widgets/custom_text_form_field.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class SignUpCompleteAccountScreen extends StatelessWidget {
@@ -24,33 +24,33 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
             resizeToAvoidBottomInset: false,
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 13, right: 24, bottom: 13),
+                padding: getPadding(context,left: 24, top: 13, right: 24, bottom: 13),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       CustomImageView(
                           svgPath: ImageConstant.imgArrowleft,
-                          height: getSize(24),
-                          width: getSize(24),
+                          height: getSize(context,24),
+                          width: getSize(context,24),
                           onTap: () {
                             onTapImgArrowleft(context);
                           }),
                       Align(
                           alignment: Alignment.centerRight,
                           child: Padding(
-                              padding: getPadding(top: 47, right: 15),
+                              padding: getPadding(context,top: 47, right: 15),
                               child: Text("msg_complete_your_account".tr,
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.left,
                                   style: AppStyle.txtPlusJakartaSansBold24
                                       .copyWith(
                                           letterSpacing:
-                                              getHorizontalSize(0.12))))),
+                                              getHorizontalSize(context,0.12))))),
                       Align(
                           alignment: Alignment.center,
                           child: Padding(
-                              padding: getPadding(top: 9),
+                              padding: getPadding(context,top: 9),
                               child: Text("msg_lorem_ipsum_dol6".tr,
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.left,
@@ -58,16 +58,16 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                       .txtPlusJakartaSansMedium14Bluegray400
                                       .copyWith(
                                           letterSpacing:
-                                              getHorizontalSize(0.07))))),
+                                              getHorizontalSize(context,0.07))))),
                       Padding(
-                          padding: getPadding(top: 33),
+                          padding: getPadding(context,top: 33),
                           child: Text("lbl_first_name".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle
                                   .txtPlusJakartaSansMedium14Bluegray900
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<
                               SignUpCompleteAccountBloc,
                               SignUpCompleteAccountState,
@@ -78,18 +78,18 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneController,
                                 hintText: "msg_enter_your_firs".tr,
-                                margin: getMargin(top: 9),
+                                margin: getMargin(context,top: 9),
                                 padding: TextFormFieldPadding.PaddingT15);
                           }),
                       Padding(
-                          padding: getPadding(top: 18),
+                          padding: getPadding(context,top: 18),
                           child: Text("lbl_last_name".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle
                                   .txtPlusJakartaSansMedium14Bluegray900
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<
                               SignUpCompleteAccountBloc,
                               SignUpCompleteAccountState,
@@ -100,18 +100,18 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneOneController,
                                 hintText: "msg_enter_your_last".tr,
-                                margin: getMargin(top: 9),
+                                margin: getMargin(context,top: 9),
                                 padding: TextFormFieldPadding.PaddingT15);
                           }),
                       Padding(
-                          padding: getPadding(top: 18),
+                          padding: getPadding(context,top: 18),
                           child: Text("lbl_password".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle
                                   .txtPlusJakartaSansMedium14Bluegray900
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<
                               SignUpCompleteAccountBloc,
                               SignUpCompleteAccountState,
@@ -122,12 +122,12 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneTwoController,
                                 hintText: "msg_create_a_passwo".tr,
-                                margin: getMargin(top: 9),
+                                margin: getMargin(context,top: 9),
                                 padding: TextFormFieldPadding.PaddingT15_1,
                                 textInputAction: TextInputAction.done,
                                 textInputType: TextInputType.visiblePassword,
                                 suffix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 30,
                                         top: 14,
                                         right: 16,
@@ -135,19 +135,19 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                     child: CustomImageView(
                                         svgPath: ImageConstant.imgCheckmark)),
                                 suffixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(52)));
+                                    maxHeight: getVerticalSize(context,52)));
                           }),
                       Container(
-                          margin: getMargin(top: 16),
-                          padding: getPadding(
+                          margin: getMargin(context,top: 16),
+                          padding: getPadding(context,
                               left: 16, top: 12, right: 16, bottom: 12),
-                          decoration: AppDecoration.outlineIndigo50.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder24),
+                          decoration: AppDecoration.outlineIndigo50(context).copyWith(
+                              borderRadius: BorderRadiusStyle.roundedBorder24(context)),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                    padding: getPadding(top: 5),
+                                    padding: getPadding(context,top: 5),
                                     child: Text("msg_select_a_countr2".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
@@ -155,17 +155,17 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                             .txtPlusJakartaSansMedium16Gray900
                                             .copyWith(
                                                 letterSpacing:
-                                                    getHorizontalSize(0.08)))),
+                                                    getHorizontalSize(context,0.08)))),
                                 CustomImageView(
                                     svgPath: ImageConstant.imgArrowrightGray900,
-                                    height: getSize(24),
-                                    width: getSize(24),
-                                    margin: getMargin(top: 1, bottom: 1))
+                                    height: getSize(context,24),
+                                    width: getSize(context,24),
+                                    margin: getMargin(context,top: 1, bottom: 1))
                               ])),
                       CustomButton(
-                          height: getVerticalSize(56),
+                          height: getVerticalSize(context,56),
                           text: "msg_continue_with_e".tr,
-                          margin: getMargin(top: 40),
+                          margin: getMargin(context,top: 40),
                           padding: ButtonPadding.PaddingAll17,
                           fontStyle:
                               ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
@@ -175,7 +175,7 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                       Align(
                           alignment: Alignment.center,
                           child: Padding(
-                              padding: getPadding(left: 40, top: 28, right: 40),
+                              padding: getPadding(context,left: 40, top: 28, right: 40),
                               child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -186,13 +186,13 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                             .txtPlusJakartaSansSemiBold16
                                             .copyWith(
                                                 letterSpacing:
-                                                    getHorizontalSize(0.08))),
+                                                    getHorizontalSize(context,0.08))),
                                     GestureDetector(
                                         onTap: () {
                                           onTapTxtLogin(context);
                                         },
                                         child: Padding(
-                                            padding: getPadding(left: 3),
+                                            padding: getPadding(context,left: 3),
                                             child: Text("lbl_login".tr,
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
@@ -200,14 +200,14 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                                     .txtPlusJakartaSansSemiBold16Gray900
                                                     .copyWith(
                                                         letterSpacing:
-                                                            getHorizontalSize(
+                                                            getHorizontalSize(context,
                                                                 0.08)))))
                                   ]))),
                       Align(
                           alignment: Alignment.center,
                           child: Container(
-                              width: getHorizontalSize(245),
-                              margin: getMargin(
+                              width: getHorizontalSize(context,245),
+                              margin: getMargin(context,
                                   left: 40, top: 19, right: 40, bottom: 5),
                               child: RichText(
                                   text: TextSpan(children: [
@@ -215,38 +215,38 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                                         text: "msg_by_signing_up_y2".tr,
                                         style: TextStyle(
                                             color: ColorConstant.blueGray400,
-                                            fontSize: getFontSize(14),
+                                            fontSize: getFontSize(context,14),
                                             fontFamily: 'Plus Jakarta Sans',
                                             fontWeight: FontWeight.w600,
                                             letterSpacing:
-                                                getHorizontalSize(0.07))),
+                                                getHorizontalSize(context,0.07))),
                                     TextSpan(
                                         text: "lbl_terms".tr,
                                         style: TextStyle(
                                             color: ColorConstant.gray90001,
-                                            fontSize: getFontSize(14),
+                                            fontSize: getFontSize(context,14),
                                             fontFamily: 'Plus Jakarta Sans',
                                             fontWeight: FontWeight.w600,
                                             letterSpacing:
-                                                getHorizontalSize(0.07))),
+                                                getHorizontalSize(context,0.07))),
                                     TextSpan(
                                         text: "lbl_and".tr,
                                         style: TextStyle(
                                             color: ColorConstant.blueGray400,
-                                            fontSize: getFontSize(14),
+                                            fontSize: getFontSize(context,14),
                                             fontFamily: 'Plus Jakarta Sans',
                                             fontWeight: FontWeight.w600,
                                             letterSpacing:
-                                                getHorizontalSize(0.07))),
+                                                getHorizontalSize(context,0.07))),
                                     TextSpan(
                                         text: "msg_conditions_of_u".tr,
                                         style: TextStyle(
                                             color: ColorConstant.gray90001,
-                                            fontSize: getFontSize(14),
+                                            fontSize: getFontSize(context,14),
                                             fontFamily: 'Plus Jakarta Sans',
                                             fontWeight: FontWeight.w600,
                                             letterSpacing:
-                                                getHorizontalSize(0.07)))
+                                                getHorizontalSize(context,0.07)))
                                   ]),
                                   textAlign: TextAlign.center)))
                     ]))));

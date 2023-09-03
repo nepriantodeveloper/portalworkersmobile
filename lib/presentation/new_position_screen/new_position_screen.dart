@@ -24,24 +24,24 @@ class NewPositionScreen extends StatelessWidget {
             backgroundColor: ColorConstant.whiteA70002,
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                height: getVerticalSize(24),
+                height: getVerticalSize(context,24),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24),
+                    margin: getMargin(context,left: 24),
                     onTap: () {
                       onTapArrowleft15(context);
                     }),
                 centerTitle: true,
                 title: AppbarTitle(text: "msg_add_new_positio".tr)),
             body: SizedBox(
-                width: size.width,
+                width: size(context).width,
                 child: SingleChildScrollView(
                     child: Padding(
                         padding:
-                            getPadding(left: 24, top: 49, right: 24, bottom: 5),
+                            getPadding(context,left: 24, top: 49, right: 24, bottom: 5),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +53,7 @@ class NewPositionScreen extends StatelessWidget {
                                       .txtPlusJakartaSansMedium14Bluegray900
                                       .copyWith(
                                           letterSpacing:
-                                              getHorizontalSize(0.07))),
+                                              getHorizontalSize(context,0.07))),
                               BlocSelector<NewPositionBloc, NewPositionState,
                                       TextEditingController?>(
                                   selector: (state) => state.frameOneController,
@@ -62,15 +62,15 @@ class NewPositionScreen extends StatelessWidget {
                                         focusNode: FocusNode(),
                                         controller: frameOneController,
                                         hintText: "lbl_ex_ui_designer".tr,
-                                        margin: getMargin(top: 9));
+                                        margin: getMargin(context,top: 9));
                                   }),
                               Container(
                                   width: double.maxFinite,
                                   child: Container(
-                                      margin: getMargin(top: 20),
+                                      margin: getMargin(context,top: 20),
                                       decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadiusStyle.roundedBorder8),
+                                              BorderRadiusStyle.roundedBorder8(context)),
                                       child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -84,28 +84,28 @@ class NewPositionScreen extends StatelessWidget {
                                                     .txtPlusJakartaSansMedium14Bluegray900
                                                     .copyWith(
                                                         letterSpacing:
-                                                            getHorizontalSize(
+                                                            getHorizontalSize(context,
                                                                 0.07))),
                                             Container(
-                                                margin: getMargin(top: 7),
-                                                padding: getPadding(
+                                                margin: getMargin(context,top: 7),
+                                                padding: getPadding(context,
                                                     left: 16,
                                                     top: 13,
                                                     right: 16,
                                                     bottom: 13),
                                                 decoration: AppDecoration
-                                                    .outlineIndigo50
+                                                    .outlineIndigo50(context)
                                                     .copyWith(
                                                         borderRadius:
                                                             BorderRadiusStyle
-                                                                .roundedBorder24),
+                                                                .roundedBorder24(context)),
                                                 child: Row(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
                                                             .spaceBetween,
                                                     children: [
                                                       Padding(
-                                                          padding: getPadding(
+                                                          padding: getPadding(context,
                                                               top: 2),
                                                           child: Text(
                                                               "lbl_please_select"
@@ -120,19 +120,19 @@ class NewPositionScreen extends StatelessWidget {
                                                                   .txtPlusJakartaSansMedium16
                                                                   .copyWith(
                                                                       letterSpacing:
-                                                                          getHorizontalSize(
+                                                                          getHorizontalSize(context,
                                                                               0.08)))),
                                                       CustomImageView(
                                                           svgPath: ImageConstant
                                                               .imgArrowdownGray90002,
-                                                          height: getSize(24),
-                                                          width: getSize(24),
-                                                          margin: getMargin(
+                                                          height: getSize(context,24),
+                                                          width: getSize(context,24),
+                                                          margin: getMargin(context,
                                                               right: 3))
                                                     ]))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 20),
+                                  padding: getPadding(context,top: 20),
                                   child: Text("lbl_company_name".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
@@ -140,7 +140,7 @@ class NewPositionScreen extends StatelessWidget {
                                           .txtPlusJakartaSansMedium14Bluegray900
                                           .copyWith(
                                               letterSpacing:
-                                                  getHorizontalSize(0.07)))),
+                                                  getHorizontalSize(context,0.07)))),
                               BlocSelector<NewPositionBloc, NewPositionState,
                                       TextEditingController?>(
                                   selector: (state) =>
@@ -150,10 +150,10 @@ class NewPositionScreen extends StatelessWidget {
                                         focusNode: FocusNode(),
                                         controller: frameOneOneController,
                                         hintText: "lbl_ex_shopee".tr,
-                                        margin: getMargin(top: 7));
+                                        margin: getMargin(context,top: 7));
                                   }),
                               Padding(
-                                  padding: getPadding(top: 18),
+                                  padding: getPadding(context,top: 18),
                                   child: Text("lbl_location2".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
@@ -161,7 +161,7 @@ class NewPositionScreen extends StatelessWidget {
                                           .txtPlusJakartaSansMedium14Bluegray900
                                           .copyWith(
                                               letterSpacing:
-                                                  getHorizontalSize(0.07)))),
+                                                  getHorizontalSize(context,0.07)))),
                               BlocSelector<NewPositionBloc, NewPositionState,
                                       TextEditingController?>(
                                   selector: (state) => state.countryController,
@@ -170,10 +170,10 @@ class NewPositionScreen extends StatelessWidget {
                                         focusNode: FocusNode(),
                                         controller: countryController,
                                         hintText: "msg_ex_singapore".tr,
-                                        margin: getMargin(top: 9));
+                                        margin: getMargin(context,top: 9));
                                   }),
                               Padding(
-                                  padding: getPadding(top: 18),
+                                  padding: getPadding(context,top: 18),
                                   child: Text("lbl_start_date".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
@@ -181,28 +181,28 @@ class NewPositionScreen extends StatelessWidget {
                                           .txtPlusJakartaSansMedium14Bluegray900
                                           .copyWith(
                                               letterSpacing:
-                                                  getHorizontalSize(0.07)))),
+                                                  getHorizontalSize(context,0.07)))),
                               GestureDetector(
                                   onTap: () {
                                     onTapRowsmalllabelregulthree(context);
                                   },
                                   child: Container(
-                                      margin: getMargin(top: 9),
-                                      padding: getPadding(
+                                      margin: getMargin(context,top: 9),
+                                      padding: getPadding(context,
                                           left: 16,
                                           top: 14,
                                           right: 16,
                                           bottom: 14),
-                                      decoration: AppDecoration.outlineIndigo50
+                                      decoration: AppDecoration.outlineIndigo50(context)
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder24),
+                                                  .roundedBorder24(context)),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Padding(
-                                                padding: getPadding(top: 2),
+                                                padding: getPadding(context,top: 2),
                                                 child: BlocSelector<
                                                         NewPositionBloc,
                                                         NewPositionState,
@@ -223,17 +223,17 @@ class NewPositionScreen extends StatelessWidget {
                                                               .txtPlusJakartaSansMedium16
                                                               .copyWith(
                                                                   letterSpacing:
-                                                                      getHorizontalSize(
+                                                                      getHorizontalSize(context,
                                                                           0.08)));
                                                     })),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgCalendar,
-                                                height: getSize(24),
-                                                width: getSize(24))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 18),
+                                  padding: getPadding(context,top: 18),
                                   child: Text("lbl_end_date".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
@@ -241,28 +241,28 @@ class NewPositionScreen extends StatelessWidget {
                                           .txtPlusJakartaSansMedium14Bluegray900
                                           .copyWith(
                                               letterSpacing:
-                                                  getHorizontalSize(0.07)))),
+                                                  getHorizontalSize(context,0.07)))),
                               GestureDetector(
                                   onTap: () {
                                     onTapRowsmalllabelregulfour(context);
                                   },
                                   child: Container(
-                                      margin: getMargin(top: 9),
-                                      padding: getPadding(
+                                      margin: getMargin(context,top: 9),
+                                      padding: getPadding(context,
                                           left: 16,
                                           top: 14,
                                           right: 16,
                                           bottom: 14),
-                                      decoration: AppDecoration.outlineIndigo50
+                                      decoration: AppDecoration.outlineIndigo50(context)
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
-                                                  .roundedBorder24),
+                                                  .roundedBorder24(context)),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Padding(
-                                                padding: getPadding(top: 2),
+                                                padding: getPadding(context,top: 2),
                                                 child: BlocSelector<
                                                         NewPositionBloc,
                                                         NewPositionState,
@@ -283,17 +283,17 @@ class NewPositionScreen extends StatelessWidget {
                                                               .txtPlusJakartaSansMedium16
                                                               .copyWith(
                                                                   letterSpacing:
-                                                                      getHorizontalSize(
+                                                                      getHorizontalSize(context,
                                                                           0.08)));
                                                     })),
                                             CustomImageView(
                                                 svgPath:
                                                     ImageConstant.imgCalendar,
-                                                height: getSize(24),
-                                                width: getSize(24))
+                                                height: getSize(context,24),
+                                                width: getSize(context,24))
                                           ]))),
                               Padding(
-                                  padding: getPadding(top: 20),
+                                  padding: getPadding(context,top: 20),
                                   child: Text("msg_job_role_descri".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
@@ -301,7 +301,7 @@ class NewPositionScreen extends StatelessWidget {
                                           .txtPlusJakartaSansMedium14Bluegray900
                                           .copyWith(
                                               letterSpacing:
-                                                  getHorizontalSize(0.07)))),
+                                                  getHorizontalSize(context,0.07)))),
                               BlocSelector<NewPositionBloc, NewPositionState,
                                       TextEditingController?>(
                                   selector: (state) =>
@@ -311,7 +311,7 @@ class NewPositionScreen extends StatelessWidget {
                                         focusNode: FocusNode(),
                                         controller: frameOneTwoController,
                                         hintText: "lbl_lorem_ipsun".tr,
-                                        margin: getMargin(top: 7),
+                                        margin: getMargin(context,top: 7),
                                         padding:
                                             TextFormFieldPadding.PaddingT55,
                                         textInputAction: TextInputAction.done,
@@ -319,9 +319,9 @@ class NewPositionScreen extends StatelessWidget {
                                   })
                             ])))),
             bottomNavigationBar: CustomButton(
-                height: getVerticalSize(56),
+                height: getVerticalSize(context,56),
                 text: "lbl_save_changes".tr,
-                margin: getMargin(left: 24, right: 24, bottom: 37),
+                margin: getMargin(context,left: 24, right: 24, bottom: 37),
                 padding: ButtonPadding.PaddingAll17,
                 fontStyle: ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
                 onTap: () {

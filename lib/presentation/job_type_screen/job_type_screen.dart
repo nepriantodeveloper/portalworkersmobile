@@ -22,30 +22,30 @@ class JobTypeScreen extends StatelessWidget {
               backgroundColor: ColorConstant.whiteA70002,
               body: Container(
                   width: double.maxFinite,
-                  padding: getPadding(left: 24, top: 13, right: 24, bottom: 13),
+                  padding: getPadding(context,left: 24, top: 13, right: 24, bottom: 13),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         CustomImageView(
                             svgPath: ImageConstant.imgArrowleft,
-                            height: getSize(24),
-                            width: getSize(24),
+                            height: getSize(context,24),
+                            width: getSize(context,24),
                             alignment: Alignment.centerLeft,
                             onTap: () {
                               onTapImgArrowleft(context);
                             }),
                         Padding(
-                            padding: getPadding(top: 47),
+                            padding: getPadding(context,top: 47),
                             child: Text("lbl_choose_job_type".tr,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPlusJakartaSansBold24
                                     .copyWith(
                                         letterSpacing:
-                                            getHorizontalSize(0.12)))),
+                                            getHorizontalSize(context,0.12)))),
                         Container(
-                            width: getHorizontalSize(209),
-                            margin: getMargin(top: 7),
+                            width: getHorizontalSize(context,209),
+                            margin: getMargin(context,top: 7),
                             child: Text("msg_are_you_looking".tr,
                                 maxLines: null,
                                 textAlign: TextAlign.center,
@@ -53,26 +53,26 @@ class JobTypeScreen extends StatelessWidget {
                                     .txtPlusJakartaSansMedium14Bluegray400
                                     .copyWith(
                                         letterSpacing:
-                                            getHorizontalSize(0.07)))),
+                                            getHorizontalSize(context,0.07)))),
                         Padding(
-                            padding: getPadding(top: 38, bottom: 5),
+                            padding: getPadding(context,top: 38, bottom: 5),
                             child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Expanded(
                                       child: Container(
-                                          margin: getMargin(right: 7),
-                                          padding: getPadding(
+                                          margin: getMargin(context,right: 7),
+                                          padding: getPadding(context,
                                               left: 18,
                                               top: 24,
                                               right: 18,
                                               bottom: 24),
                                           decoration: AppDecoration
-                                              .outlineGray900
+                                              .outlineGray900(context)
                                               .copyWith(
                                                   borderRadius:
                                                       BorderRadiusStyle
-                                                          .roundedBorder24),
+                                                          .roundedBorder24(context)),
                                           child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment:
@@ -92,7 +92,7 @@ class JobTypeScreen extends StatelessWidget {
                                                             .imgIcon)),
                                                 Padding(
                                                     padding:
-                                                        getPadding(top: 29),
+                                                        getPadding(context,top: 29),
                                                     child: Text(
                                                         "lbl_find_a_job".tr,
                                                         overflow: TextOverflow
@@ -103,12 +103,12 @@ class JobTypeScreen extends StatelessWidget {
                                                             .txtPlusJakartaSansSemiBold16Gray900
                                                             .copyWith(
                                                                 letterSpacing:
-                                                                    getHorizontalSize(
+                                                                    getHorizontalSize(context,
                                                                         0.08)))),
                                                 Container(
                                                     width:
-                                                        getHorizontalSize(120),
-                                                    margin: getMargin(
+                                                        getHorizontalSize(context,120),
+                                                    margin: getMargin(context,
                                                         top: 9, bottom: 1),
                                                     child: Text(
                                                         "msg_it_s_easy_to_fi"
@@ -120,23 +120,23 @@ class JobTypeScreen extends StatelessWidget {
                                                             .txtPlusJakartaSansMedium12
                                                             .copyWith(
                                                                 letterSpacing:
-                                                                    getHorizontalSize(
+                                                                    getHorizontalSize(context,
                                                                         0.06))))
                                               ]))),
                                   Expanded(
                                       child: Container(
-                                          margin: getMargin(left: 7),
-                                          padding: getPadding(
+                                          margin: getMargin(context,left: 7),
+                                          padding: getPadding(context,
                                               left: 14,
                                               top: 24,
                                               right: 14,
                                               bottom: 24),
                                           decoration: AppDecoration
-                                              .outlineGray70014
+                                              .outlineGray70014(context)
                                               .copyWith(
                                                   borderRadius:
                                                       BorderRadiusStyle
-                                                          .roundedBorder24),
+                                                          .roundedBorder24(context)),
                                           child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment:
@@ -156,7 +156,7 @@ class JobTypeScreen extends StatelessWidget {
                                                             .imgUser)),
                                                 Padding(
                                                     padding:
-                                                        getPadding(top: 29),
+                                                        getPadding(context,top: 29),
                                                     child: Text(
                                                         "lbl_find_a_employee"
                                                             .tr,
@@ -168,12 +168,12 @@ class JobTypeScreen extends StatelessWidget {
                                                             .txtPlusJakartaSansSemiBold16Gray900
                                                             .copyWith(
                                                                 letterSpacing:
-                                                                    getHorizontalSize(
+                                                                    getHorizontalSize(context,
                                                                         0.08)))),
                                                 Container(
                                                     width:
-                                                        getHorizontalSize(109),
-                                                    margin: getMargin(
+                                                        getHorizontalSize(context,109),
+                                                    margin: getMargin(context,
                                                         top: 9, bottom: 1),
                                                     child: Text(
                                                         "msg_it_s_easy_to_fi2"
@@ -185,15 +185,15 @@ class JobTypeScreen extends StatelessWidget {
                                                             .txtPlusJakartaSansMedium12
                                                             .copyWith(
                                                                 letterSpacing:
-                                                                    getHorizontalSize(
+                                                                    getHorizontalSize(context,
                                                                         0.06))))
                                               ])))
                                 ]))
                       ])),
               bottomNavigationBar: CustomButton(
-                  height: getVerticalSize(56),
+                  height: getVerticalSize(context,56),
                   text: "lbl_continue".tr,
-                  margin: getMargin(left: 24, right: 24, bottom: 55),
+                  margin: getMargin(context,left: 24, right: 24, bottom: 55),
                   padding: ButtonPadding.PaddingAll17,
                   fontStyle: ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
                   onTap: () {

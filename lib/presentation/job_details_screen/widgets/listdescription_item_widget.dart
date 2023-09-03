@@ -12,13 +12,13 @@ class ListdescriptionItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicWidth(
       child: Container(
-        width: getHorizontalSize(
+        width: getHorizontalSize(context,
           101,
         ),
-        margin: getMargin(
+        margin: getMargin(context,
           right: 12,
         ),
-        padding: getPadding(
+        padding: getPadding(context,
           left: 16,
           top: 12,
           right: 16,
@@ -32,7 +32,7 @@ class ListdescriptionItemWidget extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
           style: AppStyle.txtPlusJakartaSansSemiBold12Gray900.copyWith(
-            letterSpacing: getHorizontalSize(
+            letterSpacing: getHorizontalSize(context,
               0.06,
             ),
           ),

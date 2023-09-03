@@ -1,4 +1,4 @@
-// export 'package:stockworkers/localization/app_localization.dart';
+export 'package:stockworkers/localization/app_localization.dart';
 export 'package:stockworkers/core/constants/constants.dart';
 export 'package:stockworkers/core/utils/image_constant.dart';
 export 'package:stockworkers/core/utils/color_constant.dart';

@@ -19,11 +19,11 @@ class AppDecoration {
   static BoxDecoration get fillWhiteA70001 => BoxDecoration(
         color: ColorConstant.whiteA70001,
       );
-  static BoxDecoration get outlineGray900 => BoxDecoration(
+  static BoxDecoration outlineGray900(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.gray900,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -37,24 +37,24 @@ class AppDecoration {
   static BoxDecoration get fillWhiteA700 => BoxDecoration(
         color: ColorConstant.whiteA700,
       );
-  static BoxDecoration get outlineIndigo50 => BoxDecoration(
+  static BoxDecoration outlineIndigo50(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
       );
-  static BoxDecoration get outlineGray70014 => BoxDecoration(
+  static BoxDecoration outlineGray70014(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         boxShadow: [
           BoxShadow(
             color: ColorConstant.gray70014,
-            spreadRadius: getHorizontalSize(
+            spreadRadius: getHorizontalSize(context,
               2,
             ),
-            blurRadius: getHorizontalSize(
+            blurRadius: getHorizontalSize(context,
               2,
             ),
             offset: Offset(
@@ -64,24 +64,24 @@ class AppDecoration {
           ),
         ],
       );
-  static BoxDecoration get outlineIndigo501 => BoxDecoration(
+  static BoxDecoration outlineIndigo501(BuildContext context) => BoxDecoration(
         color: ColorConstant.gray50,
         border: Border.all(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
       );
-  static BoxDecoration get outlineBluegray90014 => BoxDecoration(
+  static BoxDecoration outlineBluegray90014(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         boxShadow: [
           BoxShadow(
             color: ColorConstant.blueGray90014,
-            spreadRadius: getHorizontalSize(
+            spreadRadius: getHorizontalSize(context,
               2,
             ),
-            blurRadius: getHorizontalSize(
+            blurRadius: getHorizontalSize(context,
               2,
             ),
             offset: Offset(
@@ -91,21 +91,21 @@ class AppDecoration {
           ),
         ],
       );
-  static BoxDecoration get outlineIndigo502 => BoxDecoration(
+  static BoxDecoration outlineIndigo502(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
           strokeAlign: strokeAlignCenter,
         ),
       );
-  static BoxDecoration get txtOutlineBluegray50 => BoxDecoration(
+  static BoxDecoration txtOutlineBluegray50(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.blueGray50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -138,11 +138,11 @@ class AppDecoration {
   static BoxDecoration get fillGray5001 => BoxDecoration(
         color: ColorConstant.gray5001,
       );
-  static BoxDecoration get outlineBluegray50 => BoxDecoration(
+  static BoxDecoration outlineBluegray50(BuildContext context) => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.blueGray50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -150,93 +150,93 @@ class AppDecoration {
 }
 
 class BorderRadiusStyle {
-  static BorderRadius roundedBorder16 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder16(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       16,
     ),
   );
 
-  static BorderRadius roundedBorder8 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder8(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       8,
     ),
   );
 
-  static BorderRadius roundedBorder39 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder39(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       39,
     ),
   );
 
-  static BorderRadius customBorderTL241 = BorderRadius.only(
+  static BorderRadius customBorderTL241(BuildContext context) => BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
     topRight: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
     bottomRight: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
   );
 
-  static BorderRadius customBorderTL24 = BorderRadius.only(
+  static BorderRadius customBorderTL24(BuildContext context) => BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
     topRight: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
   );
 
-  static BorderRadius roundedBorder12 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder12(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       12,
     ),
   );
 
-  static BorderRadius roundedBorder24 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder24(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       24,
     ),
   );
 
-  static BorderRadius roundedBorder32 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder32(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       32,
     ),
   );
 
-  static BorderRadius roundedBorder44 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius roundedBorder44(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       44,
     ),
   );
 
-  static BorderRadius txtCircleBorder22 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius txtCircleBorder22(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       22,
     ),
   );
 
-  static BorderRadius circleBorder28 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius circleBorder28(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       28,
     ),
   );
 
-  static BorderRadius txtCircleBorder14 = BorderRadius.circular(
-    getHorizontalSize(
+  static BorderRadius txtCircleBorder14(BuildContext context) => BorderRadius.circular(
+    getHorizontalSize(context,
       14,
     ),
   );

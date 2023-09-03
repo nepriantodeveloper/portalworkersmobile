@@ -26,13 +26,13 @@ class NotificationsGeneralScreen extends StatelessWidget {
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA70002,
             appBar: CustomAppBar(
-                height: getVerticalSize(50),
+                height: getVerticalSize(context,50),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 13),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 13),
                     onTap: () {
                       onTapArrowleft9(context);
                     }),
@@ -40,36 +40,36 @@ class NotificationsGeneralScreen extends StatelessWidget {
                 title: AppbarTitle(text: "lbl_notifications".tr),
                 actions: [
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(context,24),
+                      width: getSize(context,24),
                       svgPath: ImageConstant.imgSettings,
                       margin:
-                          getMargin(left: 24, top: 13, right: 24, bottom: 13),
+                          getMargin(context,left: 24, top: 13, right: 24, bottom: 13),
                       onTap: () {
                         onTapSettings(context);
                       })
                 ]),
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 30, right: 24, bottom: 30),
+                padding: getPadding(context,left: 24, top: 30, right: 24, bottom: 30),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Row(children: [
                         CustomButton(
-                            height: getVerticalSize(44),
-                            width: getHorizontalSize(79),
+                            height: getVerticalSize(context,44),
+                            width: getHorizontalSize(context,79),
                             text: "lbl_general".tr,
                             shape: ButtonShape.RoundedBorder12,
                             padding: ButtonPadding.PaddingAll16,
                             fontStyle: ButtonFontStyle
                                 .PlusJakartaSansSemiBold12WhiteA700_1),
                         CustomButton(
-                            height: getVerticalSize(44),
-                            width: getHorizontalSize(111),
+                            height: getVerticalSize(context,44),
+                            width: getHorizontalSize(context,111),
                             text: "lbl_my_proposals".tr,
-                            margin: getMargin(left: 12),
+                            margin: getMargin(context,left: 12),
                             variant: ButtonVariant.OutlineBluegray50,
                             shape: ButtonShape.RoundedBorder12,
                             padding: ButtonPadding.PaddingAll16,
@@ -80,7 +80,7 @@ class NotificationsGeneralScreen extends StatelessWidget {
                             })
                       ]),
                       Padding(
-                          padding: getPadding(top: 24, bottom: 117),
+                          padding: getPadding(context,top: 24, bottom: 117),
                           child: BlocSelector<
                                   NotificationsGeneralBloc,
                                   NotificationsGeneralState,
@@ -93,13 +93,13 @@ class NotificationsGeneralScreen extends StatelessWidget {
                                     shrinkWrap: true,
                                     separatorBuilder: (context, index) {
                                       return Padding(
-                                          padding: getPadding(
+                                          padding: getPadding(context,
                                               top: 15.5, bottom: 15.5),
                                           child: SizedBox(
-                                              width: getHorizontalSize(323),
+                                              width: getHorizontalSize(context,323),
                                               child: Divider(
-                                                  height: getVerticalSize(1),
-                                                  thickness: getVerticalSize(1),
+                                                  height: getVerticalSize(context,1),
+                                                  thickness: getVerticalSize(context,1),
                                                   color:
                                                       ColorConstant.indigo50)));
                                     },

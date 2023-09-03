@@ -22,20 +22,20 @@ class SavedPage extends StatelessWidget {
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA70002,
             appBar: CustomAppBar(
-                height: getVerticalSize(50),
+                height: getVerticalSize(context,50),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 13),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 13),
                     onTap: () {
                       onTapArrowleft5(context);
                     }),
                 centerTitle: true,
                 title: AppbarTitle(text: "lbl_saved".tr)),
             body: Padding(
-                padding: getPadding(left: 24, top: 30, right: 24),
+                padding: getPadding(context,left: 24, top: 30, right: 24),
                 child: BlocSelector<SavedBloc, SavedState, SavedModel?>(
                     selector: (state) => state.savedModelObj,
                     builder: (context, savedModelObj) {
@@ -43,7 +43,7 @@ class SavedPage extends StatelessWidget {
                           physics: NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           separatorBuilder: (context, index) {
-                            return SizedBox(height: getVerticalSize(12));
+                            return SizedBox(height: getVerticalSize(context,12));
                           },
                           itemCount: savedModelObj?.savedItemList.length ?? 0,
                           itemBuilder: (context, index) {

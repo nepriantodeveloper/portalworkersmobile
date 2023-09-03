@@ -34,13 +34,13 @@ class MessageActionScreen extends StatelessWidget {
             backgroundColor: ColorConstant.whiteA70002,
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                height: getVerticalSize(51),
+                height: getVerticalSize(context,51),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 14),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 14),
                     onTap: () {
                       onTapArrowleft3(context);
                     }),
@@ -48,7 +48,7 @@ class MessageActionScreen extends StatelessWidget {
                 title: AppbarTitle(text: "lbl_message".tr)),
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(top: 24, bottom: 24),
+                padding: getPadding(context,top: 24, bottom: 24),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -60,10 +60,10 @@ class MessageActionScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneController,
                                 hintText: "msg_search_message".tr,
-                                margin: getMargin(left: 24, top: 4, right: 24),
+                                margin: getMargin(context,left: 24, top: 4, right: 24),
                                 padding: SearchViewPadding.PaddingT15,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 17,
                                         right: 8,
@@ -71,9 +71,9 @@ class MessageActionScreen extends StatelessWidget {
                                     child: CustomImageView(
                                         svgPath: ImageConstant.imgSearch)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(52)),
+                                    maxHeight: getVerticalSize(context,52)),
                                 suffix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 30,
                                         top: 17,
                                         right: 16,
@@ -81,10 +81,10 @@ class MessageActionScreen extends StatelessWidget {
                                     child: CustomImageView(
                                         svgPath: ImageConstant.imgInfo)),
                                 suffixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(52)));
+                                    maxHeight: getVerticalSize(context,52)));
                           }),
                       Padding(
-                          padding: getPadding(top: 24),
+                          padding: getPadding(context,top: 24),
                           child: BlocSelector<MessageActionBloc,
                                   MessageActionState, MessageActionModel?>(
                               selector: (state) => state.messageActionModelObj,
@@ -95,12 +95,12 @@ class MessageActionScreen extends StatelessWidget {
                                     separatorBuilder: (context, index) {
                                       return Padding(
                                           padding:
-                                              getPadding(top: 7.5, bottom: 7.5),
+                                              getPadding(context,top: 7.5, bottom: 7.5),
                                           child: SizedBox(
-                                              width: getHorizontalSize(327),
+                                              width: getHorizontalSize(context,327),
                                               child: Divider(
-                                                  height: getVerticalSize(1),
-                                                  thickness: getVerticalSize(1),
+                                                  height: getVerticalSize(context,1),
+                                                  thickness: getVerticalSize(context,1),
                                                   color:
                                                       ColorConstant.indigo50)));
                                     },
@@ -123,16 +123,16 @@ class MessageActionScreen extends StatelessWidget {
                               })),
                       Spacer(),
                       CustomButton(
-                          height: getVerticalSize(46),
-                          width: getHorizontalSize(137),
+                          height: getVerticalSize(context,46),
+                          width: getHorizontalSize(context,137),
                           text: "lbl_new_chat".tr,
-                          margin: getMargin(right: 24),
+                          margin: getMargin(context,right: 24),
                           shape: ButtonShape.RoundedBorder20,
                           padding: ButtonPadding.PaddingT14,
                           fontStyle:
                               ButtonFontStyle.PlusJakartaSansSemiBold14Gray50,
                           prefixWidget: Container(
-                              margin: getMargin(right: 4),
+                              margin: getMargin(context,right: 4),
                               child: CustomImageView(
                                   svgPath: ImageConstant.imgPlus18x18)),
                           alignment: Alignment.centerRight)
