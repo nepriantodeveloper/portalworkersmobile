@@ -1,10 +1,10 @@
 import 'bloc/speciallization_bloc.dart';
 import 'models/speciallization_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
-import 'package:stock_workers/widgets/custom_text_form_field.dart';
-import 'package:stock_workers/presentation/confirmation_dialog/confirmation_dialog.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
+import 'package:stockworkers/widgets/custom_text_form_field.dart';
+import 'package:stockworkers/presentation/confirmation_dialog/confirmation_dialog.dart';
 
 class SpeciallizationScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -23,36 +23,36 @@ class SpeciallizationScreen extends StatelessWidget {
             resizeToAvoidBottomInset: false,
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 23, top: 13, right: 23, bottom: 13),
+                padding: getPadding(context,left: 23, top: 13, right: 23, bottom: 13),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       CustomImageView(
                           svgPath: ImageConstant.imgArrowleft,
-                          height: getSize(24),
-                          width: getSize(24),
+                          height: getSize(context,24),
+                          width: getSize(context,24),
                           alignment: Alignment.centerLeft,
-                          margin: getMargin(left: 1),
+                          margin: getMargin(context,left: 1),
                           onTap: () {
                             onTapImgArrowleft(context);
                           }),
                       Container(
-                          width: getHorizontalSize(177),
-                          margin: getMargin(top: 44),
+                          width: getHorizontalSize(context,177),
+                          margin: getMargin(context,top: 44),
                           child: Text("msg_what_is_your_specialization".tr,
                               maxLines: null,
                               textAlign: TextAlign.center,
                               style: AppStyle.txtPlusJakartaSansBold24.copyWith(
-                                  letterSpacing: getHorizontalSize(0.12)))),
+                                  letterSpacing: getHorizontalSize(context,0.12)))),
                       Padding(
-                          padding: getPadding(top: 7),
+                          padding: getPadding(context,top: 7),
                           child: Text("msg_lorem_ipsum_dol7".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle
                                   .txtPlusJakartaSansMedium14Bluegray400
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<SpeciallizationBloc, SpeciallizationState,
                               TextEditingController?>(
                           selector: (state) => state.group163009Controller,
@@ -61,12 +61,12 @@ class SpeciallizationScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: group163009Controller,
                                 hintText: "msg_design_creati".tr,
-                                margin: getMargin(top: 31),
+                                margin: getMargin(context,top: 31),
                                 padding: TextFormFieldPadding.PaddingT13,
                                 fontStyle: TextFormFieldFontStyle
                                     .PlusJakartaSansSemiBold16Gray900,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 12,
                                         right: 16,
@@ -77,7 +77,7 @@ class SpeciallizationScreen extends StatelessWidget {
                                         svgPath:
                                             ImageConstant.imgCheckmark24x24)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(48)));
+                                    maxHeight: getVerticalSize(context,48)));
                           }),
                       BlocSelector<SpeciallizationBloc, SpeciallizationState,
                               TextEditingController?>(
@@ -87,12 +87,12 @@ class SpeciallizationScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: group163010Controller,
                                 hintText: "msg_development_i".tr,
-                                margin: getMargin(top: 16),
+                                margin: getMargin(context,top: 16),
                                 padding: TextFormFieldPadding.PaddingT13,
                                 fontStyle: TextFormFieldFontStyle
                                     .PlusJakartaSansSemiBold16Gray900,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 12,
                                         right: 17,
@@ -101,7 +101,7 @@ class SpeciallizationScreen extends StatelessWidget {
                                         svgPath: ImageConstant
                                             .imgSettingsIndigo5001)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(48)));
+                                    maxHeight: getVerticalSize(context,48)));
                           }),
                       BlocSelector<SpeciallizationBloc, SpeciallizationState,
                               TextEditingController?>(
@@ -111,12 +111,12 @@ class SpeciallizationScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: group163011Controller,
                                 hintText: "msg_engineering_a".tr,
-                                margin: getMargin(top: 16),
+                                margin: getMargin(context,top: 16),
                                 padding: TextFormFieldPadding.PaddingT13,
                                 fontStyle: TextFormFieldFontStyle
                                     .PlusJakartaSansSemiBold16Gray900,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 12,
                                         right: 17,
@@ -125,7 +125,7 @@ class SpeciallizationScreen extends StatelessWidget {
                                         svgPath: ImageConstant
                                             .imgSettingsIndigo5001)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(48)));
+                                    maxHeight: getVerticalSize(context,48)));
                           }),
                       BlocSelector<SpeciallizationBloc, SpeciallizationState,
                               TextEditingController?>(
@@ -135,12 +135,12 @@ class SpeciallizationScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: group163012Controller,
                                 hintText: "msg_sales_marketi".tr,
-                                margin: getMargin(top: 16),
+                                margin: getMargin(context,top: 16),
                                 padding: TextFormFieldPadding.PaddingT13,
                                 fontStyle: TextFormFieldFontStyle
                                     .PlusJakartaSansSemiBold16Gray900,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 12,
                                         right: 17,
@@ -149,7 +149,7 @@ class SpeciallizationScreen extends StatelessWidget {
                                         svgPath: ImageConstant
                                             .imgSettingsIndigo5001)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(48)));
+                                    maxHeight: getVerticalSize(context,48)));
                           }),
                       BlocSelector<SpeciallizationBloc, SpeciallizationState,
                               TextEditingController?>(
@@ -159,12 +159,12 @@ class SpeciallizationScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: group163013Controller,
                                 hintText: "lbl_writing".tr,
-                                margin: getMargin(top: 16),
+                                margin: getMargin(context,top: 16),
                                 padding: TextFormFieldPadding.PaddingT13,
                                 fontStyle: TextFormFieldFontStyle
                                     .PlusJakartaSansSemiBold16Gray900,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 12,
                                         right: 17,
@@ -173,7 +173,7 @@ class SpeciallizationScreen extends StatelessWidget {
                                         svgPath: ImageConstant
                                             .imgSettingsIndigo5001)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(48)));
+                                    maxHeight: getVerticalSize(context,48)));
                           }),
                       BlocSelector<SpeciallizationBloc, SpeciallizationState,
                               TextEditingController?>(
@@ -183,13 +183,13 @@ class SpeciallizationScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: group163014Controller,
                                 hintText: "lbl_finance".tr,
-                                margin: getMargin(top: 16, bottom: 5),
+                                margin: getMargin(context,top: 16, bottom: 5),
                                 padding: TextFormFieldPadding.PaddingT13,
                                 fontStyle: TextFormFieldFontStyle
                                     .PlusJakartaSansSemiBold16Gray900,
                                 textInputAction: TextInputAction.done,
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 12,
                                         right: 17,
@@ -198,13 +198,13 @@ class SpeciallizationScreen extends StatelessWidget {
                                         svgPath: ImageConstant
                                             .imgSettingsIndigo5001)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(48)));
+                                    maxHeight: getVerticalSize(context,48)));
                           })
                     ])),
             bottomNavigationBar: CustomButton(
-                height: getVerticalSize(56),
+                height: getVerticalSize(context,56),
                 text: "lbl_continue".tr,
-                margin: getMargin(left: 24, right: 24, bottom: 39),
+                margin: getMargin(context,left: 24, right: 24, bottom: 39),
                 padding: ButtonPadding.PaddingAll17,
                 fontStyle: ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
                 onTap: () {

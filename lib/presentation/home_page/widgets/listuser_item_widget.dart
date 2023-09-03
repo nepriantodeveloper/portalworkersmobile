@@ -1,7 +1,7 @@
 import '../models/listuser_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_icon_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class ListuserItemWidget extends StatelessWidget {
@@ -15,10 +15,10 @@ class ListuserItemWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerRight,
         child: Container(
-          margin: getMargin(
+          margin: getMargin(context,
             right: 16,
           ),
-          padding: getPadding(
+          padding: getPadding(context,
             all: 16,
           ),
           decoration: AppDecoration.fillGray900.copyWith(
@@ -31,7 +31,7 @@ class ListuserItemWidget extends StatelessWidget {
               CustomIconButton(
                 height: 48,
                 width: 48,
-                margin: getMargin(
+                margin: getMargin(context,
                   bottom: 96,
                 ),
                 variant: IconButtonVariant.FillWhiteA700,
@@ -40,7 +40,7 @@ class ListuserItemWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: getPadding(
+                padding: getPadding(context,
                   left: 12,
                   top: 4,
                 ),
@@ -53,13 +53,13 @@ class ListuserItemWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtPlusJakartaSansBold14Gray50.copyWith(
-                        letterSpacing: getHorizontalSize(
+                        letterSpacing: getHorizontalSize(context,
                           0.07,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         top: 7,
                       ),
                       child: Text(
@@ -67,14 +67,14 @@ class ListuserItemWidget extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtPlusJakartaSansSemiBold12.copyWith(
-                          letterSpacing: getHorizontalSize(
+                          letterSpacing: getHorizontalSize(context,
                             0.06,
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         top: 11,
                       ),
                       child: Text(
@@ -83,14 +83,14 @@ class ListuserItemWidget extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: AppStyle.txtPlusJakartaSansMedium12Gray5094
                             .copyWith(
-                          letterSpacing: getHorizontalSize(
+                          letterSpacing: getHorizontalSize(context,
                             0.06,
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         top: 9,
                       ),
                       child: Text(
@@ -99,23 +99,23 @@ class ListuserItemWidget extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style:
                             AppStyle.txtPlusJakartaSansMedium12Gray50.copyWith(
-                          letterSpacing: getHorizontalSize(
+                          letterSpacing: getHorizontalSize(context,
                             0.06,
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         top: 17,
                       ),
                       child: Row(
                         children: [
                           Container(
-                            width: getHorizontalSize(
+                            width: getHorizontalSize(context,
                               70,
                             ),
-                            padding: getPadding(
+                            padding: getPadding(context,
                               left: 12,
                               top: 5,
                               right: 12,
@@ -131,20 +131,20 @@ class ListuserItemWidget extends StatelessWidget {
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansMedium12Gray50a2
                                   .copyWith(
-                                letterSpacing: getHorizontalSize(
+                                letterSpacing: getHorizontalSize(context,
                                   0.06,
                                 ),
                               ),
                             ),
                           ),
                           Container(
-                            width: getHorizontalSize(
+                            width: getHorizontalSize(context,
                               103,
                             ),
-                            margin: getMargin(
+                            margin: getMargin(context,
                               left: 7,
                             ),
-                            padding: getPadding(
+                            padding: getPadding(context,
                               left: 12,
                               top: 4,
                               right: 12,
@@ -160,7 +160,7 @@ class ListuserItemWidget extends StatelessWidget {
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansMedium12Gray50a2
                                   .copyWith(
-                                letterSpacing: getHorizontalSize(
+                                letterSpacing: getHorizontalSize(context,
                                   0.06,
                                 ),
                               ),

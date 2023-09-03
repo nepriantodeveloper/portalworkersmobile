@@ -1,12 +1,12 @@
 import 'bloc/personal_info_bloc.dart';
 import 'models/personal_info_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
-import 'package:stock_workers/widgets/custom_text_form_field.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
+import 'package:stockworkers/widgets/custom_text_form_field.dart';
 
 class PersonalInfoScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -24,13 +24,13 @@ class PersonalInfoScreen extends StatelessWidget {
             backgroundColor: ColorConstant.whiteA70002,
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                height: getVerticalSize(50),
+                height: getVerticalSize(context,50),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 13),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 13),
                     onTap: () {
                       onTapArrowleft13(context);
                     }),
@@ -38,15 +38,15 @@ class PersonalInfoScreen extends StatelessWidget {
                 title: AppbarTitle(text: "lbl_personal_info".tr),
                 actions: [
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(context,24),
+                      width: getSize(context,24),
                       svgPath: ImageConstant.imgEdit,
                       margin:
-                          getMargin(left: 24, top: 13, right: 24, bottom: 13))
+                          getMargin(context,left: 24, top: 13, right: 24, bottom: 13))
                 ]),
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 32, right: 24, bottom: 32),
+                padding: getPadding(context,left: 24, top: 32, right: 24, bottom: 32),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -55,7 +55,7 @@ class PersonalInfoScreen extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtPlusJakartaSansMedium14.copyWith(
-                              letterSpacing: getHorizontalSize(0.07))),
+                              letterSpacing: getHorizontalSize(context,0.07))),
                       BlocSelector<PersonalInfoBloc, PersonalInfoState,
                               TextEditingController?>(
                           selector: (state) => state.frameOneController,
@@ -64,16 +64,16 @@ class PersonalInfoScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneController,
                                 hintText: "lbl_gustavo".tr,
-                                margin: getMargin(top: 9));
+                                margin: getMargin(context,top: 9));
                           }),
                       Padding(
-                          padding: getPadding(top: 18),
+                          padding: getPadding(context,top: 18),
                           child: Text("lbl_last_name".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansMedium14
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<PersonalInfoBloc, PersonalInfoState,
                               TextEditingController?>(
                           selector: (state) => state.frameOneOneController,
@@ -82,16 +82,16 @@ class PersonalInfoScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneOneController,
                                 hintText: "lbl_lipshutz".tr,
-                                margin: getMargin(top: 9));
+                                margin: getMargin(context,top: 9));
                           }),
                       Padding(
-                          padding: getPadding(top: 18),
+                          padding: getPadding(context,top: 18),
                           child: Text("lbl_email".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansMedium14
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<PersonalInfoBloc, PersonalInfoState,
                               TextEditingController?>(
                           selector: (state) => state.emailOneController,
@@ -100,17 +100,17 @@ class PersonalInfoScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: emailOneController,
                                 hintText: "lbl_xyz_gmail_com".tr,
-                                margin: getMargin(top: 9),
+                                margin: getMargin(context,top: 9),
                                 textInputType: TextInputType.emailAddress);
                           }),
                       Padding(
-                          padding: getPadding(top: 18),
+                          padding: getPadding(context,top: 18),
                           child: Text("lbl_phone".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansMedium14
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<PersonalInfoBloc, PersonalInfoState,
                               TextEditingController?>(
                           selector: (state) => state.mobileNoController,
@@ -119,16 +119,16 @@ class PersonalInfoScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: mobileNoController,
                                 hintText: "lbl_1_1234567890".tr,
-                                margin: getMargin(top: 9));
+                                margin: getMargin(context,top: 9));
                           }),
                       Padding(
-                          padding: getPadding(top: 18),
+                          padding: getPadding(context,top: 18),
                           child: Text("lbl_location".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtPlusJakartaSansMedium14
                                   .copyWith(
-                                      letterSpacing: getHorizontalSize(0.07)))),
+                                      letterSpacing: getHorizontalSize(context,0.07)))),
                       BlocSelector<PersonalInfoBloc, PersonalInfoState,
                               TextEditingController?>(
                           selector: (state) => state.frameOneTwoController,
@@ -137,16 +137,16 @@ class PersonalInfoScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneTwoController,
                                 hintText: "lbl_lorem_ipsun".tr,
-                                margin: getMargin(top: 9, bottom: 5),
+                                margin: getMargin(context,top: 9, bottom: 5),
                                 padding: TextFormFieldPadding.PaddingT55,
                                 textInputAction: TextInputAction.done,
                                 maxLines: 6);
                           })
                     ])),
             bottomNavigationBar: CustomButton(
-                height: getVerticalSize(56),
+                height: getVerticalSize(context,56),
                 text: "lbl_save_changes".tr,
-                margin: getMargin(left: 24, right: 24, bottom: 44),
+                margin: getMargin(context,left: 24, right: 24, bottom: 44),
                 variant: ButtonVariant.FillBluegray5001,
                 padding: ButtonPadding.PaddingAll17,
                 fontStyle:

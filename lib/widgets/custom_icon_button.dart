@@ -51,12 +51,12 @@ class CustomIconButton extends StatelessWidget {
           vertical: -4,
           horizontal: -4,
         ),
-        iconSize: getSize(height ?? 0),
+        iconSize: getSize(context,height ?? 0),
         padding: EdgeInsets.all(0),
         icon: Container(
           alignment: Alignment.center,
-          width: getSize(width ?? 0),
-          height: getSize(height ?? 0),
+          width: getSize(context,width ?? 0),
+          height: getSize(context,height ?? 0),
           padding: _setPadding(),
           decoration: _buildDecoration(),
           child: child,
@@ -76,19 +76,19 @@ class CustomIconButton extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       case IconButtonPadding.PaddingAll16:
-        return getPadding(
+        return getPadding(context,
           all: 16,
         );
       case IconButtonPadding.PaddingAll12:
-        return getPadding(
+        return getPadding(context,
           all: 12,
         );
       case IconButtonPadding.PaddingAll2:
-        return getPadding(
+        return getPadding(context,
           all: 4,
         );
       default:
-        return getPadding(
+        return getPadding(context,
           all: 8,
         );
     }
@@ -115,25 +115,25 @@ class CustomIconButton extends StatelessWidget {
     switch (shape) {
       case IconButtonShape.CircleBorder32:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             32.00,
           ),
         );
       case IconButtonShape.CircleBorder24:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             24.00,
           ),
         );
       case IconButtonShape.CircleBorder16:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             16.00,
           ),
         );
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             8.00,
           ),
         );

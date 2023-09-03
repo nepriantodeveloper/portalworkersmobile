@@ -6,7 +6,7 @@ import 'package:stockworkers/core/utils/size_utils.dart';
 class AppStyle {
   static TextStyle txtPlusJakartaSansMedium14Bluegray400 = TextStyle(
     color: ColorConstant.blueGray400,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -15,7 +15,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold14Gray50 = TextStyle(
     color: ColorConstant.gray50,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -24,7 +24,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold18 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       18,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -33,7 +33,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold14Bluegray400 = TextStyle(
     color: ColorConstant.blueGray400,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -42,7 +42,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold16 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -51,7 +51,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold14 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -60,7 +60,7 @@ class AppStyle {
 
   static TextStyle txtRobotoRegular20 = TextStyle(
     color: ColorConstant.black900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       20,
     ),
     fontFamily: 'Roboto',
@@ -69,7 +69,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold14DeeporangeA200 = TextStyle(
     color: ColorConstant.deepOrangeA200,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -78,7 +78,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12Gray5094 = TextStyle(
     color: ColorConstant.gray5094,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -87,7 +87,7 @@ class AppStyle {
 
   static TextStyle txtInterMedium12 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Inter',
@@ -96,7 +96,7 @@ class AppStyle {
 
   static TextStyle txtInterBold16 = TextStyle(
     color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Inter',
@@ -105,7 +105,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium16 = TextStyle(
     color: ColorConstant.blueGray400,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -114,7 +114,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12Bluegray300 = TextStyle(
     color: ColorConstant.blueGray300,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -123,7 +123,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium14 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -132,7 +132,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold12 = TextStyle(
     color: ColorConstant.gray50A2,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -141,7 +141,7 @@ class AppStyle {
 
   static TextStyle txtPoppinsRegular16 = TextStyle(
     color: ColorConstant.gray90002,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Poppins',
@@ -150,7 +150,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12 = TextStyle(
     color: ColorConstant.blueGray400,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -159,7 +159,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold10 = TextStyle(
     color: ColorConstant.gray50,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       10,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -168,7 +168,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold16 = TextStyle(
     color: ColorConstant.blueGray300,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -177,7 +177,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold12Bluegray400 = TextStyle(
     color: ColorConstant.blueGray400,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -186,7 +186,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium10 = TextStyle(
     color: ColorConstant.blueGray300,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       10,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -195,7 +195,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold14 = TextStyle(
     color: ColorConstant.gray50,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -204,7 +204,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold18 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       18,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -213,7 +213,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium14Bluegray40087 = TextStyle(
     color: ColorConstant.blueGray40087,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -222,7 +222,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12Gray600 = TextStyle(
     color: ColorConstant.gray600,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -231,7 +231,7 @@ class AppStyle {
 
   static TextStyle txtInterRegular12 = TextStyle(
     color: ColorConstant.whiteA700A2,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Inter',
@@ -240,7 +240,7 @@ class AppStyle {
 
   static TextStyle txtInterRegular14 = TextStyle(
     color: ColorConstant.gray600,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Inter',
@@ -249,7 +249,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold16Bluegray900 = TextStyle(
     color: ColorConstant.blueGray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -258,7 +258,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium14Gray600 = TextStyle(
     color: ColorConstant.gray600,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -267,7 +267,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold18Gray90001 = TextStyle(
     color: ColorConstant.gray90001,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       18,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -276,7 +276,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium14Bluegray900 = TextStyle(
     color: ColorConstant.blueGray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -285,7 +285,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12Gray50a2 = TextStyle(
     color: ColorConstant.gray50A2,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -294,7 +294,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12Gray50 = TextStyle(
     color: ColorConstant.gray50,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -303,7 +303,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold12DeeporangeA200 = TextStyle(
     color: ColorConstant.deepOrangeA200,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -312,7 +312,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold14Bluegray900 = TextStyle(
     color: ColorConstant.blueGray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -321,7 +321,7 @@ class AppStyle {
 
   static TextStyle txtPoppinsMedium12 = TextStyle(
     color: ColorConstant.gray500,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Poppins',
@@ -330,7 +330,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold16Gray50 = TextStyle(
     color: ColorConstant.gray50,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -339,7 +339,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold14Bluegray300 = TextStyle(
     color: ColorConstant.blueGray300,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -348,7 +348,7 @@ class AppStyle {
 
   static TextStyle txtPoppinsMedium16 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Poppins',
@@ -357,7 +357,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold16RedA200 = TextStyle(
     color: ColorConstant.redA200,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -366,7 +366,7 @@ class AppStyle {
 
   static TextStyle txtInterSemiBold16 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Inter',
@@ -375,7 +375,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold14RedA200 = TextStyle(
     color: ColorConstant.redA200,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -384,7 +384,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold16Gray90002 = TextStyle(
     color: ColorConstant.gray90002,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -393,7 +393,7 @@ class AppStyle {
 
   static TextStyle txtRobotoRegular16 = TextStyle(
     color: ColorConstant.blueGray40001,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Roboto',
@@ -402,7 +402,7 @@ class AppStyle {
 
   static TextStyle txtInterMedium12Bluegray300 = TextStyle(
     color: ColorConstant.blueGray300,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Inter',
@@ -411,7 +411,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold14Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       14,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -420,7 +420,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold16Bluegray400 = TextStyle(
     color: ColorConstant.blueGray400,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -429,7 +429,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold16Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -438,7 +438,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold12Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -447,7 +447,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansBold24 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       24,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -456,7 +456,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansSemiBold12Bluegray300 = TextStyle(
     color: ColorConstant.blueGray300,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -465,7 +465,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium16Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       16,
     ),
     fontFamily: 'Plus Jakarta Sans',
@@ -474,7 +474,7 @@ class AppStyle {
 
   static TextStyle txtPlusJakartaSansMedium12Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    fontSize: getFontSize(
+    fontSize: getFontSize(context,
       12,
     ),
     fontFamily: 'Plus Jakarta Sans',

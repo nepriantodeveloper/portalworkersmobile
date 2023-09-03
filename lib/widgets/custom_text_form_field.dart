@@ -114,36 +114,36 @@ class CustomTextFormField extends StatelessWidget {
       case TextFormFieldFontStyle.PlusJakartaSansSemiBold16Gray900:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.31,
           ),
         );
       case TextFormFieldFontStyle.PlusJakartaSansMedium12Gray6007c:
         return TextStyle(
           color: ColorConstant.gray6007c,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             12,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w500,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.33,
           ),
         );
       default:
         return TextStyle(
           color: ColorConstant.blueGray400,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w500,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.31,
           ),
         );
@@ -154,13 +154,13 @@ class CustomTextFormField extends StatelessWidget {
     switch (shape) {
       case TextFormFieldShape.CircleBorder28:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             28.00,
           ),
         );
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
+          getHorizontalSize(context,
             24.00,
           ),
         );
@@ -210,37 +210,37 @@ class CustomTextFormField extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       case TextFormFieldPadding.PaddingT15:
-        return getPadding(
+        return getPadding(context,
           left: 12,
           top: 15,
           right: 12,
           bottom: 15,
         );
       case TextFormFieldPadding.PaddingT15_1:
-        return getPadding(
+        return getPadding(context,
           left: 15,
           top: 15,
           bottom: 15,
         );
       case TextFormFieldPadding.PaddingT55:
-        return getPadding(
+        return getPadding(context,
           left: 16,
           top: 55,
           right: 16,
           bottom: 55,
         );
       case TextFormFieldPadding.PaddingT13:
-        return getPadding(
+        return getPadding(context,
           top: 13,
           right: 13,
           bottom: 13,
         );
       case TextFormFieldPadding.PaddingAll20:
-        return getPadding(
+        return getPadding(context,
           all: 20,
         );
       default:
-        return getPadding(
+        return getPadding(context,
           all: 15,
         );
     }

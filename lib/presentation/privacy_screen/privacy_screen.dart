@@ -1,10 +1,10 @@
 import 'bloc/privacy_bloc.dart';
 import 'models/privacy_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
 
 class PrivacyScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -22,13 +22,13 @@ class PrivacyScreen extends StatelessWidget {
           child: Scaffold(
               backgroundColor: ColorConstant.whiteA70002,
               appBar: CustomAppBar(
-                  height: getVerticalSize(51),
+                  height: getVerticalSize(context,51),
                   leadingWidth: 48,
                   leading: AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(context,24),
+                      width: getSize(context,24),
                       svgPath: ImageConstant.imgArrowleft,
-                      margin: getMargin(left: 24, top: 13, bottom: 14),
+                      margin: getMargin(context,left: 24, top: 13, bottom: 14),
                       onTap: () {
                         onTapArrowleft17(context);
                       }),
@@ -36,23 +36,23 @@ class PrivacyScreen extends StatelessWidget {
                   title: AppbarTitle(text: "msg_legel_and_polic".tr)),
               body: Container(
                   width: double.maxFinite,
-                  padding: getPadding(left: 24, right: 24),
+                  padding: getPadding(context,left: 24, right: 24),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                            padding: getPadding(top: 30),
+                            padding: getPadding(context,top: 30),
                             child: Text("lbl_terms".tr,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPlusJakartaSansBold16
                                     .copyWith(
                                         letterSpacing:
-                                            getHorizontalSize(0.08)))),
+                                            getHorizontalSize(context,0.08)))),
                         Container(
-                            width: getHorizontalSize(307),
-                            margin: getMargin(top: 11, right: 19),
+                            width: getHorizontalSize(context,307),
+                            margin: getMargin(context,top: 11, right: 19),
                             child: Text("msg_lorem_ipsum_dol8".tr,
                                 maxLines: null,
                                 textAlign: TextAlign.left,
@@ -60,10 +60,10 @@ class PrivacyScreen extends StatelessWidget {
                                     .txtPlusJakartaSansMedium14Bluegray40087
                                     .copyWith(
                                         letterSpacing:
-                                            getHorizontalSize(0.07)))),
+                                            getHorizontalSize(context,0.07)))),
                         Container(
-                            width: getHorizontalSize(307),
-                            margin: getMargin(top: 4, right: 19),
+                            width: getHorizontalSize(context,307),
+                            margin: getMargin(context,top: 4, right: 19),
                             child: Text("msg_lorem_ipsum_dol8".tr,
                                 maxLines: null,
                                 textAlign: TextAlign.left,
@@ -71,27 +71,27 @@ class PrivacyScreen extends StatelessWidget {
                                     .txtPlusJakartaSansMedium14Bluegray40087
                                     .copyWith(
                                         letterSpacing:
-                                            getHorizontalSize(0.07)))),
+                                            getHorizontalSize(context,0.07)))),
                         Padding(
-                            padding: getPadding(top: 21),
+                            padding: getPadding(context,top: 21),
                             child: Text("msg_changes_to_the".tr,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPlusJakartaSansBold16
                                     .copyWith(
                                         letterSpacing:
-                                            getHorizontalSize(0.08)))),
+                                            getHorizontalSize(context,0.08)))),
                         Container(
-                            height: getVerticalSize(298),
-                            width: getHorizontalSize(307),
-                            margin: getMargin(top: 7),
+                            height: getVerticalSize(context,298),
+                            width: getHorizontalSize(context,307),
+                            margin: getMargin(context,top: 7),
                             child: Stack(
                                 alignment: Alignment.bottomCenter,
                                 children: [
                                   Align(
                                       alignment: Alignment.topCenter,
                                       child: Container(
-                                          width: getHorizontalSize(307),
+                                          width: getHorizontalSize(context,307),
                                           child: Text("msg_lorem_ipsum_dol8".tr,
                                               maxLines: null,
                                               textAlign: TextAlign.left,
@@ -99,12 +99,12 @@ class PrivacyScreen extends StatelessWidget {
                                                   .txtPlusJakartaSansMedium14Bluegray40087
                                                   .copyWith(
                                                       letterSpacing:
-                                                          getHorizontalSize(
+                                                          getHorizontalSize(context,
                                                               0.07))))),
                                   Align(
                                       alignment: Alignment.bottomCenter,
                                       child: Container(
-                                          width: getHorizontalSize(307),
+                                          width: getHorizontalSize(context,307),
                                           child: Text("msg_lorem_ipsum_dol8".tr,
                                               maxLines: null,
                                               textAlign: TextAlign.left,
@@ -112,7 +112,7 @@ class PrivacyScreen extends StatelessWidget {
                                                   .txtPlusJakartaSansMedium14Bluegray40087
                                                   .copyWith(
                                                       letterSpacing:
-                                                          getHorizontalSize(
+                                                          getHorizontalSize(context,
                                                               0.07)))))
                                 ]))
                       ]))));

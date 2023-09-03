@@ -3,11 +3,11 @@ import 'bloc/experience_setting_bloc.dart';
 import 'models/experience_setting_model.dart';
 import 'models/listuser2_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
 
 class ExperienceSettingScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -24,13 +24,13 @@ class ExperienceSettingScreen extends StatelessWidget {
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA70002,
             appBar: CustomAppBar(
-                height: getVerticalSize(51),
+                height: getVerticalSize(context,51),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 14),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 14),
                     onTap: () {
                       onTapArrowleft14(context);
                     }),
@@ -38,14 +38,14 @@ class ExperienceSettingScreen extends StatelessWidget {
                 title: AppbarTitle(text: "lbl_experience".tr)),
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 28, right: 24, bottom: 28),
+                padding: getPadding(context,left: 24, top: 28, right: 24, bottom: 28),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                           width: double.maxFinite,
                           child: Container(
-                              padding: getPadding(all: 16),
+                              padding: getPadding(context,all: 16),
                               decoration: AppDecoration.outlineIndigo50
                                   .copyWith(
                                       borderRadius:
@@ -56,13 +56,13 @@ class ExperienceSettingScreen extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                        padding: getPadding(top: 1),
+                                        padding: getPadding(context,top: 1),
                                         child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Padding(
-                                                  padding: getPadding(top: 2),
+                                                  padding: getPadding(context,top: 2),
                                                   child: Text(
                                                       "lbl_experience".tr,
                                                       overflow:
@@ -72,20 +72,20 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                           .txtPlusJakartaSansBold18
                                                           .copyWith(
                                                               letterSpacing:
-                                                                  getHorizontalSize(
+                                                                  getHorizontalSize(context,
                                                                       0.09)))),
                                               CustomImageView(
                                                   svgPath:
                                                       ImageConstant.imgShare,
-                                                  height: getSize(24),
-                                                  width: getSize(24),
-                                                  margin: getMargin(bottom: 1),
+                                                  height: getSize(context,24),
+                                                  width: getSize(context,24),
+                                                  margin: getMargin(context,bottom: 1),
                                                   onTap: () {
                                                     onTapImgShare(context);
                                                   })
                                             ])),
                                     Padding(
-                                        padding: getPadding(top: 15, right: 60),
+                                        padding: getPadding(context,top: 15, right: 60),
                                         child: BlocSelector<
                                                 ExperienceSettingBloc,
                                                 ExperienceSettingState,
@@ -101,19 +101,19 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                   separatorBuilder:
                                                       (context, index) {
                                                     return Padding(
-                                                        padding: getPadding(
+                                                        padding: getPadding(context,
                                                             top: 19.5,
                                                             bottom: 19.5),
                                                         child: SizedBox(
                                                             width:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     295),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .indigo50)));
@@ -136,9 +136,9 @@ class ExperienceSettingScreen extends StatelessWidget {
                                             }))
                                   ]))),
                       CustomButton(
-                          height: getVerticalSize(56),
+                          height: getVerticalSize(context,56),
                           text: "msg_add_new_positio".tr,
-                          margin: getMargin(top: 37),
+                          margin: getMargin(context,top: 37),
                           padding: ButtonPadding.PaddingAll17,
                           fontStyle:
                               ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
@@ -148,8 +148,8 @@ class ExperienceSettingScreen extends StatelessWidget {
                       Container(
                           width: double.maxFinite,
                           child: Container(
-                              margin: getMargin(top: 32, bottom: 3),
-                              padding: getPadding(all: 16),
+                              margin: getMargin(context,top: 32, bottom: 3),
+                              padding: getPadding(context,all: 16),
                               decoration: AppDecoration.outlineBluegray50
                                   .copyWith(
                                       borderRadius:
@@ -164,7 +164,7 @@ class ExperienceSettingScreen extends StatelessWidget {
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Padding(
-                                              padding: getPadding(top: 2),
+                                              padding: getPadding(context,top: 2),
                                               child: Text("lbl_education".tr,
                                                   overflow:
                                                       TextOverflow.ellipsis,
@@ -173,24 +173,24 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                       .txtPlusJakartaSansBold16
                                                       .copyWith(
                                                           letterSpacing:
-                                                              getHorizontalSize(
+                                                              getHorizontalSize(context,
                                                                   0.08)))),
                                           CustomImageView(
                                               svgPath: ImageConstant.imgShare,
-                                              height: getSize(24),
-                                              width: getSize(24))
+                                              height: getSize(context,24),
+                                              width: getSize(context,24))
                                         ]),
                                     Padding(
-                                        padding: getPadding(top: 24, right: 83),
+                                        padding: getPadding(context,top: 24, right: 83),
                                         child: Row(children: [
                                           CustomImageView(
                                               svgPath: ImageConstant
                                                   .imgTrophyGray100,
-                                              height: getSize(48),
-                                              width: getSize(48)),
+                                              height: getSize(context,48),
+                                              width: getSize(context,48)),
                                           Expanded(
                                               child: Padding(
-                                                  padding: getPadding(
+                                                  padding: getPadding(context,
                                                       left: 12,
                                                       top: 5,
                                                       bottom: 1),
@@ -214,15 +214,15 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                                 .txtPlusJakartaSansSemiBold14Gray900
                                                                 .copyWith(
                                                                     letterSpacing:
-                                                                        getHorizontalSize(
+                                                                        getHorizontalSize(context,
                                                                             0.07))),
                                                         Padding(
-                                                            padding: getPadding(
+                                                            padding: getPadding(context,
                                                                 top: 6),
                                                             child: Row(
                                                                 children: [
                                                                   Padding(
-                                                                      padding: getPadding(
+                                                                      padding: getPadding(context,
                                                                           top:
                                                                               1),
                                                                       child: Text(
@@ -234,9 +234,9 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                                               .left,
                                                                           style: AppStyle
                                                                               .txtPlusJakartaSansMedium12
-                                                                              .copyWith(letterSpacing: getHorizontalSize(0.06)))),
+                                                                              .copyWith(letterSpacing: getHorizontalSize(context,0.06)))),
                                                                   Padding(
-                                                                      padding: getPadding(
+                                                                      padding: getPadding(context,
                                                                           left:
                                                                               4,
                                                                           top:
@@ -250,9 +250,9 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                                               .left,
                                                                           style: AppStyle
                                                                               .txtPlusJakartaSansMedium12
-                                                                              .copyWith(letterSpacing: getHorizontalSize(0.06)))),
+                                                                              .copyWith(letterSpacing: getHorizontalSize(context,0.06)))),
                                                                   Padding(
-                                                                      padding: getPadding(
+                                                                      padding: getPadding(context,
                                                                           left:
                                                                               4,
                                                                           bottom:
@@ -266,16 +266,16 @@ class ExperienceSettingScreen extends StatelessWidget {
                                                                               .left,
                                                                           style: AppStyle
                                                                               .txtPlusJakartaSansMedium12
-                                                                              .copyWith(letterSpacing: getHorizontalSize(0.06))))
+                                                                              .copyWith(letterSpacing: getHorizontalSize(context,0.06))))
                                                                 ]))
                                                       ])))
                                         ]))
                                   ])))
                     ])),
             bottomNavigationBar: CustomButton(
-                height: getVerticalSize(56),
+                height: getVerticalSize(context,56),
                 text: "msg_add_new_educati".tr,
-                margin: getMargin(left: 24, right: 24, bottom: 55),
+                margin: getMargin(context,left: 24, right: 24, bottom: 55),
                 padding: ButtonPadding.PaddingAll17,
                 fontStyle: ButtonFontStyle.PlusJakartaSansSemiBold16Gray50,
                 onTap: () {

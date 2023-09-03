@@ -1,8 +1,8 @@
 import '../models/listlocation_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
-import 'package:stock_workers/widgets/custom_icon_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
+import 'package:stockworkers/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class ListlocationItemWidget extends StatelessWidget {
@@ -19,7 +19,7 @@ class ListlocationItemWidget extends StatelessWidget {
         CustomIconButton(
           height: 48,
           width: 48,
-          margin: getMargin(
+          margin: getMargin(context,
             bottom: 42,
           ),
           child: CustomImageView(
@@ -27,7 +27,7 @@ class ListlocationItemWidget extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: getPadding(
+          padding: getPadding(context,
             left: 12,
             top: 4,
           ),
@@ -40,13 +40,13 @@ class ListlocationItemWidget extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtPlusJakartaSansBold14.copyWith(
-                  letterSpacing: getHorizontalSize(
+                  letterSpacing: getHorizontalSize(context,
                     0.07,
                   ),
                 ),
               ),
               Padding(
-                padding: getPadding(
+                padding: getPadding(context,
                   top: 6,
                 ),
                 child: Text(
@@ -55,21 +55,21 @@ class ListlocationItemWidget extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style:
                       AppStyle.txtPlusJakartaSansSemiBold12Bluegray300.copyWith(
-                    letterSpacing: getHorizontalSize(
+                    letterSpacing: getHorizontalSize(context,
                       0.06,
                     ),
                   ),
                 ),
               ),
               CustomButton(
-                height: getVerticalSize(
+                height: getVerticalSize(context,
                   28,
                 ),
-                width: getHorizontalSize(
+                width: getHorizontalSize(context,
                   78,
                 ),
                 text: "lbl_opened".tr,
-                margin: getMargin(
+                margin: getMargin(context,
                   top: 17,
                 ),
                 variant: ButtonVariant.FillGreen50,

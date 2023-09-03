@@ -1,8 +1,8 @@
 import '../models/listgroup_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
-import 'package:stock_workers/widgets/custom_icon_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
+import 'package:stockworkers/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class ListgroupItemWidget extends StatelessWidget {
@@ -23,7 +23,7 @@ class ListgroupItemWidget extends StatelessWidget {
             onTapColumngroup?.call();
           },
           child: Container(
-            padding: getPadding(
+            padding: getPadding(context,
               all: 16,
             ),
             decoration: AppDecoration.outlineIndigo50.copyWith(
@@ -39,7 +39,7 @@ class ListgroupItemWidget extends StatelessWidget {
                     CustomIconButton(
                       height: 48,
                       width: 48,
-                      margin: getMargin(
+                      margin: getMargin(context,
                         top: 1,
                       ),
                       child: CustomImageView(
@@ -47,7 +47,7 @@ class ListgroupItemWidget extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         left: 12,
                         top: 4,
                         bottom: 2,
@@ -61,13 +61,13 @@ class ListgroupItemWidget extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtPlusJakartaSansBold16.copyWith(
-                              letterSpacing: getHorizontalSize(
+                              letterSpacing: getHorizontalSize(context,
                                 0.08,
                               ),
                             ),
                           ),
                           Padding(
-                            padding: getPadding(
+                            padding: getPadding(context,
                               top: 5,
                             ),
                             child: Text(
@@ -77,7 +77,7 @@ class ListgroupItemWidget extends StatelessWidget {
                               style: AppStyle
                                   .txtPlusJakartaSansSemiBold12Bluegray300
                                   .copyWith(
-                                letterSpacing: getHorizontalSize(
+                                letterSpacing: getHorizontalSize(context,
                                   0.06,
                                 ),
                               ),
@@ -89,20 +89,20 @@ class ListgroupItemWidget extends StatelessWidget {
                     Spacer(),
                     CustomImageView(
                       svgPath: ImageConstant.imgBookmark,
-                      height: getSize(
+                      height: getSize(context,
                         24,
                       ),
-                      width: getSize(
+                      width: getSize(context,
                         24,
                       ),
-                      margin: getMargin(
+                      margin: getMargin(context,
                         bottom: 25,
                       ),
                     ),
                   ],
                 ),
                 Padding(
-                  padding: getPadding(
+                  padding: getPadding(context,
                     left: 60,
                     top: 9,
                   ),
@@ -111,7 +111,7 @@ class ListgroupItemWidget extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtPlusJakartaSansMedium12Gray600.copyWith(
-                      letterSpacing: getHorizontalSize(
+                      letterSpacing: getHorizontalSize(context,
                         0.06,
                       ),
                     ),
@@ -120,17 +120,17 @@ class ListgroupItemWidget extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: getPadding(
+                    padding: getPadding(context,
                       top: 13,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
-                          height: getVerticalSize(
+                          height: getVerticalSize(context,
                             28,
                           ),
-                          width: getHorizontalSize(
+                          width: getHorizontalSize(context,
                             70,
                           ),
                           text: "lbl_fulltime".tr,
@@ -138,14 +138,14 @@ class ListgroupItemWidget extends StatelessWidget {
                           shape: ButtonShape.RoundedBorder8,
                         ),
                         CustomButton(
-                          height: getVerticalSize(
+                          height: getVerticalSize(context,
                             28,
                           ),
-                          width: getHorizontalSize(
+                          width: getHorizontalSize(context,
                             103,
                           ),
                           text: "lbl_two_days_ago".tr,
-                          margin: getMargin(
+                          margin: getMargin(context,
                             left: 8,
                           ),
                           variant: ButtonVariant.FillGray100,

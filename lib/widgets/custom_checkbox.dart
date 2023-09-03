@@ -117,12 +117,12 @@ class CustomCheckbox extends StatelessWidget {
       default:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.31,
           ),
         );

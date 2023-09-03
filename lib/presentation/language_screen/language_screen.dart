@@ -5,10 +5,10 @@ import 'models/language_model.dart';
 import 'models/listchineses_item_model.dart';
 import 'models/listenglishuk_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
 
 class LanguageScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -25,13 +25,13 @@ class LanguageScreen extends StatelessWidget {
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA70002,
             appBar: CustomAppBar(
-                height: getVerticalSize(51),
+                height: getVerticalSize(context,51),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 14),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 14),
                     onTap: () {
                       onTapArrowleft18(context);
                     }),
@@ -39,14 +39,14 @@ class LanguageScreen extends StatelessWidget {
                 title: AppbarTitle(text: "lbl_language".tr)),
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 28, right: 24, bottom: 28),
+                padding: getPadding(context,left: 24, top: 28, right: 24, bottom: 28),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
                           width: double.maxFinite,
                           child: Container(
-                              padding: getPadding(
+                              padding: getPadding(context,
                                   left: 16, top: 21, right: 16, bottom: 21),
                               decoration: AppDecoration.outlineIndigo50
                                   .copyWith(
@@ -58,7 +58,7 @@ class LanguageScreen extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                        padding: getPadding(top: 2),
+                                        padding: getPadding(context,top: 2),
                                         child: Text("msg_suggested_langu".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
@@ -66,10 +66,10 @@ class LanguageScreen extends StatelessWidget {
                                                 .txtPlusJakartaSansSemiBold12Bluegray400
                                                 .copyWith(
                                                     letterSpacing:
-                                                        getHorizontalSize(
+                                                        getHorizontalSize(context,
                                                             0.06)))),
                                     Padding(
-                                        padding: getPadding(top: 16),
+                                        padding: getPadding(context,top: 16),
                                         child: BlocSelector<LanguageBloc,
                                                 LanguageState, LanguageModel?>(
                                             selector: (state) =>
@@ -83,19 +83,19 @@ class LanguageScreen extends StatelessWidget {
                                                   separatorBuilder:
                                                       (context, index) {
                                                     return Padding(
-                                                        padding: getPadding(
+                                                        padding: getPadding(context,
                                                             top: 7.0,
                                                             bottom: 7.0),
                                                         child: SizedBox(
                                                             width:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     295),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .indigo50)));
@@ -128,8 +128,8 @@ class LanguageScreen extends StatelessWidget {
                       Container(
                           width: double.maxFinite,
                           child: Container(
-                              margin: getMargin(top: 24, bottom: 5),
-                              padding: getPadding(all: 16),
+                              margin: getMargin(context,top: 24, bottom: 5),
+                              padding: getPadding(context,all: 16),
                               decoration: AppDecoration.outlineIndigo50
                                   .copyWith(
                                       borderRadius:
@@ -140,7 +140,7 @@ class LanguageScreen extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                        padding: getPadding(top: 3),
+                                        padding: getPadding(context,top: 3),
                                         child: Text("lbl_other_languages".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
@@ -148,10 +148,10 @@ class LanguageScreen extends StatelessWidget {
                                                 .txtPlusJakartaSansSemiBold12Bluegray400
                                                 .copyWith(
                                                     letterSpacing:
-                                                        getHorizontalSize(
+                                                        getHorizontalSize(context,
                                                             0.06)))),
                                     Padding(
-                                        padding: getPadding(top: 19),
+                                        padding: getPadding(context,top: 19),
                                         child: BlocSelector<LanguageBloc,
                                                 LanguageState, LanguageModel?>(
                                             selector: (state) =>
@@ -165,19 +165,19 @@ class LanguageScreen extends StatelessWidget {
                                                   separatorBuilder:
                                                       (context, index) {
                                                     return Padding(
-                                                        padding: getPadding(
+                                                        padding: getPadding(context,
                                                             top: 8.0,
                                                             bottom: 8.0),
                                                         child: SizedBox(
                                                             width:
-                                                                getHorizontalSize(
+                                                                getHorizontalSize(context,
                                                                     295),
                                                             child: Divider(
                                                                 height:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 thickness:
-                                                                    getVerticalSize(
+                                                                    getVerticalSize(context,
                                                                         1),
                                                                 color: ColorConstant
                                                                     .indigo50)));

@@ -50,10 +50,10 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.gray90014,
-            spreadRadius: getHorizontalSize(
+            spreadRadius: getHorizontalSize(context,
               2,
             ),
-            blurRadius: getHorizontalSize(
+            blurRadius: getHorizontalSize(context,
               2,
             ),
             offset: Offset(
@@ -79,16 +79,16 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
               children: [
                 CustomImageView(
                   svgPath: bottomMenuList[index].icon,
-                  height: getSize(
+                  height: getSize(context,
                     24,
                   ),
-                  width: getSize(
+                  width: getSize(context,
                     24,
                   ),
                   color: ColorConstant.blueGray300,
                 ),
                 Padding(
-                  padding: getPadding(
+                  padding: getPadding(context,
                     top: 3,
                   ),
                   child: Text(
@@ -96,7 +96,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterMedium12Bluegray300.copyWith(
-                      letterSpacing: getHorizontalSize(
+                      letterSpacing: getHorizontalSize(context,
                         0.06,
                       ),
                       color: ColorConstant.blueGray300,
@@ -112,16 +112,16 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
               children: [
                 CustomImageView(
                   svgPath: bottomMenuList[index].icon,
-                  height: getSize(
+                  height: getSize(context,
                     24,
                   ),
-                  width: getSize(
+                  width: getSize(context,
                     24,
                   ),
                   color: ColorConstant.gray900,
                 ),
                 Padding(
-                  padding: getPadding(
+                  padding: getPadding(context,
                     top: 2,
                   ),
                   child: Text(
@@ -129,7 +129,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterMedium12.copyWith(
-                      letterSpacing: getHorizontalSize(
+                      letterSpacing: getHorizontalSize(context,
                         0.06,
                       ),
                       color: ColorConstant.gray900,

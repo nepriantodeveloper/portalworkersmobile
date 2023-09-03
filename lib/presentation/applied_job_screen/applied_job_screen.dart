@@ -5,11 +5,11 @@ import 'models/applied_job_model.dart';
 import 'models/listclock2_item_model.dart';
 import 'models/listdescription2_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
-import 'package:stock_workers/widgets/custom_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/widgets/custom_button.dart';
 
 class AppliedJobScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -26,13 +26,13 @@ class AppliedJobScreen extends StatelessWidget {
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA70002,
             appBar: CustomAppBar(
-                height: getVerticalSize(50),
+                height: getVerticalSize(context,50),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 24, top: 13, bottom: 13),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 13),
                     onTap: () {
                       onTapArrowleft8(context);
                     }),
@@ -40,14 +40,14 @@ class AppliedJobScreen extends StatelessWidget {
                 title: AppbarTitle(text: "lbl_job_details".tr),
                 actions: [
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(context,24),
+                      width: getSize(context,24),
                       svgPath: ImageConstant.imgBookmark,
                       margin:
-                          getMargin(left: 16, top: 13, right: 16, bottom: 13))
+                          getMargin(context,left: 16, top: 13, right: 16, bottom: 13))
                 ]),
             body: Container(
-                height: getVerticalSize(718),
+                height: getVerticalSize(context,718),
                 width: double.maxFinite,
                 child: Stack(alignment: Alignment.bottomCenter, children: [
                   Align(
@@ -58,8 +58,8 @@ class AppliedJobScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                                margin: getMargin(right: 24),
-                                padding: getPadding(
+                                margin: getMargin(context,right: 24),
+                                padding: getPadding(context,
                                     left: 72, top: 24, right: 72, bottom: 24),
                                 decoration: AppDecoration.outlineIndigo50
                                     .copyWith(
@@ -78,9 +78,9 @@ class AppliedJobScreen extends StatelessWidget {
                                               borderRadius: BorderRadiusStyle
                                                   .roundedBorder39),
                                           child: Container(
-                                              height: getSize(79),
-                                              width: getSize(79),
-                                              padding: getPadding(all: 19),
+                                              height: getSize(context,79),
+                                              width: getSize(context,79),
+                                              padding: getPadding(context,all: 19),
                                               decoration: AppDecoration
                                                   .fillGray100
                                                   .copyWith(
@@ -91,12 +91,12 @@ class AppliedJobScreen extends StatelessWidget {
                                                 CustomImageView(
                                                     svgPath:
                                                         ImageConstant.imgFilter,
-                                                    height: getSize(40),
-                                                    width: getSize(40),
+                                                    height: getSize(context,40),
+                                                    width: getSize(context,40),
                                                     alignment: Alignment.center)
                                               ]))),
                                       Padding(
-                                          padding: getPadding(top: 16),
+                                          padding: getPadding(context,top: 16),
                                           child: Text("msg_senior_ui_ux_de".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
@@ -104,10 +104,10 @@ class AppliedJobScreen extends StatelessWidget {
                                                   .txtPlusJakartaSansBold14Bluegray900
                                                   .copyWith(
                                                       letterSpacing:
-                                                          getHorizontalSize(
+                                                          getHorizontalSize(context,
                                                               0.07)))),
                                       Padding(
-                                          padding: getPadding(top: 7),
+                                          padding: getPadding(context,top: 7),
                                           child: Text("lbl_shopee_sg".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
@@ -115,18 +115,18 @@ class AppliedJobScreen extends StatelessWidget {
                                                   .txtPlusJakartaSansMedium12
                                                   .copyWith(
                                                       letterSpacing:
-                                                          getHorizontalSize(
+                                                          getHorizontalSize(context,
                                                               0.06)))),
                                       Padding(
-                                          padding: getPadding(left: 1, top: 12),
+                                          padding: getPadding(context,left: 1, top: 12),
                                           child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
                                                 CustomButton(
-                                                    height: getVerticalSize(28),
+                                                    height: getVerticalSize(context,28),
                                                     width:
-                                                        getHorizontalSize(69),
+                                                        getHorizontalSize(context,69),
                                                     text: "lbl_fulltime".tr,
                                                     variant: ButtonVariant
                                                         .FillGray100,
@@ -135,11 +135,11 @@ class AppliedJobScreen extends StatelessWidget {
                                                     fontStyle: ButtonFontStyle
                                                         .InterRegular12Bluegray400),
                                                 CustomButton(
-                                                    height: getVerticalSize(28),
+                                                    height: getVerticalSize(context,28),
                                                     width:
-                                                        getHorizontalSize(104),
+                                                        getHorizontalSize(context,104),
                                                     text: "lbl_two_days_ago".tr,
-                                                    margin: getMargin(left: 9),
+                                                    margin: getMargin(context,left: 9),
                                                     variant: ButtonVariant
                                                         .FillGray100,
                                                     shape: ButtonShape
@@ -149,19 +149,19 @@ class AppliedJobScreen extends StatelessWidget {
                                               ]))
                                     ])),
                             Container(
-                                height: getVerticalSize(124),
+                                height: getVerticalSize(context,124),
                                 child: BlocSelector<AppliedJobBloc,
                                         AppliedJobState, AppliedJobModel?>(
                                     selector: (state) =>
                                         state.appliedJobModelObj,
                                     builder: (context, appliedJobModelObj) {
                                       return ListView.separated(
-                                          padding: getPadding(
+                                          padding: getPadding(context,
                                               left: 15, top: 24, right: 48),
                                           scrollDirection: Axis.horizontal,
                                           separatorBuilder: (context, index) {
                                             return SizedBox(
-                                                height: getVerticalSize(54));
+                                                height: getVerticalSize(context,54));
                                           },
                                           itemCount: appliedJobModelObj
                                                   ?.listclock2ItemList.length ??
@@ -176,18 +176,18 @@ class AppliedJobScreen extends StatelessWidget {
                                           });
                                     })),
                             Container(
-                                height: getVerticalSize(69),
+                                height: getVerticalSize(context,69),
                                 child: BlocSelector<AppliedJobBloc,
                                         AppliedJobState, AppliedJobModel?>(
                                     selector: (state) =>
                                         state.appliedJobModelObj,
                                     builder: (context, appliedJobModelObj) {
                                       return ListView.separated(
-                                          padding: getPadding(top: 25),
+                                          padding: getPadding(context,top: 25),
                                           scrollDirection: Axis.horizontal,
                                           separatorBuilder: (context, index) {
                                             return SizedBox(
-                                                height: getVerticalSize(12));
+                                                height: getVerticalSize(context,12));
                                           },
                                           itemCount: appliedJobModelObj
                                                   ?.listdescription2ItemList
@@ -204,7 +204,7 @@ class AppliedJobScreen extends StatelessWidget {
                                           });
                                     })),
                             Padding(
-                                padding: getPadding(top: 20),
+                                padding: getPadding(context,top: 20),
                                 child: Text("lbl_job_description".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
@@ -212,10 +212,10 @@ class AppliedJobScreen extends StatelessWidget {
                                         .txtPlusJakartaSansBold16Bluegray900
                                         .copyWith(
                                             letterSpacing:
-                                                getHorizontalSize(0.08)))),
+                                                getHorizontalSize(context,0.08)))),
                             Container(
-                                width: getHorizontalSize(319),
-                                margin: getMargin(left: 7, top: 13, right: 24),
+                                width: getHorizontalSize(context,319),
+                                margin: getMargin(context,left: 7, top: 13, right: 24),
                                 child: Text("msg_lorem_ipsum_dol4".tr,
                                     maxLines: null,
                                     textAlign: TextAlign.left,
@@ -223,12 +223,12 @@ class AppliedJobScreen extends StatelessWidget {
                                         .txtPlusJakartaSansMedium14Gray600
                                         .copyWith(
                                             letterSpacing:
-                                                getHorizontalSize(0.07))))
+                                                getHorizontalSize(context,0.07))))
                           ])),
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                          padding: getPadding(
+                          padding: getPadding(context,
                               left: 24, top: 28, right: 24, bottom: 28),
                           decoration: AppDecoration.gradientGray50Gray5000,
                           child: Column(
@@ -236,9 +236,9 @@ class AppliedJobScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CustomButton(
-                                    height: getVerticalSize(56),
+                                    height: getVerticalSize(context,56),
                                     text: "lbl_applied".tr,
-                                    margin: getMargin(bottom: 12),
+                                    margin: getMargin(context,bottom: 12),
                                     variant: ButtonVariant.FillBluegray5001,
                                     padding: ButtonPadding.PaddingAll17,
                                     fontStyle: ButtonFontStyle

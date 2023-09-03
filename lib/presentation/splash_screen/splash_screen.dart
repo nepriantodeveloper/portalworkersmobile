@@ -1,7 +1,7 @@
 import 'bloc/splash_bloc.dart';
 import 'models/splash_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/app_export.dart';
 
 class SplashScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -25,9 +25,9 @@ class SplashScreen extends StatelessWidget {
                       children: [
                         CustomImageView(
                             svgPath: ImageConstant.imgGroup162797,
-                            height: getVerticalSize(153),
-                            width: getHorizontalSize(102),
-                            margin: getMargin(bottom: 5))
+                            height: getVerticalSize(context,153),
+                            width: getHorizontalSize(context,102),
+                            margin: getMargin(context,bottom: 5))
                       ]))));
     });
   }

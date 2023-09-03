@@ -4,6 +4,8 @@ import 'package:stockworkers/core/utils/size_utils.dart';
 
 
 class AppDecoration {
+  final BuildContext context;
+  AppDecoration(this.context);
   static BoxDecoration get fillDeeppurple400 => BoxDecoration(
         color: ColorConstant.deepPurple400,
       );
@@ -23,7 +25,7 @@ class AppDecoration {
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.gray900,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -41,7 +43,7 @@ class AppDecoration {
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -51,10 +53,10 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.gray70014,
-            spreadRadius: getHorizontalSize(
+            spreadRadius: getHorizontalSize(context,
               2,
             ),
-            blurRadius: getHorizontalSize(
+            blurRadius: getHorizontalSize(context,
               2,
             ),
             offset: Offset(
@@ -68,7 +70,7 @@ class AppDecoration {
         color: ColorConstant.gray50,
         border: Border.all(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -78,10 +80,10 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.blueGray90014,
-            spreadRadius: getHorizontalSize(
+            spreadRadius: getHorizontalSize(context,
               2,
             ),
-            blurRadius: getHorizontalSize(
+            blurRadius: getHorizontalSize(context,
               2,
             ),
             offset: Offset(
@@ -95,7 +97,7 @@ class AppDecoration {
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.indigo50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
           strokeAlign: strokeAlignCenter,
@@ -105,7 +107,7 @@ class AppDecoration {
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.blueGray50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -142,7 +144,7 @@ class AppDecoration {
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.blueGray50,
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             1,
           ),
         ),
@@ -151,36 +153,36 @@ class AppDecoration {
 
 class BorderRadiusStyle {
   static BorderRadius roundedBorder16 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       16,
     ),
   );
 
   static BorderRadius roundedBorder8 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       8,
     ),
   );
 
   static BorderRadius roundedBorder39 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       39,
     ),
   );
 
   static BorderRadius customBorderTL241 = BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
     topRight: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
     bottomRight: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
@@ -188,55 +190,55 @@ class BorderRadiusStyle {
 
   static BorderRadius customBorderTL24 = BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
     topRight: Radius.circular(
-      getHorizontalSize(
+      getHorizontalSize(context,
         24,
       ),
     ),
   );
 
   static BorderRadius roundedBorder12 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       12,
     ),
   );
 
   static BorderRadius roundedBorder24 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       24,
     ),
   );
 
   static BorderRadius roundedBorder32 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       32,
     ),
   );
 
   static BorderRadius roundedBorder44 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       44,
     ),
   );
 
   static BorderRadius txtCircleBorder22 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       22,
     ),
   );
 
   static BorderRadius circleBorder28 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       28,
     ),
   );
 
   static BorderRadius txtCircleBorder14 = BorderRadius.circular(
-    getHorizontalSize(
+    getHorizontalSize(context,
       14,
     ),
   );

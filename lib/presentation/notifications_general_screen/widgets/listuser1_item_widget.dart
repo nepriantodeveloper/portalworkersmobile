@@ -1,7 +1,7 @@
 import '../models/listuser1_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/custom_icon_button.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class Listuser1ItemWidget extends StatelessWidget {
@@ -18,7 +18,7 @@ class Listuser1ItemWidget extends StatelessWidget {
         CustomIconButton(
           height: 32,
           width: 32,
-          margin: getMargin(
+          margin: getMargin(context,
             bottom: 62,
           ),
           shape: IconButtonShape.CircleBorder16,
@@ -28,13 +28,13 @@ class Listuser1ItemWidget extends StatelessWidget {
           ),
         ),
         Container(
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             90,
           ),
-          width: getHorizontalSize(
+          width: getHorizontalSize(context,
             287,
           ),
-          margin: getMargin(
+          margin: getMargin(context,
             top: 4,
           ),
           child: Stack(
@@ -48,7 +48,7 @@ class Listuser1ItemWidget extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style:
                       AppStyle.txtPlusJakartaSansMedium12Bluegray300.copyWith(
-                    letterSpacing: getHorizontalSize(
+                    letterSpacing: getHorizontalSize(context,
                       0.06,
                     ),
                   ),
@@ -66,13 +66,13 @@ class Listuser1ItemWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtPlusJakartaSansBold14.copyWith(
-                        letterSpacing: getHorizontalSize(
+                        letterSpacing: getHorizontalSize(context,
                           0.07,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: getPadding(
+                      padding: getPadding(context,
                         top: 7,
                       ),
                       child: Text(
@@ -80,17 +80,17 @@ class Listuser1ItemWidget extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtPlusJakartaSansMedium12.copyWith(
-                          letterSpacing: getHorizontalSize(
+                          letterSpacing: getHorizontalSize(context,
                             0.06,
                           ),
                         ),
                       ),
                     ),
                     Container(
-                      width: getHorizontalSize(
+                      width: getHorizontalSize(context,
                         233,
                       ),
-                      margin: getMargin(
+                      margin: getMargin(context,
                         top: 10,
                       ),
                       child: Text(
@@ -99,7 +99,7 @@ class Listuser1ItemWidget extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style:
                             AppStyle.txtPlusJakartaSansMedium12Gray900.copyWith(
-                          letterSpacing: getHorizontalSize(
+                          letterSpacing: getHorizontalSize(context,
                             0.06,
                           ),
                         ),

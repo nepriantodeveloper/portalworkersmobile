@@ -1,12 +1,12 @@
 import 'bloc/select_a_country_bloc.dart';
 import 'models/select_a_country_model.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_workers/core/app_export.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_image.dart';
-import 'package:stock_workers/widgets/app_bar/appbar_title.dart';
-import 'package:stock_workers/widgets/app_bar/custom_app_bar.dart';
-import 'package:stock_workers/widgets/custom_radio_button.dart';
-import 'package:stock_workers/widgets/custom_search_view.dart';
+import 'package:stockworkers/core/app_export.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_image.dart';
+import 'package:stockworkers/widgets/app_bar/appbar_title.dart';
+import 'package:stockworkers/widgets/app_bar/custom_app_bar.dart';
+import 'package:stockworkers/widgets/custom_radio_button.dart';
+import 'package:stockworkers/widgets/custom_search_view.dart';
 
 class SelectACountryScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -24,13 +24,13 @@ class SelectACountryScreen extends StatelessWidget {
             backgroundColor: ColorConstant.whiteA70002,
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                height: getVerticalSize(51),
+                height: getVerticalSize(context,51),
                 leadingWidth: 48,
                 leading: AppbarImage(
-                    height: getSize(24),
-                    width: getSize(24),
+                    height: getSize(context,24),
+                    width: getSize(context,24),
                     svgPath: ImageConstant.imgClose,
-                    margin: getMargin(left: 24, top: 13, bottom: 14),
+                    margin: getMargin(context,left: 24, top: 13, bottom: 14),
                     onTap: () {
                       onTapClose(context);
                     }),
@@ -38,7 +38,7 @@ class SelectACountryScreen extends StatelessWidget {
                 title: AppbarTitle(text: "msg_select_a_countr".tr)),
             body: Container(
                 width: double.maxFinite,
-                padding: getPadding(left: 24, top: 13, right: 24, bottom: 13),
+                padding: getPadding(context,left: 24, top: 13, right: 24, bottom: 13),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -51,9 +51,9 @@ class SelectACountryScreen extends StatelessWidget {
                                 focusNode: FocusNode(),
                                 controller: frameOneController,
                                 hintText: "lbl_search".tr,
-                                margin: getMargin(top: 12),
+                                margin: getMargin(context,top: 12),
                                 prefix: Container(
-                                    margin: getMargin(
+                                    margin: getMargin(context,
                                         left: 16,
                                         top: 17,
                                         right: 8,
@@ -61,10 +61,10 @@ class SelectACountryScreen extends StatelessWidget {
                                     child: CustomImageView(
                                         svgPath: ImageConstant.imgSearch)),
                                 prefixConstraints: BoxConstraints(
-                                    maxHeight: getVerticalSize(52)),
+                                    maxHeight: getVerticalSize(context,52)),
                                 suffix: Padding(
                                     padding: EdgeInsets.only(
-                                        right: getHorizontalSize(15)),
+                                        right: getHorizontalSize(context,15)),
                                     child: IconButton(
                                         onPressed: () {
                                           frameOneController!.clear();
@@ -73,7 +73,7 @@ class SelectACountryScreen extends StatelessWidget {
                                             color: Colors.grey.shade600))));
                           }),
                       Padding(
-                          padding: getPadding(top: 24),
+                          padding: getPadding(context,top: 24),
                           child: BlocBuilder<SelectACountryBloc,
                               SelectACountryState>(builder: (context, state) {
                             return state.selectACountryModelObj!.radioList
@@ -85,7 +85,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[0] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(right: 68),
+                                        margin: getMargin(context,right: 68),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -100,7 +100,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[1] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22, right: 104),
+                                        margin: getMargin(context,top: 22, right: 104),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -115,7 +115,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[2] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 24, right: 107),
+                                        margin: getMargin(context,top: 24, right: 107),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -130,7 +130,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[3] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22, right: 99),
+                                        margin: getMargin(context,top: 22, right: 99),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -145,7 +145,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[4] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 24, right: 107),
+                                        margin: getMargin(context,top: 24, right: 107),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -160,7 +160,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[5] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22),
+                                        margin: getMargin(context,top: 22),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -175,7 +175,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[6] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22, right: 85),
+                                        margin: getMargin(context,top: 22, right: 85),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -190,7 +190,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[7] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22, right: 85),
+                                        margin: getMargin(context,top: 22, right: 85),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -205,7 +205,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[8] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22, right: 97),
+                                        margin: getMargin(context,top: 22, right: 97),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -220,7 +220,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[9] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 24, right: 94),
+                                        margin: getMargin(context,top: 24, right: 94),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -235,7 +235,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[10] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 24, right: 107),
+                                        margin: getMargin(context,top: 24, right: 107),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -250,7 +250,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[11] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 24, right: 80),
+                                        margin: getMargin(context,top: 24, right: 80),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {
@@ -265,7 +265,7 @@ class SelectACountryScreen extends StatelessWidget {
                                                 ?.radioList[12] ??
                                             "",
                                         groupValue: state.radioGroup,
-                                        margin: getMargin(top: 22, right: 80),
+                                        margin: getMargin(context,top: 22, right: 80),
                                         fontStyle: RadioFontStyle
                                             .PlusJakartaSansSemiBold16Gray900,
                                         onChange: (value) {

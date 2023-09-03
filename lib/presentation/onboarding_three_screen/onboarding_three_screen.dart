@@ -5,7 +5,7 @@ import 'models/sliderapplicationsurely_item_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:stock_workers/core/app_export.dart';
+import 'package:stockworkers/core/app_export.dart';
 
 class OnboardingThreeScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
@@ -32,28 +32,28 @@ class OnboardingThreeScreen extends StatelessWidget {
                 child: Container(
                     width: double.maxFinite,
                     padding:
-                        getPadding(left: 24, top: 29, right: 24, bottom: 29),
+                        getPadding(context,left: 24, top: 29, right: 24, bottom: 29),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                              height: getVerticalSize(699),
-                              width: getHorizontalSize(327),
-                              margin: getMargin(bottom: 5),
+                              height: getVerticalSize(context,699),
+                              width: getHorizontalSize(context,327),
+                              margin: getMargin(context,bottom: 5),
                               child: Stack(
                                   alignment: Alignment.bottomCenter,
                                   children: [
                                     CustomImageView(
                                         imagePath:
                                             ImageConstant.imgImage422x313,
-                                        height: getVerticalSize(422),
-                                        width: getHorizontalSize(313),
+                                        height: getVerticalSize(context,422),
+                                        width: getHorizontalSize(context,313),
                                         alignment: Alignment.topCenter),
                                     Align(
                                         alignment: Alignment.bottomCenter,
                                         child: Container(
-                                            height: getVerticalSize(367),
-                                            width: getHorizontalSize(327),
+                                            height: getVerticalSize(context,367),
+                                            width: getHorizontalSize(context,327),
                                             child: Stack(
                                                 alignment:
                                                     Alignment.bottomCenter,
@@ -68,7 +68,7 @@ class OnboardingThreeScreen extends StatelessWidget {
                                                             options:
                                                                 CarouselOptions(
                                                                     height:
-                                                                        getVerticalSize(
+                                                                        getVerticalSize(context,
                                                                             367),
                                                                     initialPage:
                                                                         0,
@@ -120,9 +120,9 @@ class OnboardingThreeScreen extends StatelessWidget {
                                                               (context, state) {
                                                         return Container(
                                                             height:
-                                                                getVerticalSize(
+                                                                getVerticalSize(context,
                                                                     10),
-                                                            margin: getMargin(
+                                                            margin: getMargin(context,
                                                                 bottom: 112),
                                                             child: AnimatedSmoothIndicator(
                                                                 activeIndex: state
@@ -143,10 +143,10 @@ class OnboardingThreeScreen extends StatelessWidget {
                                                                         ColorConstant
                                                                             .gray90068,
                                                                     dotHeight:
-                                                                        getVerticalSize(
+                                                                        getVerticalSize(context,
                                                                             10),
                                                                     dotWidth:
-                                                                        getHorizontalSize(
+                                                                        getHorizontalSize(context,
                                                                             10))));
                                                       }))
                                                 ])))

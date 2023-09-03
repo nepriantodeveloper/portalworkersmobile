@@ -120,24 +120,24 @@ class CustomRadioButton extends StatelessWidget {
       case RadioFontStyle.PoppinsMedium14:
         return TextStyle(
           color: ColorConstant.blueGray300,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             14,
           ),
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w500,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.50,
           ),
         );
       default:
         return TextStyle(
           color: ColorConstant.gray900,
-          fontSize: getFontSize(
+          fontSize: getFontSize(context,
             16,
           ),
           fontFamily: 'Plus Jakarta Sans',
           fontWeight: FontWeight.w600,
-          height: getVerticalSize(
+          height: getVerticalSize(context,
             1.31,
           ),
         );
