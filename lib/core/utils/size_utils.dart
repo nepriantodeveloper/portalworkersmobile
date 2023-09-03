@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 // This is where the magic happens.
 // This functions are responsible to make UI responsive across all the mobile devices.
 
-Size size = WidgetsBinding.instance.window.physicalSize /
-    WidgetsBinding.instance.window.devicePixelRatio;
+/// [WidgetsBinding.instance.window] Dinyatakan deprecated. Dan dianjurkan menggunakan
+/// [View.of]. Jadi karena membutuhkan [BuildContext], maka setiap function ditambahkan
+/// parameter [context]
+///
+Size size(context) =>
+    View.of(context).physicalSize / View.of(context).devicePixelRatio;
 
 // Caution! If you think these are static values and are used to build a static UI,  you mustn’t.
 // These are the Viewport values of your Figma Design.
@@ -14,35 +18,34 @@ const num FIGMA_DESIGN_HEIGHT = 812;
 const num FIGMA_DESIGN_STATUS_BAR = 44;
 
 ///This method is used to get device viewport width.
-get width {
-  return size.width;
+double width(BuildContext context) {
+  return size(context).width;
 }
 
 ///This method is used to get device viewport height.
-get height {
-  num statusBar =
-      MediaQueryData.fromWindow(WidgetsBinding.instance.window).viewPadding.top;
-  num bottomBar = MediaQueryData.fromWindow(WidgetsBinding.instance.window)
-      .viewPadding
-      .bottom;
-  num screenHeight = size.height - statusBar - bottomBar;
+double height(BuildContext context) {
+  final view = View.of(context);
+  double statusBar = MediaQueryData.fromView(view).viewPadding.top;
+  double bottomBar = MediaQueryData.fromView(view).viewPadding.bottom;
+  double screenHeight = size(context).height - statusBar - bottomBar;
   return screenHeight;
 }
 
 ///This method is used to set padding/margin (for the left and Right side) & width of the screen or widget according to the Viewport width.
-double getHorizontalSize(double px) {
-  return ((px * width) / FIGMA_DESIGN_WIDTH);
+double getHorizontalSize(BuildContext context, double px) {
+  return ((px * width(context)) / FIGMA_DESIGN_WIDTH);
 }
 
 ///This method is used to set padding/margin (for the top and bottom side) & height of the screen or widget according to the Viewport height.
-double getVerticalSize(double px) {
-  return ((px * height) / (FIGMA_DESIGN_HEIGHT - FIGMA_DESIGN_STATUS_BAR));
+double getVerticalSize(BuildContext context, double px) {
+  return ((px * height(context)) /
+      (FIGMA_DESIGN_HEIGHT - FIGMA_DESIGN_STATUS_BAR));
 }
 
 ///This method is used to set smallest px in image height and width
-double getSize(double px) {
-  var height = getVerticalSize(px);
-  var width = getHorizontalSize(px);
+double getSize(BuildContext context, double px) {
+  var height = getVerticalSize(context, px);
+  var width = getHorizontalSize(context, px);
   if (height < width) {
     return height.toInt().toDouble();
   } else {
@@ -51,12 +54,13 @@ double getSize(double px) {
 }
 
 ///This method is used to set text font size according to Viewport
-double getFontSize(double px) {
-  return getSize(px);
+double getFontSize(BuildContext context, double px) {
+  return getSize(context, px);
 }
 
 ///This method is used to set padding responsively
-EdgeInsetsGeometry getPadding({
+EdgeInsetsGeometry getPadding(
+  BuildContext context, {
   double? all,
   double? left,
   double? top,
@@ -64,6 +68,7 @@ EdgeInsetsGeometry getPadding({
   double? bottom,
 }) {
   return getMarginOrPadding(
+    context,
     all: all,
     left: left,
     top: top,
@@ -73,7 +78,8 @@ EdgeInsetsGeometry getPadding({
 }
 
 ///This method is used to set margin responsively
-EdgeInsetsGeometry getMargin({
+EdgeInsetsGeometry getMargin(
+  BuildContext context, {
   double? all,
   double? left,
   double? top,
@@ -81,6 +87,7 @@ EdgeInsetsGeometry getMargin({
   double? bottom,
 }) {
   return getMarginOrPadding(
+    context,
     all: all,
     left: left,
     top: top,
@@ -90,7 +97,8 @@ EdgeInsetsGeometry getMargin({
 }
 
 ///This method is used to get padding or margin responsively
-EdgeInsetsGeometry getMarginOrPadding({
+EdgeInsetsGeometry getMarginOrPadding(
+  BuildContext context, {
   double? all,
   double? left,
   double? top,
@@ -105,15 +113,19 @@ EdgeInsetsGeometry getMarginOrPadding({
   }
   return EdgeInsets.only(
     left: getHorizontalSize(
+      context,
       left ?? 0,
     ),
     top: getVerticalSize(
+      context,
       top ?? 0,
     ),
     right: getHorizontalSize(
+      context,
       right ?? 0,
     ),
     bottom: getVerticalSize(
+      context,
       bottom ?? 0,
     ),
   );
